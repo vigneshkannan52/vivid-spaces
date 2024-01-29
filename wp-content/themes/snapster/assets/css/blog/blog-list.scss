@@ -1,0 +1,249 @@
+@import '../mixin';
+
+.snapster-blog {
+	$blog: &;
+
+	&--search-page{
+		padding: 100px 0;
+		text-align: center;
+
+		@include lg-size-max{
+			padding: 90px 0;
+		}
+
+		@include sm-size-max{
+			padding: 80px 0;
+		}
+
+		@include xs-size-max{
+			padding: 50px 0;
+		}
+
+		&__title{
+			margin-bottom: 30px;
+			word-wrap: break-word;
+		}
+
+		&__search-form{
+			div{
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+
+				@include xs-size-max{
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+			input[type="text"]{
+				border: 1px solid var(--c-grey);
+				line-height: 35px;
+				padding: 5px 20px;
+				min-width: 250px;
+				margin-bottom: 20px;
+
+				@include xs-size-max{
+					text-align: center;
+				}
+			}
+			input[type="submit"]{
+				border: none;
+				position: relative;
+				z-index: 10;
+				font-weight: 500;
+				padding: 11px 15px 10px;
+				background-color: var(--c-active);
+				color: var(--c-light);
+				cursor: pointer;
+				transition: all .3s ease;
+				&:hover,
+				&:focus{
+					background-color: var(--c-dark);
+					opacity: .6;
+				}
+			}
+		}
+	}
+
+	&--banner {
+		background-color: rgba(var(--ca-grey), .1);
+		padding: 130px 15px;
+		text-align: center;
+		min-height: 150px;
+		background-size: cover;
+		background-position: center;
+		&.with-image {
+			* {
+				color: var(--c-light);
+			}
+		}
+
+		@include md-size-max{
+			padding: 100px 15px;
+		}
+
+		@include xs-size-max{
+			padding: 80px 15px;
+		}
+
+		&__title {
+			line-height: 1.4;
+			font-size: 70px;
+			word-break: break-word;
+			@media only screen and (max-width: 1024px){
+				font-size: 55px;
+			}
+			@media only screen and (max-width: 767px){
+				font-size: 45px;
+			}
+		}
+
+		&__count-results{
+			margin-top: 25px;
+		}
+
+	}
+
+	&--wrapper{
+
+		padding: 100px 0 70px;
+
+		@include lg-size-max{
+			padding: 90px 0 60px;
+		}
+
+		@include sm-size-max{
+			padding: 80px 0 50px;
+		}
+
+		@include xs-size-max{
+			padding: 30px 0 0;
+		}
+		#{$blog}--post{
+			margin-bottom: 30px;
+
+			@include xs-size-max{
+				flex: 0 0 100%;
+				max-width: 100%;
+				margin-bottom: 15px;
+			}
+
+			&.sticky{
+				#{$blog}--post__title{
+					&::before{
+						content: '\f367';
+						font-family: "Ionicons";
+						display: inline-block;
+						margin-right: 10px;
+						transform: rotate(30deg);
+						color: var(--c-active);
+					}
+				}
+			}
+
+			&__item{
+				background-color: var(--c-light);
+				box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+			}
+			&__media {
+				padding-top: calc(100% / 4 * 3);
+			}
+			&__info-wrap{
+				padding: 30px 30px 38px 30px;
+
+			}
+			&__info-wrap-date a{
+				font-size: 13px;
+				line-height: 1.3;
+				color: rgba(17, 17, 17, 0.7);
+				margin-bottom: 14px;
+				display: inline-block;
+				i{
+					display: inline-block;
+					margin-right: 5px;
+				}
+			}
+			&__title{
+				font-size: 25px;
+				font-weight: bold;
+				line-height: 1.25;
+				color: var(--c-dark);
+				transition: all .3s ease;
+				margin-bottom: 15px;
+				display: inline-block;
+				word-wrap: break-word;
+				max-width: 100%;
+				font-family: "Playfair Display", serif;
+				letter-spacing: 0;
+
+				@include xs-size-max{
+					font-size: 23px;
+				}
+
+				&:hover,
+				&:focus{
+					color: var(--c-active);
+					opacity: 0.6;
+				}
+			}
+			&__text{
+				line-height: 1.86;
+				margin-bottom: 20px;
+				p{
+					margin-bottom: 0;
+					word-wrap: break-word;
+				}
+			}
+			&__author{
+				color: var(--c-dark);
+				display: flex;
+				align-items: center;
+				font-size: 13px;
+				font-weight: bold;
+				img{
+					border-radius: 50%;
+					margin-right: 15px;
+				}
+			}
+		}
+		#{$blog}--pagination{
+			text-align: center;
+			margin-top: 63px;
+			margin-bottom: 23px;
+
+			@include lg-size-max{
+				margin-top: 53px;
+			}
+
+			@include sm-size-max{
+				margin-top: 33px;
+				margin-bottom: 53px;
+			}
+
+			@include xs-size-max{
+				margin-top: 15px;
+				margin-bottom: 23px;
+			}
+
+			.page-numbers{
+				color: var(--c-grey);
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				line-height: 1;
+				margin: 8px;
+				font-size: 1rem;
+				&:hover,
+				&:focus{
+					color: var(--c-active);
+				}
+				&.current{
+					background: var(--c-active);
+					color: var(--c-light);
+					padding: 10px 15px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}

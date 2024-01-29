@@ -1,0 +1,81 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--ninedok_skin-2 {
+    &#{$p}--ninedok {
+      #{$p}__img {
+        position: relative;
+        background-color: #c0c0c0;
+        border-radius: 3px 3px 0px 0px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: var(--c-dark);
+          opacity: 0.5;
+          left: 0px;
+          top: 0px;
+        }
+      }
+      #{$p}__inner {
+        position: relative;
+      }
+      #{$p}__content {
+        position: absolute;
+        padding: 0px 25px 14px;
+        bottom: 0px;
+        left: 0px;
+      }
+      #{$p}__date {
+        padding: 10px 0;
+        font-weight: initial;
+        margin-bottom: 0px;
+        color: var(--c-grey);
+
+        i {
+          display: inline-block;
+          margin-right: 4px;
+          font-size: 1.14em;
+        }
+      }
+      #{$p}__title {
+        padding-top: 0;
+        margin-bottom: 9px;
+
+        a {
+          color: inherit;
+          line-height: inherit;
+          font-size: inherit;
+          font-family: inherit;
+          font-weight: inherit;
+
+          &:hover {
+            color: var(--c-active);
+          }
+
+        }
+      }
+    }
+  }
+
+  &--grid {
+    &#{$p}--ninedok_skin-2 {
+      #{$p}__img {
+        padding-bottom: calc(var(--img-height) * 0.78%);
+      }
+    }
+
+  }
+}
+
+.swiper-slide {
+  .aheto-cpt-article--ninedok_skin-1 {
+    .aheto-cpt-article__inner {
+      box-shadow: 0 5px 18px 0 rgba(53, 82, 99, .09);
+    }
+  }
+}

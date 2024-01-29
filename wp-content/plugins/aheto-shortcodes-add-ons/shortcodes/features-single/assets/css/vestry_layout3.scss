@@ -1,0 +1,55 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-features {
+  $features: &;
+
+  &--vestry-modern-with-icon {
+    position: relative;
+    box-shadow: 0 15px 40px 0 rgba(var(--ca-dark), .1);
+    text-align: center;
+
+    #{$features}-block {
+      &__image {
+        width: 100%;
+        padding-bottom: 67%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &__content {
+        position: relative;
+        padding: 65px 40px 40px;
+        background-color: var(--c-light);
+      }
+      &__icon-box {
+        width: 90px;
+        height: 90px;
+        box-shadow: 0 5px 20px 0 rgba(var(--ca-active), 0.8);
+        background-color: var(--c-active);
+        border-radius: 50%;
+        position: absolute;
+        left: 40px;
+        top: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__icon {
+        width: 80%;
+        height: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &__title {
+        text-align: left;
+        margin-bottom: 12px;
+      }
+
+      &__info-text {
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

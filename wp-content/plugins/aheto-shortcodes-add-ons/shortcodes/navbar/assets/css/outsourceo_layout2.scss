@@ -1,0 +1,150 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-navbar {
+	$navbar: &;
+	&--outsourceo-additional {
+
+		#{$navbar}--inner {
+			text-align: center;
+
+			&.aheto-navbar--fixed {
+				@media only screen and (min-width: 1025px) {
+					position: fixed;
+					left: 0;
+					width: 100%;
+					background-color: var(--c-light);
+					z-index: 100;
+					box-shadow: 0 25px 50px 0 rgba(var(--ca-dark), .05);
+
+					#{$navbar}--outsourceo-menu-additional.transparent_white,
+					#{$navbar}--outsourceo-menu-additional {
+						ul li {
+							a {
+								color: var(--c-dark);
+							}
+							&:hover {
+								& > a {
+									color: var(--c-active);
+									&::before {
+										width: 100%;
+										left: 0;
+										right: auto;
+									}
+								}
+							}
+							&.current-menu-item,
+							&.current-menu-parent {
+								& > a {
+									color: var(--c-active);
+									&::before {
+										width: 100%;
+										left: 0;
+										right: auto;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#{$navbar}--outsourceo-menu-additional {
+			ul {
+				text-align: center;
+				margin-bottom: 0;
+				@include xs-size-max {
+					padding: 3px 0;
+				}
+				li {
+					display: inline-block;
+					padding: 21px 25px 21px;
+					@media only screen and (max-width: 1024px) {
+						padding: 21px 15px 21px;
+					}
+					@include xs-size-max {
+						padding: 3px 15px;
+					}
+
+					a {
+						display: inline-block;
+						color: var(--c-dark);
+						text-decoration: none;
+						transition: all .3s ease;
+						position: relative;
+
+						&::before {
+							content: '';
+							display: block;
+							height: 4px;
+							width: 0;
+							background: var(--c-active);
+							position: absolute;
+							top: -22px;
+							right: 0;
+							transition: width .5s cubic-bezier(.25, .8, .25, 1) 0s;
+							@include xs-size-max {
+								top: -7px;
+							}
+						}
+					}
+
+					&:hover {
+						& > a {
+							color: var(--c-active);
+							&::before {
+								width: 100%;
+								left: 0;
+								right: auto;
+							}
+						}
+					}
+					&.current-menu-item,
+					&.current-menu-parent {
+						& > a {
+							color: var(--c-active);
+							&::before {
+								width: 100%;
+								left: 0;
+								right: auto;
+							}
+						}
+					}
+
+				}
+			}
+
+			&.transparent_white {
+				ul {
+					li {
+						a {
+							color: var(--c-light);
+						}
+						&:hover {
+							& > a {
+								color: var(--c-active);
+								&::before {
+									width: 100%;
+									left: 0;
+									right: auto;
+								}
+							}
+						}
+
+						&.current-menu-item,
+						&.current-menu-parent {
+							& > a {
+								color: var(--c-active);
+								&::before {
+									width: 100%;
+									left: 0;
+									right: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

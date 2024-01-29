@@ -1,0 +1,54 @@
+@import '../../../../assets/css/mixin';
+
+
+.widget_aheto {
+  $contact: &;
+
+  &__contact_info--funero-simple {
+
+    #{$contact}__infos{
+      a {
+        display: table;
+        word-break: break-all;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+
+      a, p {
+        padding-left: 35px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: 'Ionicons';
+          font-size: 1.3em;
+          color: inherit;
+        }
+
+        &#{$contact}__link-mail {
+          &:before {
+            content: '\f2eb';
+          }
+        }
+
+        &#{$contact}__link-phone {
+          &:before {
+            content: '\f4b9';
+          }
+        }
+      }
+
+      p {
+        &:before {
+          content: '\f456';
+        }
+      }
+    }
+  }
+}

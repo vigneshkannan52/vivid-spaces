@@ -1,0 +1,117 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt-article {
+	$p: &;
+	&--hryzantema_skin-1 {
+		--img-height: 69.5;
+
+
+		&.hide-thumb {
+			& {
+				margin-bottom: 20px;
+			}
+			#{$p}__img {
+				display: none;
+			}
+			#{$p}__title {
+				margin-bottom: 27px;
+			}
+			#{$p}__excerpt {
+				margin-bottom: 0;
+				p {
+					line-height: inherit;
+				}
+			}
+			#{$p}__author-meta {
+				margin-top: 20px;
+			}
+		}
+
+
+		#{$p}__img {
+			padding-top: calc(var(--img-height) * 1%);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+		  #{$p}__title {
+			padding-top: 0;
+			margin-bottom: 7px;
+
+
+			a {
+			  color: inherit;
+			  line-height: inherit;
+			  font-size: inherit;
+			  font-family: inherit;
+				font-weight: inherit;
+              font-style: inherit;
+			  &:hover {
+				opacity: 0.7;
+			  }
+			}
+		  }
+
+		  p {
+			margin-bottom: 0px;
+		  }
+
+		#{$p}__inner {
+			background-color: var(--c-light);
+			box-shadow: 0 10px 15px 0 rgba(var(--ca-dark), 0.09);
+			position: relative;
+			transition: 0.3s box-shadow;
+			height: 100%;
+			&:hover {
+				box-shadow: 0px 10px 15px 0 rgba(var(--ca-dark), 0.1);
+			}
+		}
+
+		  #{$p}__content {
+			padding: 35px 28px 35px;
+			img {
+			  border-radius: 50%;
+			  margin-right: 12px;
+			}
+			  @include xs-size-max {
+				  padding: 24px 28px 15px;
+			  }
+		  }
+
+		  #{$p}__author-meta {
+			  color: var(--c-dark);
+			  margin-top: 10px;
+		  }
+
+		  #{$p}__date {
+			margin-bottom: 19px;
+			  color: rgba(var(--c-dark), 0.5);
+			  i {
+				  font-style: inherit;
+				  margin-right: 7px;
+				  font-size: 1rem;
+			  }
+		  }
+
+		  #{$p}__cats {
+			position: absolute;
+			top: 30px;
+			left: 30px;
+
+			a {
+			  background-color: var(--c-active);
+			  color: var(--c-light);
+			  display: inline-block;
+			  border-radius: 3px;
+			  padding: 0 10px;
+			  margin-right: 3px;
+
+			  &:hover {
+				background-color: var(--c-dark);
+				color: var(--c-light);
+			  }
+			}
+		  }
+	}
+}

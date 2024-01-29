@@ -1,0 +1,73 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials {
+	$socials: &;
+
+	&--networks-moovit-modern {
+
+		#{$socials}-container{
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: -10px;
+			margin-left: -10px;
+			width: calc(100% + 20px);
+
+			&.justify-align {
+				justify-content: space-between;
+			}
+			&.center-align {
+				justify-content: center;
+			}
+			&.left-align {
+				justify-content: flex-start;
+			}
+			&.right-align {
+				justify-content: flex-end;
+			}
+
+			@include xs-size-max {
+				&.justify-align-mob {
+					justify-content: space-between;
+				}
+				&.center-align-mob {
+					justify-content: center;
+				}
+				&.left-align-mob {
+					justify-content: flex-start;
+				}
+				&.right-align-mob {
+					justify-content: flex-end;
+				}
+			}
+
+		}
+
+		#{$socials}__link {
+			display: inline-block;
+			margin: 10px;
+			color: var(--c-dark);
+			&:hover {
+				color: var(--c-active);
+			}
+
+			@include xs_size-max{
+				margin: 5px 10px;
+			}
+		}
+
+		#{$socials}__icon {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		&.light-version{
+			#{$socials}__link {
+				color: var(--c-light);
+				&:hover {
+					color: var(--c-active);
+				}
+			}
+		}
+
+	}
+}

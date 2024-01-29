@@ -1,0 +1,56 @@
+/**
+ * Spacer styles
+ * Loads on front end and back end
+ */
+
+ .qb-block-spacer {
+	margin: 0 0 1.2em 0;
+	position: relative;
+
+	hr {
+		border: none;
+		margin: 0;
+	}
+
+	&.qb-spacer-divider:after {
+		content: " ";
+		width: 100%;
+		height: 1px;
+		border-top: solid 1px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
+
+	&.qb-divider-solid.qb-spacer-divider:after {
+		border-top-style: solid;
+	}
+
+	&.qb-divider-dotted.qb-spacer-divider:after {
+		border-top-style: dotted;
+	}
+
+	&.qb-divider-dashed.qb-spacer-divider:after {
+		border-top-style: dashed;
+	}
+
+	&.qb-divider-size-1.qb-spacer-divider:after {
+		border-top-width: 1px;
+	}
+
+	&.qb-divider-size-2.qb-spacer-divider:after {
+		border-top-width: 2px;
+	}
+
+	&.qb-divider-size-3.qb-spacer-divider:after {
+		border-top-width: 3px;
+	}
+
+	&.qb-divider-size-4.qb-spacer-divider:after {
+		border-top-width: 4px;
+	}
+
+	&.qb-divider-size-5.qb-spacer-divider:after {
+		border-top-width: 5px;
+	}
+}

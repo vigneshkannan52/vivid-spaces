@@ -1,0 +1,63 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-progress {
+  $counter: &;
+
+  &--hr-inline{
+
+    #{$counter}__title {
+      margin: 5px 0 10px;
+    }
+
+    #{$counter}__bar {
+      position: relative;
+      height: 5px;
+      margin-top: 15px;
+      background-color: rgba(var(--ca-grey), 0.2);
+      &.active{
+        #{$counter}__bar-perc {
+          opacity: 1;
+        }
+      }
+    }
+
+    #{$counter}__bar-holder {
+      position: absolute;
+      top: -25px;
+      transform: translate(-50%, 0);
+    }
+
+    #{$counter}__bar-perc {
+      position: absolute;
+      top: 46%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease;
+      transition-delay: .8s;
+      &::after{
+        content: '%';
+      }
+    }
+
+    #{$counter}__bar-val {
+      width: 0;
+      height: 100%;
+      background-color: var(--c-active);
+      position: relative;
+      &::before{
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-color: var(--c-active);
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+    }
+
+  }
+
+}

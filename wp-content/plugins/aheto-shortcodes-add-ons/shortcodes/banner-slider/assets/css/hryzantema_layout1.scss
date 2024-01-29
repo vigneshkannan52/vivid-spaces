@@ -1,0 +1,106 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+
+	&--hr-modern {
+
+		#{$banner_slider}-wrap {
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		#{$banner_slider}__content {
+			max-width: 1040px;
+			padding: 140px 15px;
+			@include lg-size-max {
+				padding: 260px 15px 140px;
+			}
+			@include md-size-max {
+				padding: 140px 15px;
+			}
+
+		}
+
+		.aheto-banner__title {
+			color: var(--c-light);
+			span {
+				color: var(--c-active);
+			}
+		}
+
+		#{$banner_slider}__add-image {
+			margin-bottom: 30px;
+		}
+		#{$banner_slider}__subtitle {
+			color: var(--c-light);
+			margin-bottom: 30px;
+		}
+		#{$banner_slider}__desc {
+			color: var(--c-light);
+			opacity: .7;
+			margin-top: 25px;
+		}
+
+		#{$banner_slider}__links {
+			margin-top: 38px;
+			a{
+				margin: 5px 12px;
+			}
+
+		}
+		div.swiper-pagination{
+			position: absolute;
+			bottom: 56px;
+			left: 0;
+			width: 100%;
+			@include xs-size-max {
+				bottom: 75px;
+			}
+
+
+			.swiper-pagination-bullet{
+				width: 65px;
+				height: 5px;
+				margin: 2px 12px;
+				background-color: var(--c-light);
+				border-radius: 0;
+				border: none;
+
+				&-active{
+					background-color: var(--c-active);
+				}
+			}
+
+		}
+		.swiper-button {
+			&-prev, &-next {
+				background-color: var(--c-light);
+				color: var(--c-dark);
+				width: 47px;
+				height: 47px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				&::before {
+					display: block;
+				}
+				@include sm-size-max {
+					display: none;
+				}
+			}
+			&-prev {
+				left: 50px;
+			}
+			&-next {
+				right: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-contents {
+    $contents: &;
+
+    &--noize-isotope {
+        #{$contents}__content {
+            column-count: 2;
+            column-gap: 15px;
+            overflow: hidden;
+            height: auto !important;
+
+            @include xs-size-max {
+                column-count: 1;
+            }
+        }
+
+        #{$contents}__item-content.is-open {
+            #{$contents}__title-content {
+                color: var(--c-active);
+
+                &::before {
+                    color: var(--c-active);
+                }
+            }
+        }
+
+        #{$contents}__item-content {
+            position: static !important;
+            break-inside: avoid;
+            background-color: rgba(var(--ca-dark), .08);
+            margin-bottom: 15px;
+            padding: 35.5px 35px;
+            transform: none !important;
+
+            @include xs-size-max {
+                width: 100%;
+                padding: 31.5px 15px;
+            }
+
+            #{$contents}__title-content {
+                position: relative;
+                vertical-align: middle;
+                margin-bottom: 0;
+                transition: all .2s ease;
+                color: var(--c-active);
+
+                @include xs-size-max {
+                    word-break: break-word;
+                    padding-right: 10px;
+                }
+
+                span {
+                    vertical-align: middle;
+                    color: var(--c-active);
+                    font-size: 0.87rem;
+                    margin-left: 10px;
+                    font-weight: initial;
+                }
+
+            }
+
+            #{$contents}__panel-content {
+                position: relative;
+            }
+
+            #{$contents}__desc-content {
+                margin-top: 20px;
+                margin-bottom: 0;
+                color: var(--c-dark);
+            }
+        }
+
+        #{$contents}__list {
+            background-color: rgba(var(--ca-dark), .13);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            @include xs-size-max {
+                flex-direction: column;
+                align-items: center;
+                display: block;
+                text-align: center;
+                padding: 15px;
+            }
+
+            &-item {
+                margin-right: 50px;
+                padding-top: 17.5px;
+                padding-bottom: 17.5px;
+                position: relative;
+
+                @include xs-size-max {
+                    margin-right: 0;
+                    display: inline-block;
+                    padding: 5px 15px;
+                }
+
+                &.active {
+                    a {
+                        color: var(--c-active) !important;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: var(--c-active);
+
+                        @include xs-size-max {
+                            display: none;
+                        }
+                    }
+                }
+
+                a {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

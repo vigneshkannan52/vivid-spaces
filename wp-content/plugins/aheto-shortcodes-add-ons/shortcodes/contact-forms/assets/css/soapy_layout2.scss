@@ -1,0 +1,96 @@
+@import '../../../../assets/css/mixin';
+
+.widget_aheto__cf {
+  $p: &;
+
+  &--soapy-line-form {
+    .widget_aheto__form {
+      border: none !important;
+    }
+
+    p {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
+
+      span {
+        font: inherit;
+        color: inherit;
+        max-width: calc(100% - 190px);
+        @media (max-width: 575px) {
+          max-width: 100%;
+        }
+
+      }
+
+      .wpcf7-form-control-wrap {
+        display: flex;
+        position: relative;
+        flex: 1;
+      }
+
+      input:not([type="submit"]) {
+        padding: 15px 20px;
+        border: solid 1px var(--c-alter2);
+        max-width: 100%;
+        box-shadow: none;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        color: var(--c-alter);
+        border-radius: 0;
+        font: inherit;
+        -webkit-appearance: none;
+        @media (max-width: 575px) {
+          width: 100%;
+        }
+        &::placeholder {
+          color: rgba(var(--ca-alter), .7);
+        }
+      }
+
+      input[type="submit"] {
+        transition: 0.5s;
+        color: var(--c-light);
+        padding: 13px 55px;
+        margin-left: 15px;
+        text-align: center;
+        @include sm-size-max{
+          padding: 13px 40px;
+        }
+        @media (max-width: 575px) {
+          margin-left: auto;
+          margin-right: auto;
+          display: table;
+        }
+        &:hover {
+          color: var(--c-alter);
+        }
+      }
+
+      .wpcf7-not-valid-tip {
+        position: absolute;
+        font-size: 0 !important;
+        padding: 0;
+        right: 15px;
+        top: 5px;
+
+      }
+
+      .ajax-loader {
+        display: none;
+      }
+    }
+
+    div.wpcf7-response-output {
+      padding: 10px;
+      margin: 15px 0 0;
+      color: var(--c-grey);
+      font-size: 75%;
+    }
+  }
+}

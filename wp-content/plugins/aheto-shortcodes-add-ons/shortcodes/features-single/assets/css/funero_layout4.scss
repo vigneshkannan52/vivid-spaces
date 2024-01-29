@@ -1,0 +1,124 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block {
+  $f: &;
+
+  &--funero-big{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    @include xs-size-max{
+      max-width: 400px;
+    }
+
+    #{$f}__image-wrap {
+      width: 100%;
+      padding-bottom: 78%;
+      background-size: cover;
+      background-position: center;
+      transition: 0.5s;
+      @include xs-size-max{
+        margin: 0;
+      }
+    }
+
+    #{$f}__text-wrap {
+      width: 100%;
+      position: relative;
+      background-color: var(--c-alter2);
+      padding: 40px 50px;
+      border: 1px solid var(--c-alter);
+      border-top: none;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      @include md-size-max{
+        padding: 40px 20px;
+      }
+    }
+    #{$f}__desc {
+      margin-bottom: 14px;
+    }
+
+    #{$f}__title {
+      margin-bottom: 10px;
+    }
+    #{$f}__subtitle {
+      margin-bottom: 17px;
+    }
+    #{$f}__link {
+      color: var(--c-alter);
+      padding-left: 30px;
+      position: relative;
+      margin: auto auto 0;
+      display: table;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 23px;
+        height: 1px;
+        background-color: var(--c-alter);
+        left: 0;
+        top: 50%;
+        transition: 0.3s
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: var(--c-alter);
+        right: 0;
+        top: 50%;
+        transition: 0.3s
+      }
+      &:hover{
+        color: var(--c-active)!important;
+        padding: 0 30px 0 0;
+        &:before{
+          background-color: var(--c-active);
+          width: 0;
+        }
+        &:after{
+          background-color: var(--c-active);
+          width: 23px;
+        }
+      }
+    }
+    #{$f}__border {
+      width: 46px;
+      height: 40px;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      z-index: 0;
+
+      @include xs-size-max{
+        width: 38px;
+        height: 32px;
+      }
+      &-tl{
+        top: 0;
+        left: 0;
+      }
+      &-tr{
+        top: 0;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+      &-bl{
+        bottom: 0;
+        left: 0;
+        transform: rotateX(180deg);
+      }
+      &-br{
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

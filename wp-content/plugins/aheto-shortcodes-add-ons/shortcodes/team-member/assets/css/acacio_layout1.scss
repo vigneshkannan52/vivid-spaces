@@ -1,0 +1,28 @@
+.aheto-team-member {
+    $member: &;
+
+    &--acacio-simple {
+        box-shadow: 0px 10px 50px 0 rgba(var(--ca-active), 0.09);
+        background-color: var(--c-light);
+        #{$member}__text {
+            padding-top: 29px;
+            padding-left: 26px;
+            padding-bottom: 12px;
+        }
+        #{$member}__img {
+            width: 100%;
+            object-fit: cover;
+        }
+        #{$member}__name {
+            margin-bottom: 5px;
+        }
+
+        &.custom-border {
+            border-bottom: 9px solid var(--c-light);
+            transition: border-color .3s ease;
+            #{$member}__text {
+                padding-bottom: 3px;
+            }
+        }
+    }
+}

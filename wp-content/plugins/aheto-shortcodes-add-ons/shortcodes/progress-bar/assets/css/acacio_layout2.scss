@@ -1,0 +1,43 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-counter {
+  $counter: &;
+  position: relative;
+  text-align: center;
+
+  &__number {
+	margin: 0;
+  }
+
+  &--acacio-classic {
+        position: relative;
+        #{$counter} {
+        &__number {
+
+
+            margin-top: 13px;
+            color: var(--c-active);
+            font-family: var(--t-secondary-font-family);
+            @include lg-size-max {
+
+                margin-top: 9px;
+            }
+
+            @include md-size-max {
+
+                margin-top: 7px;
+            }
+
+        }
+        &__heading {
+            position: absolute;
+            top: 50%;
+            margin-bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        }
+  }
+
+}

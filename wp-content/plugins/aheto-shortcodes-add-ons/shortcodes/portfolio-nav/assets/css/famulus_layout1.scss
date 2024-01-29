@@ -1,0 +1,133 @@
+@import '../../../../assets/css/mixin';
+
+.portfolio-nav--famulus-modern  {
+  .portfolio-nav {
+    $portfolio: &;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.empty-prev {
+      justify-content: flex-end;
+
+      .portfolio-nav__list {
+        display: none;
+      }
+    }
+
+    &.empty-next {
+      justify-content: flex-start;
+
+      .portfolio-nav__list {
+        display: none;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        .portfolio-nav__dir-title {
+          color: var(--c-active);
+        }
+
+        .portfolio-nav__dir-image {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &__dir {
+      &-image {
+        max-width: 120px;
+        flex: 0 0 120px;
+        height: 80px;
+        transition: all 0.35s;
+
+        @include md-size-max {
+          max-width: 80px;
+          flex: 0 0 80px;
+          height: 60px;
+        }
+
+        @include sm-size-max {
+          display: none;
+        }
+      }
+
+      &-title {
+        margin-bottom: 0;
+        color: var(--c-alter);
+        max-width: 175px;
+
+        p {
+          margin-bottom: 0;
+          color: var(--c-dark2);
+        }
+      }
+
+      &--prev {
+        width: 42%;
+        padding-right: 10px;
+
+        .portfolio-nav__link {
+          justify-content: flex-start;
+        }
+
+        .portfolio-nav__dir-image {
+          margin-right: 30px;
+
+          @include md-size-max {
+            margin-right: 15px;
+          }
+        }
+
+      }
+
+      &--next {
+        width: 42%;
+        padding-left: 10px;
+
+        .portfolio-nav__link {
+          justify-content: flex-end;
+        }
+
+        .portfolio-nav__dir-image {
+          margin-left: 30px;
+
+          @include md-size-max {
+            margin-left: 15px;
+          }
+        }
+
+        .portfolio-nav__dir-title {
+          text-align: right;
+          transition: 0.35s;
+        }
+
+        .portfolio-nav__link {
+          justify-content: flex-end;
+        }
+
+      }
+
+    }
+
+    &__list {
+      width: 16%;
+      color: var(--c-alter);
+
+      a {
+        color: inherit;
+      }
+
+      i {
+        font-size: 1.7em;
+      }
+    }
+
+  }
+}
+

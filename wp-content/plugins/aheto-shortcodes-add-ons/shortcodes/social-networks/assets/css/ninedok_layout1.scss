@@ -1,0 +1,83 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials {
+  $socials: &;
+
+  &--networks-ninedok-modern {
+
+    #{$socials}-container {
+      display: flex;
+      flex-wrap: wrap;
+      &.justify-align {
+        justify-content: space-between;
+      }
+      &.center-align {
+        justify-content: center;
+      }
+      &.left-align {
+        justify-content: flex-start;
+      }
+      &.right-align {
+        justify-content: flex-end;
+      }
+      @media screen and (max-width: 1024px) {
+        width: unset;
+        &.justify-align-tablet {
+          justify-content: space-between;
+        }
+        &.center-align-tablet {
+          justify-content: center;
+        }
+        &.left-align-tablet {
+          justify-content: flex-start;
+        }
+        &.right-align-tablet {
+          justify-content: flex-end;
+        }
+      }
+      @include xs-size-max {
+        width: unset;
+        &.justify-align-mob {
+          justify-content: space-between;
+        }
+        &.center-align-mob {
+          justify-content: center;
+        }
+        &.left-align-mob {
+          justify-content: flex-start;
+        }
+        &.right-align-mob {
+          justify-content: flex-end;
+        }
+      }
+
+    }
+
+    #{$socials}__link {
+      display: inline-block;
+      margin: 10px 25px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      @include xs_size-max {
+        margin: 5px 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    #{$socials}__icon {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+  }
+}

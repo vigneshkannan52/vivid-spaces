@@ -1,0 +1,13 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+  $heading: &;
+
+  &--rela__simple {
+    #{$heading}__title {
+      span {
+        color: var(--c-active);
+      }
+    }
+  }
+}

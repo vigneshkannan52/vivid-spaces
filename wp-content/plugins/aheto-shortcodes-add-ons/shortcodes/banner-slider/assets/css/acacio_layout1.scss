@@ -1,0 +1,133 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+     $banner_slider: &;
+
+     &--acacio-modern {
+
+          #{$banner_slider}-wrap {
+               min-height: 100vh;
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background-position: center center;
+               background-size: cover;
+               @include xs-size-max {
+                    min-height: 400px;
+               }
+          }
+
+          #{$banner_slider}__content {
+               max-width: 1040px;
+               width: 100%;
+               padding: 140px 15px;
+               @include xs-size-max {
+                    padding: 40px 15px;
+               }
+          }
+
+          .aheto-banner__title {
+               color: var(--c-light);
+
+               span {
+                    font-family: var(--t-secondary-font-family);
+               }
+          }
+
+          #{$banner_slider}__add-image {
+               margin-bottom: 30px;
+          }
+
+          #{$banner_slider}__desc {
+               color: var(--c-light);
+               opacity: .7;
+               font-weight: initial;
+               margin-top: 25px;
+          }
+
+          #{$banner_slider}__links {
+               margin-top: 38px;
+
+               a {
+                    margin: 5px 12px;
+               }
+
+          }
+
+          div.swiper-pagination {
+               position: absolute;
+               bottom: 56px;
+               left: 0;
+               width: 100%;
+
+               .swiper-pagination-bullet {
+                    width: 60px;
+                    height: 4px;
+                    margin: 2px 14px;
+                    background-color: var(--c-light);
+                    border-radius: 0;
+                    border: none;
+
+                    &-active {
+                         background-color: var(--c-active);
+                    }
+               }
+
+          }
+
+          &.hide-pagination {
+               .swiper-pagination {
+                    @include sm-size-min {
+                         display: none;
+                    }
+                    @include sm-size-max {
+                         &-bullets {
+                              margin-top: 30px;
+                         }
+                         &-bullet {
+                              background-color: var(--c-light);
+                              opacity: 0.6;
+
+                              &-active {
+                                   opacity: 1;
+                              }
+                         }
+                    }
+               }
+          }
+
+          .swiper-button {
+               &-prev, &-next {
+                    background-color: var(--c-light);
+                    color: var(--c-active);
+                    width: 47px;
+                    height: 47px;
+                    line-height: 3rem;
+                    border-radius: 50%;
+
+                    &::before {
+                         display: block;
+                         text-align: center;
+                         font-size: initial;
+                    }
+
+                    @include sm-size-max {
+                         display: block;
+                    }
+                    @include xs-size-max {
+                         display: none;
+                    }
+               }
+
+               &-prev {
+                    left: 50px;
+               }
+
+               &-next {
+                    right: 50px;
+               }
+          }
+     }
+}

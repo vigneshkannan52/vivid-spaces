@@ -1,0 +1,73 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+	$p: &;
+
+	&--snapster-faq {
+		#{$p}__title {
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+			user-select: none;
+			font-weight: normal;
+		}
+
+		#{$p}__item {
+			background-color: var(--c-light);
+            border: 1px solid rgba(var(--ca-grey), .4);
+			padding: 31px 52px 39px 36px;
+			margin-bottom: 16px;
+			position: relative;
+			@include xs-size-max {
+				padding: 30px 50px 30px 20px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			i {
+				position: absolute;
+				top: 34px;
+				right: 30px;
+				line-height: 1;
+				font-size: 1.25em;
+				font-style: inherit;
+				color: var(--c-active);
+				@include xs-size-max {
+					top: 30px;
+					right: 16px;
+				}
+			}
+
+
+			&.is-open {
+				i {
+					&::before {
+						content: '\32';
+					}
+				}
+
+				#{$p}__title {
+					color: var(--c-active);
+				}
+			}
+		}
+
+		#{$p}__panel {
+			display: none;
+		}
+
+		#{$p}__desc {
+			margin: 19px 0 0;
+
+			@media screen and (max-width: 768px) {
+				margin: 15px 0;
+			}
+		}
+	}
+}

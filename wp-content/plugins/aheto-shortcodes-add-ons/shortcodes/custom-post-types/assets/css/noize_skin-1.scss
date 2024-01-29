@@ -1,0 +1,51 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+    $article: &;
+
+    &__img-link {
+        transition: none!important;
+    }
+
+    &--noize_skin-1 {
+        #{$article}__inner {
+            background-color: var(--c-light);
+            position: relative;
+            height: 100%;
+            box-shadow: 0px 10px 50px 0 rgba(var(--ca-dark), 0.06);
+
+            #{$article}__img {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #{$article}__content {
+                position: absolute;
+                bottom: 0;
+                padding: 28px 27px 41px;
+
+                @include xs-size-max {
+                    padding: 27px 20px 27px;
+                }
+
+                #{$article}__title {
+                    padding-top: 0;
+                    
+                    a {
+                        color: inherit;
+                        line-height: inherit;
+                        font-size: inherit;
+                        font-family: inherit;
+                        font-weight: inherit;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            color: var(--c-active);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

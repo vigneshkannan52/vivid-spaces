@@ -1,0 +1,64 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block {
+  $f: &;
+
+  &--funero-simple {
+    #{$f}__wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      height: 365px;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top,  var(--c-alter)  0%,  var(--c-alter)  22%, var(--c-light)  92%, var(--c-light)  100%);
+        opacity: 0.52;
+        z-index: 0;
+      }
+    }
+
+    #{$f}__shape {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 70px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: 1;
+
+      h2 {
+        color: transparent;
+        -webkit-text-stroke-color: var(--c-active);
+        -webkit-text-stroke-width: 2px;
+        @include xs-size-max{
+          -webkit-text-stroke-width: 1px;
+        }
+      }
+    }
+
+    #{$f}__subtitle {
+      z-index: 2;
+      margin-bottom: 25px;
+    }
+
+    #{$f}__title {
+      z-index: 2;
+      margin-bottom: 0;
+    }
+  }
+}

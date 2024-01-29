@@ -1,0 +1,101 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact-info {
+    $contact-info: &;
+
+    &--noize-lay1 {
+        position: relative;
+        margin-right: 0;
+        margin-left: auto;
+        max-width: 700px;
+
+        @include xs-size-max {
+            justify-content: center;
+            position: relative;
+            display: grid;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        #{$contact-info}__item {
+            display: inline-flex;
+            max-width: 305px;
+            min-width: 305px;
+            margin-right: 40px;
+            margin-top: 60px;
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+
+            &:nth-child(2) {
+                margin-top: 0;
+
+                @include md-size-max {
+                    margin-top: 35px;
+                }
+
+                @include xs-size-max {
+                    margin-top: 35px;
+                }
+            }
+
+            #{$contact-info}__block-image {
+                margin-right: 25px;
+                width: 61px;
+                text-align: center;
+
+                @include md-size-max {
+                    margin-right: 15px;
+                }
+            }
+
+            @media (max-width: 1370px) {
+                min-width: unset;
+            }
+
+            @include md-size-max {
+                margin-right: 20px;
+            }
+
+            @include xs-size-max {
+                margin-right: 0px;
+                margin-top: 35px;
+            }
+        }
+
+        #{$contact-info}__info {
+            #{$contact-info}__title {
+                margin-bottom: 20px;
+
+                @include xs-size-max {
+                    margin-bottom: 10px;
+                }
+            }
+
+            #{$contact-info}__address {
+                display: block;
+            }
+
+            #{$contact-info}__telephone {
+                display: block;
+
+                &:hover {
+                    color: var(--c-active);
+                }
+            }
+
+            #{$contact-info}__hour {
+                display: block;
+            }
+
+            #{$contact-info}__email {
+                display: block;
+
+                &:hover {
+                    color: var(--c-active);
+                }
+            }
+        }
+    }
+}

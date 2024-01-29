@@ -1,0 +1,113 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-progress {
+    $counter: &;
+
+    &--famulus-simple {
+        #{$counter}__title {
+            margin: 10px 0;
+        }
+
+        #{$counter}__chart-holder {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            max-width: 350px;
+        }
+
+        #{$counter}__chart-bg {
+            stroke-width: 2;
+        }
+
+        #{$counter}__chart-circle {
+            transform: rotate(-90deg);
+            stroke-width: 2;
+            transform-origin: center;
+            stroke: var(--c-active);
+
+            // Animation
+            &.active {
+                animation: circle-chart-fill 2.5s reverse;
+            }
+        }
+
+        #{$counter}__chart-symbol {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 52%;
+            top: 48%;
+            color: var(--c-alter);
+            display: flex;
+            align-items: baseline;
+        }
+
+        #{$counter}__chart {
+            width: 80%;
+            height: 80%;
+            position: relative;
+            @keyframes circle-chart-fill {
+                to {
+                    stroke-dasharray: 0 100;
+                }
+            }
+        }
+
+        #{$counter}__chart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--c-active);
+        }
+
+        #{$counter}__chart-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &--chart {
+            padding: 0 10px;
+            max-width: 300px;
+            margin: 0 auto;
+            @include md-size-max {
+                padding: 0;
+            }
+
+            #{$counter} {
+
+                &__title {
+                    margin-top: 25px;
+                    color: var(--c-alter);
+                }
+
+                &__desc {
+                    margin-top: 15px;
+                    color: rgba(var(--ca-alter), 0.77);
+                }
+            }
+        }
+    }
+}
+
+.aheto-progress--famulus-simple.aheto-progress__white-text {
+    color: var(--c-light);
+
+    .aheto-progress__title {
+        color: var(--c-light);
+    }
+
+    .aheto-progress__desc {
+        color: rgba(var(--ca-light), 0.77);
+    }
+
+    .aheto-progress__chart-symbol {
+        color: var(--c-light);
+    }
+}
+
+
+

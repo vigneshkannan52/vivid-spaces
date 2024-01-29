@@ -1,0 +1,81 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--acacio_skin-2 {
+	--img-height: 69.5;
+
+	#{$p}__inner {
+	  position: relative;
+	  overflow: hidden;
+
+	  &::after {
+		display: block;
+		position: absolute;
+		bottom: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+		transition: all .5s ease-in-out;
+		content: '';
+        background-color: rgba(var(--ca-alter), 0.45);
+	  }
+		&:hover {
+			&::after {
+				content: '';
+				background-color: rgba(var(--ca-alter), 0.65);
+			}
+		}
+	}
+
+	#{$p}__content {
+	  padding: 9%;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  z-index: 2;
+	  pointer-events: none;
+	}
+
+	#{$p}__link {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  transition: all 0.5s ease-in-out;
+	  opacity: 1;
+	  z-index: 1;
+	}
+
+	#{$p}__title {
+	  margin: 0;
+
+      a {
+        color: var(--c-light);
+	    word-break: break-word;
+      }
+
+
+	  em,
+	  b {
+		color: inherit;
+	  }
+	}
+
+	#{$p}__term {
+	  margin-top: 12px;
+      margin-bottom: 0;
+	  color: var(--c-light);
+	}
+	  #{$p}__img {
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  padding-top: calc(var(--img-height) * 1%);
+	  }
+  }
+}

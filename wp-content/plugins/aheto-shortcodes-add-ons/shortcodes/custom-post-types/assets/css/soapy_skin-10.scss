@@ -1,0 +1,206 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--soapy_skin-10 {
+    height: 540px;
+    position: relative;
+
+    &:hover {
+      #{$p}__links {
+        opacity: 1;
+        visibility: visible;
+        max-height: 50px;
+      }
+
+      #{$p}__img {
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 0;
+          border: 10px solid;
+          background: transparent;
+          border-image-source: linear-gradient(155deg, transparent, var(--c-active));
+          border-image-slice: 1;
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      #{$p}__content {
+        background-color: transparent;
+        &::after {
+          opacity: 0;
+        }
+      }
+      #{$p}__date {
+        color: var(--c-active);
+      }
+
+    }
+
+    #{$p}__img {
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-size: cover;
+      background-position: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        transition: 0.3s;
+        background: linear-gradient(to top, var(--c-active), transparent);
+      }
+
+      &::before {
+        opacity: 0;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        transition: 0.5s;
+        background: linear-gradient(to top, var(--c-light) 35%, transparent);
+      }
+    }
+
+    #{$p}__inner {
+      height: 100%;
+      position: relative;
+      box-shadow: 0px 10px 50px 0 rgba(var(--ca-dark), 0.09);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      z-index: 2;
+    }
+
+
+    #{$p}__title {
+      margin-bottom: 5px;
+      position: relative;
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+        position: relative;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+
+    #{$p}__date {
+      font-family: var(--t-tertiary-font-family);
+      color: var(--c-light);
+      padding: 0 45px;
+      position: relative;
+      transition: 0.5s;
+      margin-bottom: 30px;
+
+      @include sm-size-max {
+        padding: 0 25px;
+      }
+    }
+
+    #{$p}__excerpt {
+      position: relative;
+
+      p {
+        position: relative;
+        color: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        @include sm-size-max {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    #{$p}__content {
+      background-color: var(--c-light);
+      padding: 15px 40px 30px;
+      position: relative;
+      @include sm-size-max {
+        padding: 10px 25px 15px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: -25px;
+        height: 25px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../assets/images/banner-bottom.png");
+      }
+    }
+
+    #{$p}__links {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0;
+      transition: 0.5s;
+      position: relative;
+
+      a {
+        display: table;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: var(--c-alter);
+        position: relative;
+        padding-right: 45px;
+
+        &::after {
+          position: absolute;
+          right: 0;
+          top: calc(50% - 1px);
+          transform: translate(-50%, -50%);
+          content: '→';
+          transition: 0.5s;
+          margin-left: 5px;
+          font-size: 1.4em;
+        }
+        &.aheto-cpt-article__remove-arrow{
+          &::after{
+            display: none;
+          }
+        }
+
+        &:hover {
+          color: var(--c-active);
+
+          &::after {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+}

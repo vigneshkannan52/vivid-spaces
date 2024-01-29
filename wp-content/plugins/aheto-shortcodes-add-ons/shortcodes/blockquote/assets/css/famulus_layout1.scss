@@ -1,0 +1,40 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-quote {
+  $quote: &;
+
+  &--famulus-simple {
+    border: none ;
+    background-color: var(--c-light);
+    box-shadow: 0 10px 50px 0 rgba(var(--ca-active), 0.09);
+
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      width: 20px;
+      font: 2.4em var(--t-primary-font-family);
+      content: '“';
+      opacity: 1;
+    }
+
+    #{$quote}__author {
+      color: var(--c-alter);
+      margin-bottom: 20px;
+    }
+
+    #{$quote}__date {
+      pointer-events: none;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
+
+
+
+

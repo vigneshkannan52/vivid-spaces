@@ -1,0 +1,96 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-list {
+	$list: &;
+
+	&--outsourceo-table-links {
+		display: table;
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0 15px;
+		@include xs-size-max {
+			display: block;
+			text-align: center;
+		}
+
+		#{$list}--main-row {
+			display: table-row;
+			#{$list}--column {
+				padding: 0 35px 0;
+				color: var(--c-dark);
+				@include sm-size-max {
+					padding: 0 15px 5px;
+				}
+			}
+			@include xs-size-max {
+				display: none;
+			}
+		}
+		#{$list}--row {
+			display: table-row;
+			@include xs-size-max {
+				display: block;
+			}
+			&:not(:last-of-type) {
+				margin-bottom: 15px;
+			}
+			#{$list}--column {
+				padding: 20px 35px 20px;
+				background-color: rgba(var(--ca-dark), .06);
+				vertical-align: middle;
+				color: var(--c-dark);
+				h6 {
+					display: none;
+					@include xs-size-max {
+						display: block;
+						margin-bottom: 5px;
+					}
+				}
+				h5 {
+					margin-bottom: 0;
+				}
+				@include sm-size-max {
+					padding: 10px 15px;
+				}
+				@include xs-size-max {
+					padding: 5px 15px;
+				}
+				&:first-of-type {
+					padding-top: 25px;
+					padding-bottom: 25px;
+					@include xs-size-max {
+						padding-top: 20px;
+						padding-bottom: 5px;
+					}
+					h5{
+						@include xs-size-max {
+							font-size: inherit;
+							font-weight: inherit;
+						}
+					}
+				}
+				&:last-of-type {
+					text-align: right;
+					white-space: nowrap;
+					@include xs-size-max {
+						text-align: center;
+						white-space: initial;
+						padding-bottom: 25px;
+					}
+				}
+				&:not(:first-of-type) {
+					min-width: 140px;
+					@include xs-size-max {
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+		#{$list}--column {
+			display: table-cell;
+			@include xs-size-max {
+				display: block;
+			}
+		}
+	}
+}

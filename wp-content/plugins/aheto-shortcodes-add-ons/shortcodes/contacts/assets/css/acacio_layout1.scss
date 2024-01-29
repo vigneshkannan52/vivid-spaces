@@ -1,0 +1,55 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact {
+  $contact: &;
+  position: relative;
+
+  &--acacio-simple{
+    #{$contact}__type {
+	 margin: 0;
+	 margin-bottom: 30px;
+
+	 @include md-size-max {
+	   margin-bottom: 20px;
+	 }
+    }
+
+    #{$contact}__info {
+	 display: inline-block;
+	 margin-top: 0;
+	 margin-bottom: 20px;
+	 padding-top: 0;
+
+    }
+
+    #{$contact}__link {
+	 display: table;
+	 color: var(--c-dark);
+	 &:hover {
+	   color: var(--c-active)!important;
+	 }
+	 &-holder {
+	   a {
+		line-height: initial;
+		color: var(--c-active);
+		letter-spacing: initial;
+		font-weight: initial;
+		font-size: 120%;
+	   }
+	 }
+    }
+    #{$contact}__socials {
+	 &-link {
+	   margin-right: 20px;
+	   color: var(--c-dark);
+	   &:hover {
+		color: var(--c-active);
+	   }
+	 }
+    }
+
+    #{$contact}__link-dir {
+	 margin-bottom: 0;
+    }
+  }
+}

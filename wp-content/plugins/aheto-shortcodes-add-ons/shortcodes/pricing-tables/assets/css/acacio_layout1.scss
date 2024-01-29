@@ -1,0 +1,57 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing {
+    $pricing: &;
+
+    &--acacio-default {
+        box-shadow: 0px 10px 50px 0 rgba(var(--ca-active), 0.09);
+        border: solid 1px var(--c-light);
+        background-color: var(--c-light);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        transition: all 0.5s;
+        position: relative;
+        z-index: 1;
+        &.active {
+            padding: 74px 81px;
+            position: relative;
+            z-index: 10;
+            transition: all 0.5s;
+            @include sm-size-max {
+                padding: 50px 25px;
+            }
+        }
+
+
+        #{$pricing}__title {
+            text-align: center;
+        }
+        #{$pricing}__content {
+            text-align: center;
+            padding: 0;
+        }
+        #{$pricing}__links {
+            margin-top: 40px;
+            @include xs-size-max {
+                a.aheto-btn {
+                    padding: 18px 68px!important;
+                }
+            }
+        }
+
+        #{$pricing}__cost-time {
+            margin-bottom: 30px;
+        }
+        #{$pricing}__description {
+            @include md-size-max {
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            li {
+                margin: 5px auto;
+            }
+        }
+    }
+
+
+}

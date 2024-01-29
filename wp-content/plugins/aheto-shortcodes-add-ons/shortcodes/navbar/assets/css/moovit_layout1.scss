@@ -1,0 +1,164 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-navbar{
+	$p: &;
+	&--moovit-modern{
+		max-width: 100%;
+		margin: auto;
+
+		&.two-columns{
+			#{$p}--left{
+				width: calc(50% + 48px);
+				@include sm-size-max {
+					width: calc(50% + 28px);
+				}
+				#{$p}--item {
+					&::before{
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						height: 12px;
+						width: 2px;
+						background-color: var(--c-dark);
+						@include xs-size-max {
+							display: none;
+						}
+					}
+					&:first-of-type {
+						&::before{
+							display: none;
+						}
+					}
+				}
+				@include xs-size-max {
+					width: calc(100% + 28px);
+				}
+			}
+		}
+		#{$p}--inner{
+			display: flex;
+			justify-content: space-between;
+			overflow: hidden;
+			@include xs-size-max {
+				flex-direction: column;
+			}
+		}
+		#{$p}--right{
+			width: calc(50% + 48px);
+			justify-content: flex-end;
+
+			@include sm-size-max {
+				width: calc(50% + 28px);
+			}
+
+			@include xs-size-max {
+				width: calc(100% + 28px);
+				justify-content: flex-start;
+			}
+
+			#{$p}--item {
+				@include xs-size-max {
+					&:last-of-type {
+						margin-left: auto;
+					}
+				}
+			}
+
+		}
+		#{$p}--left,
+		#{$p}--right{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin: auto -24px;
+
+			@include sm-size-max {
+				margin: auto -14px;
+			}
+
+			&.hide-mobile{
+				@include xs-size-max {
+					display: none;
+				}
+			}
+		}
+		#{$p}--item{
+			padding: 14px 24px;
+			position: relative;
+			i{
+				display: inline-block;
+				margin-right: 8px;
+				vertical-align: middle;
+				font-size: 110%;
+			}
+			&:last-of-type{
+				i{
+					margin-right: 0;
+				}
+			}
+			&:not(:last-of-type){
+				&::before{
+					content: '';
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					height: 12px;
+					width: 2px;
+					background-color: var(--c-dark);
+					@include xs-size-max {
+						display: none;
+					}
+				}
+			}
+			@include sm-size-max {
+				padding: 13px 13px;
+			}
+			@include xs-size-max{
+				padding: 4px 14px;
+			}
+			&:last-of-type{
+				@include sm-size-max {
+					padding: 13px;
+				}
+				@include xs-size-max{
+					padding: 4px 14px;
+				}
+			}
+		}
+		#{$p}--item-link{
+			color: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			&:hover{
+				color: var(--c-active)!important;
+			}
+			&.icon:not(:last-of-type){
+				margin-right: 20px;
+				@include xs-size-max {
+					margin-right: 15px;
+				}
+				i{
+					font-weight: inherit;
+					&::before{
+						font-weight: inherit;
+					}
+				}
+			}
+		}
+		&.aheto-navbar__remove-borders{
+			#{$p}--left,
+			#{$p}--right{
+				#{$p}--item{
+					&::before{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

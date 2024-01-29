@@ -1,0 +1,107 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-form--noize-lay1 {
+  $p: &;
+
+  @include xs-size-max{
+    margin-top: 50px;
+  }
+
+  #{$p}__form {
+    .wpcf7{
+
+      div.wpcf7-response-output{
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        font-size: 83%;
+        top: -45px;
+      }
+
+      span.wpcf7-not-valid-tip {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        font-size: 83%;
+        top: -30px;
+        color: #ff0000;
+      }
+
+      div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+        border: none;
+        color: #ff0000!important;
+      }
+
+      div.wpcf7-mail-sent-ok {
+        display: block!important;
+        border: none;
+        top: -30px;
+        color: #398f14!important;
+      }
+
+      form p{
+        position: relative;
+        display: flex;
+        max-height: 60px;
+        margin-bottom: 0;
+        color: inherit;
+
+        @media only screen and (max-width: 600px) {
+          flex-direction: column;
+          display: inline;
+        }
+
+      }
+
+      span {
+        font: inherit;
+        color: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        span.wpcf7-not-valid-tip {
+          font-size: 83%;
+          margin-top: 5px;
+          display: block;
+          width: 100%;
+        }
+
+      }
+
+      input:not([type="submit"])::placeholder {
+          color: rgba(var(--ca-light), .7);
+      }
+
+      input:not([type="submit"]) {
+        padding: 0 70px 0 20px;
+        border: none;
+        width: 100%;
+        height: 100%;
+        font: inherit;
+        color: var(--c-light);
+        max-width: 100%;
+        box-shadow: none;
+        min-height: 60px;
+      }
+
+      input[type="submit"] {
+        margin-left: 16px;
+
+        @media only screen and (max-width: 600px){
+          justify-content: center;
+          margin-top: 10px;
+          margin-left: 0px;
+          min-height: 60px;
+          width: 100%;
+        }
+      }
+      .ajax-loader{
+        display: none;
+      }
+    }
+  }
+  
+}
+
+

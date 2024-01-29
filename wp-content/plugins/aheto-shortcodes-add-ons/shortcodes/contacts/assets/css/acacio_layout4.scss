@@ -1,0 +1,34 @@
+.aheto-contact {
+	$contact: &;
+
+	&--acacio-classic-2 {
+		#{$contact}__item {
+			margin-bottom: 10px;
+		}
+		#{$contact}__title {
+			font-weight: inherit;
+		}
+		p {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--c-active);
+			}
+		}
+
+		&.light-version {
+			#{$contact}__title {
+				color: var(--c-light);
+			}
+			p, a {
+				color: var(--c-light);
+			}
+			a:hover {
+				color: var(--c-active);
+			}
+		}
+	}
+}

@@ -1,0 +1,246 @@
+@import '../../../../assets/css/mixin';
+.aheto-navbar{
+	$p: &;
+	&--hr-simple{
+		max-width: 100%;
+		margin: auto;
+
+		&.two-columns{
+			#{$p}--left{
+				width: calc(50% + 48px);
+				@include md-size-max {
+					width: calc(50% + 28px);
+				}
+				#{$p}--item {
+					border-left: 1px solid rgba(var(--ca-dark), 0.05);
+					&:first-of-type {
+						border:none;
+					}
+					@include sm-size-max {
+						border: none;
+					}
+				}
+				@include sm-size-max {
+					width: calc(100% + 28px);
+				}
+			}
+		}
+		#{$p}--inner{
+			display: flex;
+			justify-content: flex-end;
+			@include sm-size-max {
+				flex-direction: column;
+			}
+		}
+		#{$p}--left {
+			@include md-size-max {
+				justify-content: flex-end;
+			}
+			@include xs-size-max {
+				justify-content: flex-start;
+			}
+		}
+		#{$p}--right{
+			width: calc(50% + 48px);
+			justify-content: flex-end;
+
+			@include md-size-max {
+				width: calc(50% + 28px);
+			}
+
+			@include sm-size-max {
+				width: calc(100% + 28px);
+				justify-content: flex-start;
+			}
+
+			#{$p}--item {
+				@include sm-size-max {
+					&:last-of-type {
+						margin-left: auto;
+					}
+				}
+			}
+
+		}
+		#{$p}--left,
+		#{$p}--right{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			margin: auto -24px;
+
+			@include md-size-max {
+				margin: auto -14px;
+			}
+
+			&.hide-mobile{
+				@include md-size-max {
+					display: none;
+				}
+			}
+		}
+
+		#{$p}--item{
+			padding: 14px 10px;
+			@include lg-size-max {
+				padding: 14px 0px;
+			}
+			i{
+				display: inline-block;
+				margin-right: 8px;
+                vertical-align: middle;
+                color: var(--c-dark);
+                transform: rotateY(180deg);
+            }
+
+            .wpml {
+				&-ls-legacy-dropdown-click,
+				&-ls-legacy-dropdown {
+					width: auto;
+					a {
+						background: none;
+						border: 0;
+						&.wpml-ls-item-toggle {
+							border-radius: 4px;
+							&:after {
+								width: 5px;
+								height: 5px;
+								border-top: 0;
+								border-right: 0;
+								transform: rotate(-45deg) translateY(-3px);
+							}
+						}
+					}
+				}
+				&-ls-flag {
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+				}
+				&-ls-legacy-dropdown {
+					position: relative;
+					&:hover {
+						.wpml-ls-sub-menu {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+					a {
+						color: var(--c-dark);
+						&:hover {
+							color: var(--c-active);
+						}
+					}
+				}
+
+				&-ls-native {
+					i {
+						display: inline-block;
+						padding-left: 10px;
+						font-size: 0.45em;
+						white-space: normal;
+						vertical-align: middle;
+					}
+					a {
+						color: var(--c-dark);
+						&:hover {
+							color: var(--c-active);
+						}
+					}
+				}
+
+				&-ls-sub-menu {
+					position: absolute;
+					top: 30px;
+					left: 0;
+					opacity: 0;
+					z-index: 100;
+					visibility: hidden;
+					transition: 0.2s all;
+					min-width: 100%;
+					border-top: 0;
+					border-radius: 4px;
+					background: var(--c-light);
+					padding: 5px 0;
+					box-shadow: 0 0 13px 0 rgba(var(--ca-active), 0.09);
+
+
+					li {
+						padding: 5px 10px;
+					}
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						color: var(--c-dark);
+						&:hover {
+							color: var(--c-active);
+						}
+
+					}
+				}
+
+				&-ls-flag {
+					width: 23px;
+					height: 23px;
+					min-width: 23px;
+					margin-right: 13px;
+					a {
+						color: var(--c-dark);
+						&:hover {
+							color: var(--c-active);
+						}
+					}
+				}
+			}
+
+			&:not(:last-of-type){
+				@include sm-size-max {
+					border: none;
+				}
+			}
+			@include md-size-max {
+				padding: 14px 14px;
+			}
+			@include xs-size-max {
+				padding: 0px 14px;
+			}
+			&:last-of-type{
+				@include md-size-max {
+					padding: 0px;
+				}
+			}
+		}
+		#{$p}--item-link{
+			color: inherit;
+			font-size: inherit;
+			font-weight: inherit;
+			line-height: inherit;
+			font-family: inherit;
+			&:hover{
+				color: var(--c-active)!important;
+			}
+			&.icon:not(:last-of-type){
+				margin-right: 20px;
+				@include sm-size-max {
+					margin-right: 15px;
+				}
+				i{
+					font-weight: inherit;
+					&::before{
+						font-weight: inherit;
+					}
+				}
+			}
+		}
+
+		&-dark {
+			#{$p}--item {
+				i {
+					color: var(--c-light);
+				}
+			}
+		}
+	}
+}

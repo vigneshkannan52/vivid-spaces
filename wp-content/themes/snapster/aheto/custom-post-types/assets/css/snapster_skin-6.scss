@@ -1,0 +1,73 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+	$p: &;
+
+	&--snapster_skin-6 {
+
+		#{$p}__inner {
+			position: relative;
+			&:hover {
+				#{$p}__content {
+					animation: edgtf-animate-overlay-track-in .6s cubic-bezier(.5,.15,.33,.88) forwards;
+				}
+			}
+		}
+		#{$p}__img {
+			overflow: hidden;
+		}
+		#{$p}__content {
+			position: absolute;
+			height: calc(100% + 1px);
+			top: -1px;
+			left: 0;
+			width: 177px;
+			margin-left: 35px;
+			background-color: #fff;
+			text-align: center;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: edgtf-animate-overlay-track-out .3s cubic-bezier(.53, .43, .47, .87) forwards;
+		}
+
+		#{$p}__title {
+			word-break: break-word;
+			margin-bottom: 0;
+			margin-top: 0;
+			transform: rotate(-90deg);
+
+			em,
+			b {
+				color: inherit;
+			}
+
+			a {
+				color: inherit;
+				line-height: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				font-style: inherit;
+				letter-spacing: inherit;
+			}
+		}
+	}
+}
+@keyframes edgtf-animate-overlay-track-in {
+	0% {
+		clip-path: inset(0 0 100% 0);
+	}
+	100% {
+		clip-path: inset(0 0 0 0);
+	}
+}
+@keyframes edgtf-animate-overlay-track-out {
+	0% {
+		clip-path: inset(0 0 0 0);
+	}
+	100% {
+		clip-path: inset(100% 0 0 0);
+	}
+}

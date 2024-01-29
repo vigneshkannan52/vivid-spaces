@@ -1,0 +1,125 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-titlebar {
+	$p: &;
+
+	&--moovit-modern {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+
+		#{$p}__title {
+			margin: 0;
+			width: 100%;
+			justify-content: center;
+
+			b {
+				font-weight: inherit;
+			}
+		}
+
+		#{$p}__description {
+			text-align: center;
+			justify-content: center;
+			font-weight: inherit;
+			max-width: 600px;
+			margin: 30px auto 45px;
+			opacity: .8;
+			line-height: inherit;
+			@include xs-size-max{
+				margin: 20px auto 32px;
+			}
+		}
+
+		#{$p}__main {
+			display: flex;
+			position: relative;
+			flex: 7;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+		}
+
+		#{$p}__content {
+			display: flex;
+			position: relative;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center;
+			width: 100%;
+
+			&:not(:last-child) {
+				padding-top: 40px;
+				padding-bottom: 40px;
+
+				@include sm-size-max{
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+			}
+		}
+
+		#{$p}__overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			~ * {
+				position: relative;
+			}
+		}
+
+		#{$p}__content-inner {
+			flex: 1;
+			text-align: center;
+			max-width: 100%;
+		}
+
+		#{$p}__input {
+			flex-basis: 100%;
+			margin-bottom: auto;
+
+			input {
+				&[type=text] {
+					flex: 1;
+					padding: 21px 65px 21px 27px;
+					border: 0;
+					outline: none;
+				}
+			}
+
+			button{
+				font-size: 173%;
+				transform: rotateY(180deg) translateY(-50%);
+				padding: 0 20px;
+				background: transparent;
+				border: none;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				line-height: 1;
+				transition: all .3s ease;
+				&:hover{
+					color: var(--c-active);
+				}
+			}
+
+			form {
+				display: flex;
+				flex-wrap: wrap;
+				border-radius: 5px;
+				overflow: hidden;
+				position: relative;
+				label {
+					display: none;
+				}
+			}
+		}
+	}
+}

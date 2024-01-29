@@ -1,0 +1,23 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-counter {
+  $counter: &;
+  &--mooseoom-classic {
+    @media only screen and (max-width: 1024px) {
+      text-align: center;
+    }
+    #{$counter}__number-wrap {
+      @media only screen and (max-width: 1024px) {
+        justify-content: center;
+      }
+    }
+    #{$counter}__number {
+      margin: 0;
+    }
+    .aheto-progress__title {
+      @media only screen and (max-width: 1024px) {
+        text-align: center !important;
+      }
+    }
+  }
+}

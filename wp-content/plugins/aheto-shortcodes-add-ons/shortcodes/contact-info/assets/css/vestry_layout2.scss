@@ -1,0 +1,52 @@
+@import "../../../../assets/css/mixin";
+
+.widget_aheto {
+  $p: &;
+
+  &__audio--vestry {
+    #{$p}__infos {
+      display: flex;
+      @include sm-size-max {
+        justify-content: space-between;
+      }
+      a {
+        margin-right: 20px;
+        color: var(--c-light);
+        &:hover {
+          color: var(--c-active);
+        }
+        @include sm-size-max {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  &__audio--vestry.bb {
+    #{$p}__infos {
+      display: flex;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: rgba(var(--ca-dark), 0.1);
+        &:hover {
+          color: var(--c-active);
+          background-color: var(--c-light);
+        }
+        @include sm-size-max {
+          margin-right: 15px;
+          width: 60px;
+          height: 60px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

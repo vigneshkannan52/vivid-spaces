@@ -1,0 +1,139 @@
+@import '../../../../assets/css/mixin';
+
+
+.swiper1 {
+  .aheto-banner-slider {
+    &--funero-simple {
+      .aheto-banner-slider-wrap {
+        min-height: 100vh;
+      }
+    }
+  }
+}
+
+.aheto-banner-slider {
+  $banner_slider: &;
+
+  &--funero-simple {
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 90px;
+      @include xs-size-max {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        border-bottom: 1px solid var(--c-light);
+      }
+
+      .swiper-slides-prev,
+      .swiper-slides-next {
+        position: relative;
+        color: var(--c-light);
+        font-family: var(--t-tertiary-font-family);
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .swiper-slides-total {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-wrapper{
+      flex-grow: 1;
+    }
+    .swiper-slide {
+      height: auto;
+    }
+    #{$banner_slider}-wrap {
+      height: 100%;
+      min-height: calc(100vh - 40px);
+      background-size: cover;
+      background-position: center center;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+
+    #{$banner_slider}__content {
+      position: relative;
+      z-index: 2;
+      max-width: 1400px;
+      padding: 60px 100px;
+      @include xs-size-max {
+        padding: 30px;
+      }
+    }
+
+    #{$banner_slider}__image {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 12px;
+      position: relative;
+      @include md-size-max {
+        max-width: 170px;
+      }
+    }
+
+    #{$banner_slider}__subtitle {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    #{$banner_slider}__title {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    #{$banner_slider}__desc {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #{$banner_slider}__links {
+      margin-top: 60px;
+    }
+
+    #{$banner_slider}__overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+
+      &-dark {
+        opacity: 0.28;
+        background-image: linear-gradient(to top, var(--c-alter) 0%, var(--c-alter) 100%);;
+      }
+
+      &-light {
+        background-color: rgba(var(--ca-light), 0.6);
+      }
+    }
+  }
+}

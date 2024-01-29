@@ -1,0 +1,62 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+	$p: &;
+
+
+	&--ninedok-faq {
+		#{$p}__title {
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+		  	cursor: pointer;
+		}
+		#{$p}__item {
+			background: var(--c-light);
+			padding: 36px 64px 36px 34px;
+			margin-bottom: 10px;
+			position: relative;
+		  	box-shadow: 0 10px 50px 0 rgba(119, 85, 75, 0.1);
+			@include xs-size-max{
+				padding: 30px 50px 30px 20px;
+			}
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			p{
+				margin-bottom: 0;
+			}
+
+			i{
+				position: absolute;
+				top: 34px;
+				right: 30px;
+				@include xs-size-max{
+					top: 26px;
+					right: 16px;
+				}
+			}
+			&.is-open {
+				i{
+					&::before{
+						content: '\4b';
+					}
+				}
+				#{$p}__title {
+					color:var(--c-active);
+				}
+			}
+		}
+
+		#{$p}__panel {
+			display: none;
+		}
+
+		#{$p}__desc {
+			margin: 8px 0 0;
+
+			@media screen and (max-width: 768px) {
+				margin: 15px 0;
+			}
+		}
+	}
+}

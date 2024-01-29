@@ -1,0 +1,132 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact{
+	$contact : &;
+
+	&--acacio-classic{
+		#{$contact}__title{
+			margin-bottom: 25px;
+		}
+
+		#{$contact}__info{
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			i{
+				display: inline-block;
+				margin-right: 20px;
+
+				&::before{
+					color: var(--c-light);
+					background-color: var(--c-active);
+					border-radius: 50%;
+					padding: 5px;
+				}
+				&.icon_mail_alt::before{
+					padding: 3px 6px 7px;
+				}
+			}
+			p{
+				display: inline-block;
+				margin-bottom: 0;
+			}
+			a{
+				color: inherit;
+				font-size: inherit;
+				&:hover{
+					color: var(--c-active);
+				}
+			}
+
+		}
+
+		.swiper {
+			&-button {
+				&-prev, &-next {
+					top: 18px;
+					right: 0;
+					left: initial;
+					color: var(--c-light);
+					font-size: 0.93rem;
+					opacity: 0.7;
+					@include sm-size-max {
+						display: block;
+					}
+					@include xs-size-min {
+						display: block;
+					}
+
+				}
+				&-next {
+					top: 21px;
+					@include sm-size-max {
+						top: 21px;
+					}
+				}
+				&-prev {
+					right: 7px;
+					&::after {
+						content: '|';
+						margin: 0px 15px;
+
+						display: inline-block;
+						font-size: 1.46rem;
+					}
+					&:hover {
+						&::after {
+							color: var(--c-light);
+						}
+					}
+				}
+			}
+		}
+	}
+	&--acacio-dark {
+		.swiper {
+			&-slide {
+				margin-top: -5px;
+			}
+			&-button {
+				&-prev, &-next {
+					color: var(--c-active);
+					font-size: 0.56rem;
+					@include xs-size-max {
+						font-size: 1rem;
+					}
+				}
+				&-next {
+					top: 23px;
+					right: 28px;
+				}
+				&-prev {
+					right: 35px;
+					@include xs-size-max {
+						top: 19px;
+					}
+					&::after {
+						content: '|';
+						margin: 0px 25px;
+						-webkit-transform: translateY(3px);
+						-moz-transform: translateY(3px);
+						-ms-transform: translateY(3px);
+						-o-transform: translateY(3px);
+						transform: translateY(3px);
+						color: var(--c-active);
+						@include xs-size-max {
+							font-size: 1.67rem;
+							transform: translateY(2px);
+						}
+					}
+					&:hover {
+						&::after {
+							color: var(--c-active);
+						}
+					}
+				}
+			}
+		}
+	}
+}

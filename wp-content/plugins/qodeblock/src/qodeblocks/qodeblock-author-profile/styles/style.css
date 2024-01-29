@@ -1,0 +1,146 @@
+/**
+ * Profile styles
+ * Loads on front end and back end
+ */
+.qb-block-profile {
+  background: #f6f9ff;
+  margin: 0 auto 1.2em;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 30px; }
+  @media only screen and (max-width: 768px) {
+    .qb-block-profile {
+      padding: 15px 5px; } }
+  .qb-block-profile .qb-profile-column {
+    display: block;
+    padding: 15px;
+    flex: 3 0 0; }
+    @media only screen and (max-width: 600px) {
+      .qb-block-profile .qb-profile-column {
+        flex: auto; } }
+  .qb-block-profile .qb-profile-avatar-wrap {
+    position: relative;
+    z-index: 0;
+    flex: 1 0 0; }
+    @media only screen and (max-width: 600px) {
+      .qb-block-profile .qb-profile-avatar-wrap {
+        flex: auto;
+        max-width: 210px;
+        margin: 0 auto; } }
+  @media only screen and (max-width: 600px) {
+    .qb-block-profile .qb-profile-content-wrap {
+      text-align: center; } }
+  .qb-block-profile .qb-profile-text {
+    font-size: 18px;
+    padding-top: .7em; }
+    .qb-block-profile .qb-profile-text a {
+      color: inherit;
+      box-shadow: 0 -1px 0 inset;
+      text-decoration: none; }
+      .qb-block-profile .qb-profile-text a:hover {
+        color: inherit;
+        box-shadow: 0 -2px 0 inset; }
+    .qb-block-profile .qb-profile-text p:last-child {
+      margin-bottom: 0; }
+  .qb-block-profile .qb-profile-name {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important; }
+  .qb-block-profile .qb-profile-title {
+    opacity: .8;
+    padding-top: 5px;
+    margin-bottom: 0; }
+  .qb-block-profile .qb-profile-image-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5; }
+  .qb-block-profile .qb-profile-text:empty,
+  .qb-block-profile .qb-profile-title:empty,
+  .qb-block-profile .qb-profile-name:empty {
+    display: none; }
+  .qb-block-profile .qb-profile-image-wrap {
+    width: 100%;
+    background: #ddd;
+    position: relative; }
+    .qb-block-profile .qb-profile-image-wrap:before {
+      content: '';
+      display: inline-block;
+      padding-top: 100%; }
+    .qb-block-profile .qb-profile-image-wrap button {
+      position: absolute;
+      left: 0;
+      z-index: 50;
+      padding: 0;
+      height: 100%;
+      width: 100%; }
+    .qb-block-profile .qb-profile-image-wrap button:focus {
+      background: none;
+      border: none;
+      outline: none;
+      box-shadow: none; }
+    .qb-block-profile .qb-profile-image-wrap img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 5; }
+  .qb-block-profile .qb-social-links {
+    list-style: none;
+    margin: 0 0 -8px 0;
+    padding: 5% 0 0 0;
+    font-size: 0; }
+    .qb-block-profile .qb-social-links:empty {
+      display: none; }
+    .qb-block-profile .qb-social-links li {
+      display: inline-block;
+      margin: 0 8px 8px 0;
+      padding: 0; }
+      @media only screen and (max-width: 600px) {
+        .qb-block-profile .qb-social-links li {
+          margin: 0 4px 8px 4px; } }
+      .qb-block-profile .qb-social-links li a {
+        border: none; }
+        .qb-block-profile .qb-social-links li a:hover {
+          opacity: .9; }
+      .qb-block-profile .qb-social-links li i {
+        font-size: 18px;
+        background: #2A74ED;
+        color: #fff;
+        padding: 10px;
+        border-radius: 100px;
+        height: 38px;
+        width: 38px;
+        text-align: center; }
+
+.right .qb-profile-avatar-wrap {
+  order: 2; }
+
+.round .qb-profile-image-wrap {
+  border-radius: 500px;
+  overflow: hidden; }
+  .round .qb-profile-image-wrap:before {
+    content: '';
+    display: inline-block;
+    padding-top: 92%; }
+  .round .qb-profile-image-wrap img {
+    border-radius: 500px; }
+
+#editor .qb-has-avatar .qb-profile-image-square:hover {
+  cursor: pointer; }
+  #editor .qb-has-avatar .qb-profile-image-square:hover img {
+    opacity: .7 !important; }
+#editor .qb-has-avatar .qb-profile-image-square button {
+  top: 0;
+  left: 0;
+  opacity: 1 !important;
+  height: 100%; }
+
+/*# sourceMappingURL=style.css.map */

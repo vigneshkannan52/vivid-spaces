@@ -1,0 +1,83 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-contents {
+  $contents: &;
+
+  &--faq-soapy-simple {
+    #{$contents}__item {
+      padding: 20px 55px 20px 40px;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+      background-color: var(--c-light);
+      margin-bottom: 15px;
+      min-height: 115px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition-delay: 0s;
+      transition: 0.5s;
+      @include sm-size-max{
+        padding: 20px 20px 10px ;
+      }
+      @include xs-size-max{
+        padding: 20px 20px 15px ;
+      }
+
+      &.is-open{
+        padding-top: 40px ;
+        #{$contents}__title{
+          color: var(--c-active) ;
+          &::after {
+            transform: rotate(90deg);
+            filter: invert(53%) sepia(76%) saturate(247%) hue-rotate(108deg) brightness(92%) contrast(84%);
+          }
+        }
+      }
+    }
+
+    #{$contents}__title {
+      color: var(--c-alter);
+      transition: 0.5s;
+      cursor: pointer;
+      padding-right: 50px;
+      position: relative;
+      margin-bottom: 0;
+      &:hover{
+        color: var(--c-active)
+      }
+      @include sm-size-max{
+        padding-right: 25px;
+      }
+      &::after{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        content: "";
+        width: 33px;
+        height: 13px;
+        background-size: cover;
+        transition: 0.5s;
+        background-image: url("../../assets/images/arrow.png");
+        @include sm-size-max{
+          width: 26px;
+          height: 10px;
+        }
+        @include xs-size-max{
+          width: 23px;
+          height: 9px;
+        }
+      }
+
+      &:hover {
+        color: var(--c-active);
+      }
+    }
+    #{$contents}__desc {
+      margin-bottom: 30px;
+      margin-top: 5px;
+      @include sm-size-max{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

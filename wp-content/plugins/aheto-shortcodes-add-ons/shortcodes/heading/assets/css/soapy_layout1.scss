@@ -1,0 +1,68 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+  $heading: &;
+  &--soapy-simple {
+    #{$heading}__image {
+      max-width: 35px;
+      margin: 0 15px;
+      @include xs-size-max{
+        margin: 0 7px;
+      }
+    }
+    #{$heading}__subtitle{
+      margin-bottom: 12px;
+    }
+    #{$heading}__title{
+      margin-bottom: 30px;
+      @include xs-size-max{
+        margin-bottom: 0!important;
+      }
+    }
+    #{$heading}__desc{
+      @include xs-size-max{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    #{$heading}__link{
+      color: var(--c-alter);
+      margin-top: 20px;
+      position: relative;
+      padding-right: 25px ;
+      display: inline-block;
+      @include sm-size-max{
+        margin-top: 0;
+      }
+      &:hover{
+        color: var(--c-active);
+      }
+      &-arrow{
+        padding-right: 50px;
+        &::after {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          font-family: 'Ionicons';
+          transform: translate(-50% , -50%);
+          content: '\f3d6';
+          transition: 0.5s;
+          margin-left: 5px;
+          font-size: 1.6em;
+        }
+        &:hover{
+          &::after{
+            right: -5px;
+
+          }
+        }
+        &-remove{
+          &::after{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+

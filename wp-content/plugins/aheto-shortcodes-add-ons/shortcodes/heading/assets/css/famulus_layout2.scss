@@ -1,0 +1,75 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+    $heading: &;
+    &--famulus__in-one-line{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        #{$heading}__title{
+            margin-right: 25px;
+           color: var(--c-alter);
+            span{
+                color: var(--c-active);
+            }
+        }
+        #{$heading}__line{
+            flex-grow: 1;
+            height: 1px;
+            opacity: 0.3;
+            background-color: var(--c-alter);
+            @include xs-size-max{
+                display: none;
+            }
+        }
+        #{$heading}__link{
+            margin-left: 30px;
+            color: var(--c-alter);
+            @include xs-size-max{
+                margin-left: 0;
+            }
+            &:hover{
+                color: var(--c-active);
+            }
+            &#{$heading}__link-arrow{
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::after {
+                    font-size: 1.3em;
+                    margin-left: 20px;
+                    content: '\f3d6';
+                    font-family: "Ionicons";
+                    transition: transform 0.5s;
+                }
+                &:hover {
+                    &::after {
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
+        &#{$heading}__white-text{
+            #{$heading}__title{
+                color: var(--c-light);
+                span{
+                    color: var(--c-active);
+                }
+            }
+            #{$heading}__line{
+                background-color: var(--c-light);
+            }
+            #{$heading}__link{
+                color: var(--c-light);
+            }
+        }
+        &#{$heading}__white-highlight-text{
+            #{$heading}__title{
+                span{
+                    color: var(--c-light);
+                }
+            }
+        }
+    }
+}

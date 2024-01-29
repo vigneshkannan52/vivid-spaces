@@ -1,0 +1,31 @@
+@import '../../../../assets/css/mixin';
+
+
+.widget_aheto {
+  $contact: &;
+
+  &__contact_info--soapy-two-rows {
+    #{$contact}__infos {
+      display: flex;
+      flex-wrap: wrap;
+
+      p{
+        width: 50%;
+        margin-bottom: 0;
+
+      }
+
+      a {
+        display: block;
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+
+    #{$contact}__tel-mail {
+      width: 50%;
+      padding-left: 20px;
+    }
+  }
+}

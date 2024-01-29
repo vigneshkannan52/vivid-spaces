@@ -1,0 +1,153 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-form--noize-lay2 {
+    $p: &;
+
+    position: relative;
+    
+    @include xs-size-max {
+        margin-top: 20px;
+    }
+
+    #{$p}__contact { 
+        .wpcf7 {
+            max-width: 580px;
+            margin-left: 112px;
+
+            @include md-size-max{
+                margin-left: 0;
+            }
+
+            @include xs-size-max{
+                max-width: 100%;
+            }
+
+            form p {
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -8px;
+            }
+
+            form p br {
+                display: none;
+            }
+
+            form.invalid {
+                span.wpcf7-form-control-wrap.your-name {
+                    @include xs-size-max{
+                        padding: 18px 8px;
+                    }
+                }
+
+                span.wpcf7-form-control-wrap.your-email {
+                    @include xs-size-max {
+                        padding: 18px 8px 8px;
+                    }
+                }
+            }
+
+            span.wpcf7-form-control-wrap {
+                font: inherit;
+                color: var(--c-dark);
+                flex: 1 0 25%;
+                display: block;
+                padding: 8px;
+
+                @include sm-size-max{
+                    flex: 1 0 50%;
+                }
+                @include xs-size-max{
+                    flex: 1 0 100%;
+                }
+            }
+
+            span.wpcf7-form-control-wrap.your-message {
+                flex: 1 0 100%;
+            }
+
+            span.wpcf7-not-valid-tip {
+                position: absolute;
+                top: -20px;
+
+                @include xs-size-max {
+                    top: -15px;
+                }
+            }
+
+            textarea {
+                resize: none;
+                height: 200px;
+            }
+
+            textarea::placeholder,
+            input:not([type="submit"])::placeholder {
+                color: rgba(var(--ca-light), .7);
+            }
+
+            textarea {
+                padding: 15px 70px 0 25px;
+                border: none;
+                width: 100%;
+                height: 100%;
+                font: inherit;
+                color: var(--c-light);
+                max-width: 100%;
+                box-shadow: none;
+                max-height: 120px;
+
+                @include md-size-max {
+                    padding: 15px 45px 0 25px;
+                }
+
+            }
+
+            input:not([type="submit"]) {
+                padding: 0 70px 0 25px;
+                border: none;
+                width: 100%;
+                height: 100%;
+                font: inherit;
+                color: var(--c-light);
+                max-width: 100%;
+                box-shadow: none;
+                min-height: 60px;
+
+                @include md-size-max {
+                    padding: 0 45px 0 25px;
+                }
+
+            }
+
+            input[type="submit"] {
+                margin: 8px;
+                margin-top: 0;
+                width: 100%;
+                justify-content: center;
+                display: block;
+
+                @media only screen and (max-width: 600px){
+                    justify-content: center;
+                    margin-top: 0;
+                    min-height: 60px;
+                }
+            }
+
+            .ajax-loader{
+                display: none;
+            }
+        }
+
+        .wpcf7-response-output {
+            margin: 0!important;
+            margin-top: 5px!important;
+            padding: 0!important;
+            border: none!important;
+            color: #ff0000;
+        }
+    }
+    
+}
+
+

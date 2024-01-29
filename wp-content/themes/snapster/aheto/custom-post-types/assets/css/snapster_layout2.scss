@@ -1,0 +1,126 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt__snapster-slider {
+	$cpt: &;
+
+	--img-height: 0;
+	--count-v: 1;
+	--spaces-v: 0;
+
+	&.remove-terms{
+		.swiper-slide:not(.aheto-cpt__snapster-slider--sticky) .aheto-cpt-article__terms{
+			display: none;
+		}
+	}
+
+	.aheto-cpt-article {
+		--img-height: 0;
+	}
+
+	#{$cpt}--space {
+		line-height: 1;
+		font-size: 0;
+		margin: 0;
+		width: 100%;
+		display: block;
+		height: 30px;
+		@include xs-size-max{
+			height: 15px;
+		}
+	}
+
+	.swiper {
+		&-container {
+			padding: 15px 85px;
+			margin: -85px -15px;
+			@media only screen and (max-width: 1024px){
+				padding: 15px 55px;
+				margin: -55px -15px;
+			}
+			@include xs-size-max{
+				padding: 15px 22.5px;
+				margin: -22.5px -15px;
+			}
+		}
+		&-wrapper {
+			padding-bottom: 0;
+		}
+		&-slide {
+			padding: 70px;
+			width: fit-content;
+			cursor: ew-resize;
+			@media only screen and (max-width: 1024px){
+				padding: 40px;
+			}
+			@include xs-size-max{
+				padding: 7.5px;
+			}
+			&-wrap{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				height: 100%;
+			}
+			.aheto-cpt-article{
+				width: fit-content;
+				&__inner{
+					width: fit-content;
+				}
+				img{
+					max-width: calc(50vh - 200px);
+					max-height: calc(50vh - 200px);
+					width: auto;
+				}
+			}
+
+		}
+		#{$cpt}--sticky {
+			max-width: 550px;
+			@media only screen and (max-width: 1024px){
+				max-width: 500px;
+			}
+			@include xs-size-max{
+				max-width: 100%;
+			}
+			.aheto-cpt-article{
+				height: auto;
+				&__title{
+					text-align: right;
+					a{
+						font-size: 1.5em;
+					}
+					@include xs-size-max{
+						text-align: inherit;
+					}
+				}
+				&__terms{
+					text-align: right;
+					@include xs-size-max{
+						text-align: inherit;
+					}
+				}
+				img{
+					max-width: 100%;
+					max-height: 70vh;
+					width: auto;
+				}
+				&__add-img{
+					position: absolute;
+					bottom: 15px;
+					right: 15px;
+					max-height: calc(100% - 30px);
+					max-width: calc(100% - 30px);
+					filter: blur(0)!important;
+					visibility: hidden;
+					opacity: 0;
+					transition: all .8s cubic-bezier(.4,0,.2,1);
+				}
+				&:hover .aheto-cpt-article__add-img{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

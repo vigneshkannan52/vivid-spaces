@@ -1,0 +1,51 @@
+@import '../../../../assets/css/mixin';
+.aheto-team-member {
+    $member: &;
+    max-width: 277px;
+    margin: 0 auto;
+    @include sm-size-max {
+        max-width: 400px;
+    }
+    &--mooseoom-simple {
+        #{$member}__text {
+
+        }
+        #{$member}__name {
+            margin-top: 35px;
+            margin-bottom: 0;
+        }
+        #{$member}__img-holder {
+            position: relative;
+            img {
+                width: 100%!important;
+                transition: all .9s ease;
+                &:hover {
+                    filter: grayscale(100%);
+                    transition: all .9s ease;
+                }
+            }
+            &:hover > #{$member}__contact {
+                opacity: 1;
+                transition: all .3s ease;
+            }
+        }
+        #{$member}__position {
+            margin-top: 9px;
+            margin-bottom: 0;
+        }
+        #{$member}__contact {
+            opacity: 0;
+            position: absolute;
+            bottom: 15px;
+            left: 25px;
+            transition: all .3s ease;
+        }
+        #{$member}__link {
+            margin-right: 22px;
+            color: var(--c-light);
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
+}

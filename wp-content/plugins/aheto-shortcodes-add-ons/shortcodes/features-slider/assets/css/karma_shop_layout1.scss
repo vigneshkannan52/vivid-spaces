@@ -1,0 +1,102 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-features-slider {
+  $p: &;
+
+  &--karma-shop1 {
+    padding: 0 110px 20px;
+    @include lg-size-max {
+      padding: 0 90px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    @include xs-size-max {
+      padding: 0 50px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid var(--c-alter3);
+      background-color: transparent;
+      transform: translate(0, -50%);
+      transition: 0.5s;
+
+      &:hover {
+        background-color: var(--c-alter3);
+      }
+
+      @include xs-size-max {
+        width: 40px;
+        height: 40px;
+        font-size: 0.8em !important;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      @include lg-size-max {
+        left: 10px;
+      }
+      @include xs-size-max {
+        left: 0;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+      @include lg-size-max {
+        right: 10px;
+      }
+      @include xs-size-max {
+        right: 0;
+      }
+    }
+
+    #{$p}--slider {
+      padding-top: 100%;
+      background-size: cover;
+      background-position: center;
+
+      &:hover {
+        #{$p}__content {
+          background-color: var(--c-active);
+          &::after{
+            opacity: 1;
+          }
+          #{$p}__title {
+            color: var(--c-light) !important;
+          }
+        }
+      }
+    }
+
+    #{$p}__content {
+      width: 140px;
+      min-height: 140px;
+      background-color: var(--c-light);
+      padding: 15px 15px 15px 25px;
+      display: flex;
+      align-items: flex-end;
+      word-break: break-word;
+      transition: 0.5s;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: '\f30f';
+        font-family: 'Ionicons';
+        right: 30px;
+        top: 15px;
+        opacity: 0;
+        color: var(--c-light);
+      }
+    }
+  }
+}

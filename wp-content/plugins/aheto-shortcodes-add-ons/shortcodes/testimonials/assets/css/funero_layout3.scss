@@ -1,0 +1,89 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-tm {
+  $tm: &;
+
+  &-wrapper--funero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    #{$tm}__content {
+      width: calc(33.33% - 50px);
+      margin: 0 25px 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      transition: all .5s ease;
+      padding: 50px 25px 35px;
+      height: auto;
+      border: 1px solid var(--c-alter3);
+      background-color: var(--c-alter2);
+      @include md-size-max{
+        width: calc(33.33% - 30px);
+        margin: 0 15px 30px;
+      }
+      @include sm-size-max{
+        width: calc(50% - 30px);
+      }
+      @include xs-size-max{
+        width: calc(100% - 20px);
+        margin: 0 10px 20px;
+      }
+    }
+
+    #{$tm}__blockquote {
+      z-index: 1;
+      margin-bottom: 20px;
+      word-break: break-word;
+    }
+
+
+    #{$tm}__name {
+      z-index: 1;
+      margin: auto 0 8px;
+    }
+
+    #{$tm}__date {
+      z-index: 1;
+      margin-bottom: 5px;
+    }
+
+    #{$tm}__border {
+      width: 60px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      z-index: 0;
+
+      &-tl {
+        top: 0;
+        left: 0;
+      }
+
+      &-tr {
+        top: 0;
+        right: 0;
+        transform: rotateY(180deg);
+      }
+
+      &-bl {
+        bottom: 0;
+        left: 0;
+        transform: rotateX(180deg);
+      }
+
+      &-br {
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
+

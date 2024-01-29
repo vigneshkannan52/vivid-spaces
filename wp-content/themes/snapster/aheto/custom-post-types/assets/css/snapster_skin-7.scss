@@ -1,0 +1,91 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--snapster_skin-7 {
+    #{$p}__inner{
+	 position: relative;
+    }
+    &:hover {
+	 .bg-overlay {
+	   opacity: 1;
+	 }
+	 #{$p}__title {
+	   transition-delay: .23s;
+	   opacity: 1;
+	   transform: translateX(0);
+	   transition: .5s ease-out;
+	 }
+	 #{$p}__terms {
+	   transition-delay: .1s;
+	   opacity: 1;
+	   transform: translateX(0);
+	   transition: .5s ease-out;
+	 }
+	 #{$p}__content {
+	   &:after {
+		width: 100%;
+		transition-delay: .1s;
+	   }
+	 }
+    }
+    #{$p}__content {
+	 position: absolute;
+	 width: 100%;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 2;
+	 &:after {
+	   content: '';
+	   background: #fff;
+	   display: block;
+	   height: 1px;
+	   position: absolute;
+	   left: 0;
+	   margin-top: 5px;
+	   margin-bottom: 5px;
+	   width: 0;
+	   transition: width .5s ease;
+	   transition-delay: 0s;
+	 }
+    }
+    .bg-overlay{
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 z-index: 1;
+	 opacity: 0;
+	 transition: opacity .15s ease-in-out;
+    }
+    #{$p}__title {
+	 margin-bottom: 15px;
+	 opacity: 0;
+	 transform: translateX(-10px);
+	 transition: .2s;
+	 a {
+	   color: inherit;
+	   line-height: inherit;
+	   font-size: inherit;
+	   font-family: inherit;
+	   font-weight: inherit;
+	   font-style: inherit;
+	   letter-spacing: inherit;
+	 }
+    }
+    #{$p}__terms {
+	 opacity: 0;
+	 transform: translateX(-10px);
+	 transition: .2s;
+	 a {
+	   color: inherit;
+	   line-height: inherit;
+	   font-size: inherit;
+	   font-family: inherit;
+	   font-weight: inherit;
+	   font-style: inherit;
+	   letter-spacing: inherit;
+	 }
+    }
+  }
+}

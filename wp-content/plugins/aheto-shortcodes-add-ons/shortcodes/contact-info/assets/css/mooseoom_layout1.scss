@@ -1,0 +1,83 @@
+@import "../../../../assets/css/mixin";
+
+.widget_aheto {
+  $p: &;
+  &__contact--mooseoom {
+    #{$p}__title {
+      margin: 0 0 26px 0;
+      &.underline {
+        position: relative;
+        display: inline-block;
+
+        padding-bottom: 7px;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: 0.13;
+        }
+      }
+      &.smaller-space {
+        margin: 0 0 40px;
+        @include xs-size-max {
+          margin: 0 0 25px;
+        }
+      }
+      @include sm-size-max {
+        margin: 0 0 40px;
+      }
+      @include xs-size-max {
+        margin: 0 0 25px;
+      }
+    }
+    #{$p}__logo {
+      margin-bottom: 50px;
+      @include sm-size-max {
+        margin-bottom: 35px;
+      }
+      @include xs-size-max {
+        margin-bottom: 30px;
+      }
+      img {
+        max-height: 70px;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+    #{$p}__icon {
+      margin-right: 15px;
+      width: 16px;
+      @include md-size-max {
+        margin-right: 15px;
+      }
+    }
+    #{$p}__desc {
+      margin-top: -5px;
+    }
+    #{$p}__info {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 7px;
+      p {
+        color: inherit;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      a {
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+  }
+}

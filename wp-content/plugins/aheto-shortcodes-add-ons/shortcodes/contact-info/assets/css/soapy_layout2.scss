@@ -1,0 +1,53 @@
+@import '../../../../assets/css/mixin';
+
+
+.widget_aheto {
+  $contact: &;
+
+  &__contact_info--soapy-image {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    #{$contact}__img-wrap{
+      width: 140px;
+      height: 140px;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+      background-color: var(--c-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include xs-size-max{
+        width: 85px;
+        height: 85px;
+      }
+      img{
+        max-width: 58px;
+        max-height: 58px;
+        @include xs-size-max{
+          max-width: 40px;
+          max-height: 40px;
+        }
+      }
+    }
+    #{$contact}__title {
+      margin-bottom: 15px;
+      @include xs-size-max{
+        margin-bottom: 0;
+      }
+    }
+
+    #{$contact}__infos {
+      width: calc(100% - 140px);
+      padding-left: 20px;
+      @include xs-size-max{
+        width: calc(100% - 85px);
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

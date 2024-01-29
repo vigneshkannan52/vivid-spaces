@@ -1,0 +1,33 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials {
+  $p: &;
+
+  &-networks--soapy  {
+    #{$p} {
+      display: flex;
+      align-items: center;
+    }
+
+    #{$p}__label {
+      margin-right: 15px;
+    }
+    #{$p}__link {
+      width: 30px;
+      height: 30px;
+      padding: 2px 0 0 2px;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.1);
+      color: rgba(var(--ca-alter), 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 7px;
+      border-radius: 50%;
+      transition: 0.5s;
+      &:hover{
+        box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.5);
+        color: var(--c-active);
+      }
+    }
+  }
+}

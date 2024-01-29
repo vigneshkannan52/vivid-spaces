@@ -1,0 +1,66 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-progress {
+
+	$counter: &;
+
+	&--outsourceo-bar{
+		#{$counter}__title {
+			margin: 10px 0;
+			color: var(--c-light);
+			font-size: inherit;
+		}
+
+		#{$counter}--bar {
+			padding-top: 25px;
+		}
+
+		#{$counter}__bar-icon {
+			position: absolute;
+			top: 37px;
+			left: 6px;
+			display: block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background-color: var(--c-active);
+		}
+
+		#{$counter}__bar {
+			position: relative;
+			height: 4px;
+			margin-top: 15px;
+			background-color: var(--c-light);
+		}
+
+		#{$counter}__bar-holder {
+			position: absolute;
+			top: -41px;
+			transform: translate(-50%, 0);
+			font-size: inherit;
+			span {
+				font-weight: inherit;
+				color: var(--c-light);
+			}
+		}
+
+		#{$counter}__bar-perc {
+			color: var(--c-light);
+			font-weight: inherit;
+			display: inline;
+			position: static;
+			font-size: inherit;
+			transform: none;
+		}
+
+		#{$counter}__bar-val {
+			width: 0;
+			height: 100%;
+			background-color: var(--c-active);
+		}
+	}
+}
+
+
+
+

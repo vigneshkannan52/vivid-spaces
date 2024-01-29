@@ -1,0 +1,80 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-coming-soon {
+	$p: &;
+
+	&--rela {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		@media screen and (max-width: 485px) {
+			justify-content: space-between;
+		}
+
+		#{$p}__caption {
+			margin-top: 14px;
+			margin-bottom: 0;
+			color: var(--c-dark);
+			font-family: var(--t-secondary-font-family);
+			@media screen and (max-width: 1024px) {
+				margin-top: 0;
+			}
+		}
+
+		#{$p}__unit {
+			padding-top: 22px;
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			border: 1px solid rgba(var(--ca-alter), 0.25);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 0;
+			@media screen and (max-width: 1024px) {
+				width: 150px;
+				height: 150px;
+				padding-top: 0;
+			}
+			@include xs-size-max {
+				width: 90px;
+				height: 100px;
+			}
+			@media screen and (max-width: 485px) {
+				width: 56px;
+				height: 80px;
+			}
+		}
+
+		#{$p}__number {
+			font-family: var(--t-secondary-font-family);
+			color: var(--c-dark);
+		}
+
+		#{$p}__dots {
+			margin: 0 30px;
+			vertical-align: middle;
+			color: var(--c-dark);
+			font-family: var(--t-secondary-font-family);
+			@include md-size-max {
+				margin: 0 10px;
+			}
+			@media screen and (max-width: 485px) {
+				margin: 0 4px;
+			}
+		}
+	}
+
+	&--light {
+		#{$p}__number,
+		#{$p}__caption,
+		#{$p}__dots {
+			color: var(--c-light);
+		}
+
+		#{$p}__dots {
+			opacity: 0.5;
+		}
+	}
+}

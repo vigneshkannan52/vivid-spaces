@@ -1,0 +1,81 @@
+.djo-aheto-contents {
+	$p: &;
+
+	&--faq {
+		#{$p}__title {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+			user-select: none;
+			font-family: var(--t-secondary-font-family);
+			padding-right: 30px;
+
+			&:before {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '\f2c7';
+				display: inline-block;
+				font-family: "Ionicons";
+				speak: none;
+				font-variant: normal;
+				text-transform: none;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				color: var(--c-active);
+			}
+		}
+
+		#{$p}__item {
+			padding: 35px;
+			background-color: var(--c-dark);
+			margin-bottom: 15px;
+			&.is-open {
+				
+				#{$p} {
+
+					&__title {
+						color: var(--c-active);
+
+						&:before {
+							content: '\f2f4';
+							transform: translateY(-50%) rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+
+		#{$p}__panel {
+			display: none;
+		}
+
+		#{$p}__desc {
+			margin: 8px 0 0 0;
+			color: var(--c-light);
+
+			@media screen and (max-width: 768px) {
+				margin: 15px 0;
+			}
+		}
+
+		&.light-version {
+			#{$p}__item {
+				padding: 35px;
+				background-color: var(--c-light);
+				margin-bottom: 15px;
+			}
+
+			#{$p}__title {
+				color: var(--c-dark);
+			}
+
+			#{$p}__desc {
+				color: var(--c-dark);
+			}
+		}
+	}
+}

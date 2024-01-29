@@ -1,0 +1,108 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt {
+	$p: &;
+	&--hr-modern {
+		--img-height: 100;
+		--count: 0;
+		--count-lg: 0;
+		--count-md: 0;
+		--count-sm: 0;
+		--count-xs: 0;
+		--spaces: 0;
+		--spaces-lg: 0;
+		--spaces-md: 0;
+		--spaces-sm: 0;
+		--spaces-xs: 0;
+
+		position: relative;
+
+		&::before,
+		&::after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.swiper-container {
+			margin: 0 auto -30px;
+			padding: 0 15px;
+		}
+
+		.swiper{
+			position: relative;
+		}
+		.swiper-button-prev,
+		.swiper-button-next{
+			position: static;
+			transform: none;
+			width: 60px;
+			height: 60px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all .3s ease;
+			margin-top: 30px;
+
+			@include md-size-max{
+				width: 50px;
+				height: 50px;
+				display: none;
+			}
+
+			&:hover {
+				color: var(--c-light);
+				background: var(--c-dark);
+			}
+		}
+
+		.swiper-button-prev {
+			background: var(--c-light);
+			color: var(--c-dark);
+			&::before {
+				content: '\f124';
+				font-family: "Ionicons";
+			}
+		}
+
+		.swiper-button-next {
+			left: 60px;
+			background: var(--c-active);
+			color: var(--c-light);
+			&::before {
+				content: '\f125';
+				font-family: "Ionicons";
+			}
+			@include xs-size-max{
+				left: 50px;
+			}
+		}
+
+		.swiper-wrapper {
+			padding-bottom: 30px;
+		}
+		.swiper-pagination-bullet {
+			width: 8px;
+			height: 8px;
+			display: inline-block;
+			margin: 0 9px!important;
+			&-active {
+				width: 12px;
+				height: 12px;
+			}
+		}
+		.swiper-pagination-bullets {
+			@include md-size-max {
+				margin-top: 0px;
+			}
+		}
+
+		&.hide-pagination {
+			.swiper-pagination {
+				@include md-size-min {
+					display: none;
+				}
+			}
+		}
+	}
+}

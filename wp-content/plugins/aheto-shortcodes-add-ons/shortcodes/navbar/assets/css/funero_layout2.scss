@@ -1,0 +1,85 @@
+@import '../../../../assets/css/mixin';
+
+.widget_aheto {
+  $p: &;
+
+  &--funero-classic-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 30px;
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    border: 1px solid var(--c-alter3);
+    background-color: var(--c-alter2);
+    @include sm-size-max{
+      background-size: cover;
+      background-position: center;
+    }
+    @include xs-size-max{
+      flex-wrap: wrap;
+      padding: 25px 20px;
+      background-image: none!important;
+    }
+    #{$p}__label{
+      margin-bottom: 0;
+      margin-right: 35px;
+      @include xs-size-max{
+        width: 100%;
+        margin: 0 0 20px 0;
+        text-align: center;
+      }
+    }
+    form{
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include xs-size-max{
+        flex-wrap: wrap;
+      }
+      label{
+        width: calc(100% - 245px);
+        margin: 0 25px  0 0;
+        @include sm-size-max{
+          width: calc(100% - 185px);
+        }
+        @include xs-size-max{
+          width: 100%;
+          margin: 0 0 20px 0;
+        }
+      }
+      input[type='search']{
+        width: 100%;
+        color: var(--c-alter);
+        font-family:  var(--t-primary-font-family);
+        height: 60px;
+        border: 1px solid var(--c-alter);
+        background-color: var(--c-light);
+        box-shadow: none;
+        padding: 15px;
+        border-radius: 0;
+        &::placeholder{
+          opacity: 0.8;
+          color: var(--c-alter);
+        }
+      }
+      input[type='submit']{
+        width: 220px;
+        color: var(--c-alter);
+        font-family: var(--t-secondary-font-family);
+        height: 60px;
+        border: 1px solid var(--c-alter);
+        background-color: var(--c-light);
+        @include sm-size-max{
+          width: 160px;
+        }
+        @include xs-size-max{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

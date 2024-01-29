@@ -1,0 +1,124 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials{
+    $p: &;
+
+	&.justify-align{
+		text-align: justify;
+		text-align-last: justify;
+		@include sm-size-max{
+			text-align: center;
+			text-align-last: center;
+		}
+	}
+	&.center-align{
+		text-align: center;
+	}
+	&.left-align{
+		text-align: left;
+		@include sm-size-max{
+			text-align: center;
+		}
+	}
+	&.right-align{
+		text-align: right;
+		@include sm-size-max{
+			text-align: center;
+		}
+	}
+
+	@include sm-size-max{
+		&.justify-align-mob{
+			text-align: justify;
+			text-align-last: justify;
+		}
+		&.center-align-mob{
+			text-align: center;
+		}
+		&.left-align-mob{
+			text-align: left;
+		}
+		&.right-align-mob{
+			text-align: right;
+		}
+	}
+
+	&--acacio-networks {
+		#{$p}--default {
+			margin-right: -10px;
+			margin-left: -10px;
+			width: calc(100% + 20px);
+			#{$p}__link {
+				margin: 0 10px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 62px;
+				@include xs-size-max {
+					margin-right: 0;
+				}
+				i{
+					margin: 0;
+                    width: auto;
+                    vertical-align: middle;
+                    transition: color .3s ease;
+                    margin-right: 10px;
+				}
+                &:hover {
+                    color: var(--c-active);
+
+                    i {
+                        color: var(--c-active);
+                    }
+                }
+
+			}
+		}
+		#{$p}--circle {
+			margin-right: -2px;
+			margin-left: -2px;
+			width: calc(100% + 4px);
+			#{$p}__link {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 50px;
+				height: 50px;
+				margin: 4px;
+				border-radius: 50%;
+				text-align: center;
+				border: 1px solid currentColor;
+				@include lg-size-max {
+					width: 40px;
+					height: 40px;
+				}
+				i {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					margin: 0;
+				}
+				&:hover{
+					background: var(--c-active);
+					border-color: var(--c-active);
+				}
+			}
+		}
+		#{$p}--dark {
+			#{$p}__link {
+				color: var(--c-dark);
+
+				i{
+					color: inherit;
+				}
+				&:hover {
+					color: var(--c-active);
+
+					i {
+						color: var(--c-active);
+					}
+				}
+
+			}
+		}
+	}
+}

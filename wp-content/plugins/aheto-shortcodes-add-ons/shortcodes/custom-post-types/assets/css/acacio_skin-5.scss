@@ -1,0 +1,86 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--acacio_skin-5 {
+    #{$p}__title {
+      word-break: break-word;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      em,
+      b {
+        color: inherit;
+      }
+
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    #{$p}__link {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    #{$p}__terms {
+      margin-top: 3px;
+      color: var(--c-grey);
+
+      a {
+        color: inherit;
+        font-size: inherit;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+
+    #{$p}__popup {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 120px;
+      height: 120px;
+      background-color: var(--c-active);
+      clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+      padding-top: 50px;
+      box-sizing: border-box;
+      padding-left: 50px;
+      color: var(--c-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+
+      &:hover {
+        background-color: var(--c-dark);
+      }
+    }
+    #{$p}__img {
+      &:hover {
+        #{$p}__popup {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+

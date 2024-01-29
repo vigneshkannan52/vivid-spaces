@@ -1,0 +1,238 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-gallery-brands {
+  $gallery-brands: &;
+
+  &--ewo-isotope {
+    #{$gallery-brands}__box {
+      width: calc(25% - 18px);
+      padding-bottom: calc(25% - 18px);
+      margin-bottom: 24px;
+      background-color: transparent;
+      z-index: 1;
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: black;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      &:hover {
+        cursor: pointer;
+        &::after {
+          opacity: 0.4;
+        }
+      }
+
+      @include md-size-max {
+        width: calc(33.3% - 16px);
+        padding-bottom: calc(33.3% - 16px);
+      }
+
+      @include xs-size-max {
+        width: 100%;
+        padding-bottom: 100%;
+      }
+    }
+    #{$gallery-brands}__list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+      @include xs-size-max {
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      &-item {
+        margin-right: 55px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        position: relative;
+        @include xs-size-max {
+          margin: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+        @include xs-size-min {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          right: 0;
+          width: 0;
+          height: 2px;
+          display: block;
+          background-color: var(--c-light);
+          transition: all 0.5s ease;
+        }
+        &.active {
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            display: block;
+            background-color: var(--c-light);
+          }
+        }
+        a {
+          color: var(--c-light);
+          @include xs-size-max {
+            display: block;
+            padding: 15px;
+          }
+        }
+      }
+    }
+    #{$gallery-brands}--ibw-2 {
+      width: calc(50% - 16px);
+      @include md-size-max {
+        width: calc(66.6% - 8px);
+      }
+      @include xs-size-max {
+        width: 100%;
+      }
+    }
+
+    #{$gallery-brands}--ibh-2 {
+      padding-bottom: calc(50% - 12px);
+      @include md-size-max {
+        padding-bottom: calc(66.6% - 16px);
+      }
+      @include xs-size-max {
+        padding-bottom: 100%;
+      }
+    }
+  }
+}
+
+/**
+*   Popup
+*/
+
+/* zoom effect */
+.mfp-zoom-in {
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+    .mfp-with-anim {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+}
+
+/* change zoom-in cersor to pointer */
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: pointer;
+}
+
+/* close button */
+.mfp-content .mfp-close {
+  color: var(--c-light);
+  opacity: 1;
+  transition: 250ms;
+
+  &:hover {
+    color: var(--c-active);
+  }
+}
+
+.mfp-content {
+  max-height: 90vh;
+}
+
+/* counter */
+.mfp-counter {
+  color: var(--c-active);
+}
+
+/* arrows */
+.mfp-arrow-right:before,
+.mfp-arrow-left:before {
+  display: none;
+}
+
+.mfp-arrow-left:after {
+  border-right-color: var(--c-active);
+}
+
+.mfp-arrow-right:after {
+  border-left-color: var(--c-active);
+}
+
+.mfp-img {
+  animation: open 1s;
+  max-height: 90vh !important;
+}
+
+/* fade effect */
+.mfp-removing {
+  animation: close 1s;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

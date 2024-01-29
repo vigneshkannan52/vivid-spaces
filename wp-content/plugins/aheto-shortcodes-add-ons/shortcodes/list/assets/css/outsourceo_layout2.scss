@@ -1,0 +1,37 @@
+.aheto-list{
+	&--outsourceo-links{
+
+		ul{
+			margin: 0;
+		}
+
+		li{
+			margin-bottom: 4px;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			transition: all .3s ease;
+			position: relative;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			i{
+				transition: all .3s ease;
+				color: rgba(var(--ca-dark),.7);
+				margin-right: 10px;
+				font-size: 1.31em;
+			}
+			&:hover{
+				padding-left: 5px;
+				a,i{
+					color: var(--c-active)!important;
+				}
+			}
+			a{
+				color: var(--c-grey);
+				text-decoration: none;
+				font-weight: inherit;
+			}
+		}
+	}
+}

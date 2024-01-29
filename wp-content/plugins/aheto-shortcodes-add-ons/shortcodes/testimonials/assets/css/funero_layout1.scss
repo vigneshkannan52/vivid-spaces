@@ -1,0 +1,166 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-tm {
+	$tm: &;
+
+	&-wrapper--funero-simple{
+
+		.swiper-slide {
+			height: auto;
+		}
+		.swiper-container {
+			padding: 0;
+
+			.swiper-pagination-bullets {
+				margin-top: 70px !important;
+
+				@include md-size-max {
+					margin-top: 40px !important;
+				}
+				@include sm-size-max {
+					margin-top: 30px !important;
+				}
+				@include xs-size-max {
+					margin-top: 10px !important;
+				}
+
+				.swiper-pagination-bullet {
+					margin: 0 12px;
+					background-color: transparent;
+					border: solid 1px var(--c-alter3);
+					opacity: 1;
+					width: 11px;
+					height: 11px;
+
+					&-active {
+						border-color:  var(--c-active);
+						position: relative;
+						opacity: 1;
+						background-color: var(--c-active);
+					}
+				}
+			}
+			.swiper-button-next,
+			.swiper-button-prev {
+				width: 90px;
+				@include xs-size-max{
+					width: 40px;
+				}
+				&::before{
+					display: none;
+				}
+				&::after{
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 1px;
+					width: 100%;
+					border-bottom: 1px solid var(--c-alter3);
+				}
+				.swiper-slides-prev,
+				.swiper-slides-next{
+					position: relative;
+					color: var(--c-alter);
+					font-family: var(--t-tertiary-font-family);
+					text-align: center;
+					display: block;
+					margin-bottom: 10px;
+				}
+				.swiper-slides-total{
+					display: none;
+				}
+			}
+			.swiper-button-next{
+				right: 0;
+			}
+
+			.swiper-button-prev{
+				left: 0;
+			}
+		}
+
+
+			#{$tm}__content {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				position: relative;
+				transition: all .5s ease;
+				padding: 120px 90px;
+				height: 100%;
+				border: 1px solid var(--c-alter3);
+				background-color: var(--c-alter2);
+				@include md-size-max{
+					padding: 80px 90px;
+				}
+				@include xs-size-max{
+					padding: 53px 40px 50px;
+				}
+			}
+
+			#{$tm}__blockquote {
+				max-width: 1110px;
+				margin: 0 auto 40px;
+				z-index: 1;
+				@include xs-size-max{
+					margin-bottom: 20px;
+				}
+			}
+
+
+			#{$tm}__name {
+				max-width: 1110px;
+				width: 100%;
+				z-index: 1;
+				margin-right: auto;
+				margin-left: auto;
+				margin-bottom: 5px;
+			}
+
+			#{$tm}__date {
+				max-width: 1110px;
+				width: 100%;
+				z-index: 1;
+				margin: 0 auto 5px;
+			}
+			#{$tm}__border {
+				width: 160px;
+				height: 132px;
+				background-size: cover;
+				background-position: center;
+				position: absolute;
+				z-index: 0;
+				@include md-size-max{
+					width: 100px;
+					height: 85px;
+				}
+				@include xs-size-max{
+					width: 60px;
+					height: 50px;
+				}
+				&-tl{
+					top: 0;
+					left: 0;
+				}
+				&-tr{
+					top: 0;
+					right: 0;
+					transform: rotateY(180deg);
+				}
+				&-bl{
+					bottom: 0;
+					left: 0;
+					transform: rotateX(180deg);
+				}
+				&-br{
+					bottom: 0;
+					right: 0;
+					transform: rotate(180deg);
+				}
+			}
+	}
+}
+
+
+

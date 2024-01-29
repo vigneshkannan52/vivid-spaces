@@ -1,0 +1,39 @@
+@import "../../../../assets/css/mixin";
+.aheto-team-member {
+  $member: &;
+  &--mooseoom {
+    margin: 0 auto;
+    max-width: 376px;
+    transition: all 0.3s ease;
+    @include xs-size-max {
+      margin: 20px auto 0 auto;
+    }
+    &:hover {
+      transform: translateY(-20px);
+      transition: all 0.3s ease;
+      @include xs-size-max {
+        margin-top: 20px;
+      }
+    }
+    #{$member}__text {
+      margin-top: 30px;
+      @include xs-size-max {
+        margin-top: 20px;
+      }
+    }
+    #{$member}__img-holder {
+      img {
+        transition: all 0.3s ease;
+        width: 100% !important;
+        &:hover {
+          transition: all 0.3s ease;
+          filter: grayscale(100%);
+          @include xs-size-max {
+            transition: none;
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+}

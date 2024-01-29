@@ -1,0 +1,32 @@
+.aheto-contact {
+	$contact: &;
+
+	&--moovit-classic {
+		#{$contact}__item {
+			margin-bottom: 15px;
+		}
+		p {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: var(--c-active);
+			}
+		}
+
+		&.light-version {
+			#{$contact}__title {
+				color: var(--c-light);
+			}
+			p, a {
+				color: var(--c-light);
+			}
+			a:hover {
+				color: var(--c-active);
+			}
+
+		}
+	}
+}

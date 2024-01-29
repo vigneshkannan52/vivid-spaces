@@ -1,0 +1,17 @@
+.aheto-team-member {
+  $member: &;
+
+  &--ewo-simple {
+    #{$member}__text {
+      padding: 29px 26px 12px;
+    }
+    #{$member}__name {
+      margin-bottom: 7px;
+    }
+    #{$member}__img-holder {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+}

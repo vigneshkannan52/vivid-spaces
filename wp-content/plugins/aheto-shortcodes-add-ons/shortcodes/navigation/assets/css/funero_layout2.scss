@@ -1,0 +1,47 @@
+@import '../../../../assets/css/mixin';
+
+.main-header {
+	$p: &;
+
+	&--funero-simple {
+		max-width: 100%;
+		margin: auto;
+		color: var(--c-alter);
+		border-bottom: 1px solid var(--c-alter3);
+		#{$p}__menu{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0;
+			@include xs-size-max{
+				justify-content: center ;
+				align-items: center ;
+				margin-bottom: 15px;
+			}
+			ul{
+				display: none;
+			}
+			li{
+				padding: 0 30px 15px;
+				@include xs-size-max {
+					padding: 0 10px 10px;
+					width: auto;
+					text-align: center;
+					&:nth-child(2n){
+						padding-left: 10px;
+					}
+					&:nth-child(2n - 1){
+						padding-right: 10px;
+					}
+				}
+				a{
+					color: var(--c-alter);
+					&:hover{
+						color: var(--c-active);
+					}
+				}
+			}
+		}
+	}
+}

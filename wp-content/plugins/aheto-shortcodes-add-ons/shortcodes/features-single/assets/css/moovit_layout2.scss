@@ -1,0 +1,78 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block {
+	$features: &;
+
+	&--moovit-simple {
+		&.align-mob-left *{
+			@include xs-size-max{
+				text-align: left!important;
+			}
+		}
+
+		&.align-mob-center *{
+			@include xs-size-max {
+				text-align: center!important;
+			}
+		}
+
+		&.align-mob-center{
+			@include xs-size-max {
+				text-align: center;
+			}
+		}
+
+		&.align-mob-right *{
+			@include xs-size-max {
+				text-align: right!important;
+			}
+		}
+
+
+		#{$features}__info {
+			display: flex;
+			@include xs-size-max{
+				flex-direction: column;
+			}
+		}
+
+		#{$features}__image {
+			position: relative;
+			margin-right: 20px;
+			flex: 1 0 auto;
+			@include xs-size-max{
+				margin-right: 0;
+			}
+		}
+
+		#{$features}__title {
+			margin-top: 15px;
+			margin-bottom: 10px;
+
+			span:not(.moovit-dot) {
+				color: var(--c-active);
+			}
+
+			.moovit-dot{
+				white-space: nowrap;
+				&::after{
+					content: '';
+					display: inline-block;
+					width: calc(1em/100*18);
+					height: calc(1em/100*18);
+					background: var(--c-active);
+				}
+				&.dot-dark::after{
+					background: var(--c-dark);
+				}
+				&.dot-white::after{
+					background: var(--c-light);
+				}
+			}
+		}
+
+		#{$features}__info-text {
+			margin-bottom: 0;
+		}
+	}
+}

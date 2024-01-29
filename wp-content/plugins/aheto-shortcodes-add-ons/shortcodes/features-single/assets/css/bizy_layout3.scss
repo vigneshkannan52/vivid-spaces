@@ -1,0 +1,46 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-features {
+    $features: &;
+
+    &--bizy-simple {
+
+        #{$features}-block__wrap {
+            display: flex;
+            align-items: flex-end;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding-top: 74%;
+            box-shadow: 0 10px 20px rgba(var(--ca-dark), 0.1);
+            transition: all .4s ease;
+            top: 0;
+            &:hover{
+                top: -15px;
+                @include xs-size-max{
+                    top: -10px;
+                }
+            }
+        }
+
+        #{$features}-block__title {
+            padding: 5px 25px;
+            background: var(--c-light);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 0;
+            a{
+                color: inherit;
+                line-height: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}

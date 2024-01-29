@@ -1,0 +1,116 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-tm {
+	$tm: &;
+
+	&-wrapper--soapy-simple {
+
+		.swiper-slide {
+			height: auto;
+			padding-top: 11px;
+			opacity: 0;
+		}
+		.swiper-slide-visible{
+			opacity: 1;
+		}
+
+		.swiper-container {
+			padding: 0 35px 55px;
+			@include xs-size-max{
+				padding: 0 10px 20px;
+			}
+
+			.swiper-pagination-bullets {
+				margin-top: 70px !important;
+
+				@include md-size-max {
+					margin-top: 40px !important;
+				}
+				@include sm-size-max {
+					margin-top: 30px !important;
+				}
+				@include xs-size-max {
+					margin-top: 10px !important;
+				}
+
+				.swiper-pagination-bullet {
+					margin: 0 12px;
+					background-color: transparent;
+					border: solid 1px var(--c-alter3);
+					opacity: 1;
+					width: 11px;
+					height: 11px;
+
+					&-active {
+						border-color:  var(--c-active);
+						position: relative;
+						opacity: 1;
+						background-color: var(--c-active);
+					}
+				}
+			}
+		}
+
+		#{$tm}__simple {
+			position: relative;
+			height: calc(100% - 55px);
+
+			&:hover {
+				.aheto-tm__content {
+					transform: translateY(-10px);
+				}
+			}
+
+			#{$tm}__content {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				position: relative;
+				margin-top: 55px;
+				background-color: var(--c-light);
+				transition: all .5s ease;
+				padding: 87px 40px 35px;
+				height: 100%;
+				box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+				@include xs-size-max{
+					box-shadow: 0 10px 10px 0 rgba(var(--ca-dark), 0.09);
+
+				}
+				&::after {
+					position: absolute;
+					content: "“";
+					left: 15px;
+					top: -37px;
+					width: 80px;
+					height: 80px;
+					font-family: var(--t-secondary-font-family);
+					color: rgba(var(--ca-active), 0.2);
+				}
+			}
+
+			#{$tm}__blockquote {
+				margin-bottom: 0;
+			}
+
+			#{$tm}__avatar {
+				position: absolute;
+				transform: translate(-50%, -50%);
+				top: 0;
+				left: 50%;
+				background-size: cover;
+				background-position: center;
+				width: 110px;
+				height: 110px;
+				border-radius: 50%;
+			}
+
+			#{$tm}__name {
+				margin-top: 20px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+

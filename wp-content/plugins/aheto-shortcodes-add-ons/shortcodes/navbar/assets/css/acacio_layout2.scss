@@ -1,0 +1,139 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-navbar {
+	$navbar: &;
+	&--acacio-additional {
+
+		#{$navbar}--inner {
+			text-align: center;
+			&.aheto-navbar--fixed {
+				@media only screen and (min-width: 1025px) {
+					position: fixed;
+					left: 0;
+					width: 100%;
+					background-color: var(--c-light);
+					z-index: 100;
+					box-shadow: 0 25px 50px 0 rgba(var(--ca-dark), .05);
+					-webkit-transition: all 0.5s;
+					-moz-transition: all 0.5s;
+					-ms-transition: all 0.5s;
+					-o-transition: all 0.5s;
+					transition: all 0.5s;
+
+					#{$navbar}--acacio-menu-additional.transparent_white,
+					#{$navbar}--acacio-menu-additional {
+						ul li {
+							a {
+								color: var(--c-dark);
+							}
+							&:hover {
+								& > a {
+									color: var(--c-active);
+								}
+							}
+							&.current-menu-item,
+							&.current-menu-parent {
+								& > a {
+									color: var(--c-active);
+									&::before {
+										opacity: 1;
+										visibility: visible;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		ul {
+			text-align: center;
+			margin-bottom: 0;
+			li {
+				display: inline-block;
+				padding: 22px 25px 18px;
+				@media only screen and (max-width: 1024px) {
+					padding: 20px 10px 20px;
+				}
+				@include xs-size-max{
+					padding: 10px 15px 10px;
+				}
+
+				a {
+					display: inline-block;
+					color: var(--c-dark);
+					text-decoration: none;
+					transition: all .3s ease;
+					position: relative;
+
+					&::before {
+						content: '';
+						display: block;
+						height: 4px;
+						width: 100%;
+						background: var(--c-active);
+						opacity: 0;
+						visibility: hidden;
+						position: absolute;
+						top: -27px;
+						left: 0;
+						transition: all .3s ease;
+						@include xs-size-max{
+							top: -16px;
+						}
+					}
+				}
+
+				&:hover {
+					& > a {
+						color: var(--c-active)!important;
+						&::before {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+
+				}
+				&.current-menu-item,
+				&.current-menu-parent {
+					& > a {
+						color: var(--c-active)!important;
+						&::before {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+
+			}
+		}
+
+		&.transparent_white {
+			ul {
+				li {
+					a {
+						color: var(--c-light);
+					}
+					&:hover {
+						& > a {
+							color: var(--c-active);
+						}
+					}
+
+					&.current-menu-item,
+					&.current-menu-parent {
+						& > a {
+							color: var(--c-active);
+							&::before {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

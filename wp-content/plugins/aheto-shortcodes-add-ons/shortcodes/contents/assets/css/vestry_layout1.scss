@@ -1,0 +1,61 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-contents {
+  $p: &;
+  &--vestry-faq {
+    #{$p}__title {
+      margin: 0;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      padding-right: 25px;
+      &:after {
+        content: "\f217";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        font-family: "Ionicons";
+        color: var(--c-active);
+      }
+    }
+
+    #{$p}__item {
+      padding: 35px;
+      margin-bottom: 15px;
+      position: relative;
+      box-shadow: 0 15px 40px 0 rgba(var(--ca-dark), 0.1);
+      @include xs-size-max {
+        padding: 25px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      &.is-open {
+        #{$p}__title {
+          color: var(--c-active);
+          &:after {
+            content: "\f209";
+          }
+        }
+      }
+    }
+
+    #{$p}__panel {
+      display: none;
+    }
+
+    #{$p}__desc {
+      margin: 15px 0 0;
+
+      @media screen and (max-width: 768px) {
+        margin: 15px 0;
+      }
+    }
+  }
+}

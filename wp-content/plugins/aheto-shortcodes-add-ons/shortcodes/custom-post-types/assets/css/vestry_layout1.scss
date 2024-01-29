@@ -1,0 +1,145 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-cpt {
+  $p: &;
+
+  &--vestry-shop {
+    --img-height: 100;
+    --count-v: 1;
+    --spaces-v: 0;
+
+    .swiper-container {
+      padding: 50px 0 0;
+      margin: -50px 0 -30px;
+    }
+
+    .swiper-wrapper {
+      padding-bottom: 20px;
+      @include xs-size-max {
+        padding-bottom: 10px;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @include lg-size-max {
+        display: none;
+      }
+    }
+    .swiper-button-prev:before {
+      content: "\f3d5";
+    }
+
+    .swiper-button-next:before {
+      content: "\f3d6";
+    }
+
+    .swiper-button-prev {
+      left: -80px;
+    }
+
+    .swiper-button-next {
+      right: -80px;
+    }
+
+    .swiper-button-disabled {
+      color: var(--c-grey);
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+      margin-top: 30px;
+      @include xs-size-max {
+        margin-top: 15px;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background-color: transparent;
+      border: 1px solid var(--c-grey);
+      color: transparent;
+      width: 15px;
+      height: 15px;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: var(--c-grey);
+    }
+
+    &.arrow-top {
+      .swiper-top {
+        margin: 0 auto;
+        max-width: 1250px;
+        position: relative;
+        &>.aheto-features__subtitle {
+          display: inline-block;
+          padding: 5px 10px 4px;
+          color: var(--c-light);
+          position: relative;
+          margin-bottom: 30px;
+          border-bottom: 2px solid rgba(var(--ca-dark), .1);
+        }
+    
+        &>.aheto-features__title {
+          color: var(--c-light);
+          margin-bottom: 100px;
+          @include lg-size-max {
+            margin-bottom: 60px;
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          position: absolute;
+          top: 60px;
+          right: 60px;
+          left: auto;
+          bottom: auto;
+          width: 40px;
+          height: 40px;
+          color: var(--c-light);
+          @include lg-size-max {
+            display: block;
+            top: 0;
+            right: 60px;
+          }
+          @include md-size-max {
+            right: 30px;
+          }
+          @include xs-size-max {
+            display: block;
+            top: 5px;
+            right: 0;
+            width: 35px;
+          }
+          @media screen and (max-width: 350px) {
+            display: none;
+          }
+        }
+  
+        .swiper-button-prev {
+          right: 120px;
+          @include lg-size-max {
+            right: 150px;
+          }
+          @include md-size-max {
+            right: 120px;
+          }
+          @include xs-size-max {
+            right: 55px;
+          }
+        }
+
+        .swiper-button-prev:before {
+          content: '\f3d5';
+        }
+  
+        .swiper-button-next:before {
+          content: '\f3d6';
+        }
+      }
+    }
+    &.square-img {
+      .aheto-content-block {
+        min-height: 400px;
+      }
+    }
+  }
+}

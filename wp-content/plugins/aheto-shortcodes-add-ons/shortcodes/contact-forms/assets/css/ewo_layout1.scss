@@ -1,0 +1,158 @@
+@import "../../../../assets/css/mixin";
+
+.widget_aheto {
+  $p: &;
+
+  &__cf--ewo__subscribe-simple {
+    overflow: auto;
+
+    #{$p}__form {
+      .wpcf7 {
+        form p {
+          position: relative;
+          width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-bottom: 0;
+          @include xs-size-max {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+        }
+        span {
+          font: inherit;
+          color: inherit;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-right: 15px;
+          width: 100%;
+          @include xs-size-max {
+            margin-right: 0;
+          }
+          &.wpcf7-not-valid-tip {
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 100%;
+            color: #ff0000;
+            font-size: 87%;
+            @include xs-size-max {
+              top: 2px;
+            }
+          }
+        }
+        input:not([type="submit"]) {
+          padding: 0 70px 0 20px;
+          border: none;
+          width: 100%;
+          font: inherit;
+          color: var(--c-light);
+          max-width: 100%;
+          box-shadow: none;
+          border-bottom: 1px solid rgba(var(--ca-light), 0.7);
+          background: transparent;
+          -webkit-appearance: none;
+          border-radius: 0;
+          transition: all 0.3s ease;
+          &:focus {
+            border-color: var(--c-light);
+          }
+          @include xs-size-max {
+            padding: 20px 70px 20px 20px;
+            margin-bottom: 40px;
+          }
+          &:-webkit-autofill,
+          &:-webkit-autofill:focus {
+            -webkit-text-fill-color: var(--c-light);
+            font-size: 1rem;
+          }
+        }
+
+        .ajax-loader {
+          display: none;
+        }
+      }
+      div.wpcf7-validation-errors,
+      div.wpcf7-acceptance-missing {
+        border: 2px solid #ff0000;
+        color: #ff0000;
+      }
+
+      div.wpcf7-mail-sent-ok {
+        border: 2px solid #398f14;
+        color: #398f14;
+      }
+
+      input {
+        transition: all 0.3s ease;
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: rgba(var(--ca-light), 0.7);
+        }
+
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: rgba(var(--ca-light), 0.7);
+        }
+
+        &::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: rgba(var(--ca-light), 0.7);
+        }
+        &:focus {
+          &::placeholder {
+            opacity: 1;
+          }
+
+          &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            opacity: 1;
+          }
+
+          &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__cf--ewo__subscribe-simple.bb .widget_aheto__form .wpcf7 input:not([type="submit"]) {
+    color: var(--c-dark);
+    border-bottom: 1px solid rgba(var(--ca-dark), 0.7);
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--c-dark);
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: var(--c-dark);
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: var(--c-dark);
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: var(--c-dark);
+    }
+  }
+  &__cf--ewo__subscribe-simple.bb {
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+      border: 2px solid #ff0000;
+      color: #ff0000;
+    }
+
+    div.wpcf7-mail-sent-ok {
+      border: 2px solid #398f14;
+      color: #398f14;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import '../../../../assets/css/mixin';
+.aheto-cpt-article {
+  $p: &;
+  &--acacio_skin-4 {
+    --img-height: 69.5;
+    #{$p}__inner {
+
+      position: relative;
+
+      box-shadow: 0px 10px 50px 0 rgba(var(--ca-dark), 0.06);
+      overflow: hidden;
+      &:hover {
+        #{$p}__content {
+          bottom: 0;
+          -webkit-transition: bottom 0.5s;
+          -moz-transition: bottom 0.5s;
+          -ms-transition: bottom 0.5s;
+          -o-transition: bottom 0.5s;
+          transition: bottom 0.5s;
+        }
+      }
+    }
+    #{$p}__img {
+      position: relative;
+      @include  md-size-max {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    #{$p}__content {
+      padding: 20px 25px 20px;
+      background-color: var(--c-light);
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      left: 0;
+      -webkit-transition: bottom 0.5s;
+      -moz-transition: bottom 0.5s;
+      -ms-transition: bottom 0.5s;
+      -o-transition: bottom 0.5s;
+      transition: bottom 0.5s;
+      @include xs-size-max{
+        padding: 27px 20px 27px;
+
+      }
+    }
+
+    #{$p}__title {
+      padding-top: 0;
+      margin-bottom: 14px;
+      color: var(--c-dark);
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+    #{$p}__terms {
+      margin-top: 8px;
+      color: var(--c-grey);
+
+      a {
+        display: inline-block;
+        color: inherit;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+    #{$p}__img {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: calc(var(--img-height) * 1%);
+    }
+  }
+}

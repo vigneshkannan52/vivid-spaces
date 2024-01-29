@@ -1,0 +1,50 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+	$heading: &;
+
+	&--hr__simple {
+		&.align-mob-left *{
+			@include xs-size-max{
+				text-align: left!important;
+			}
+		}
+
+		&.align-mob-center *{
+			@include xs-size-max {
+				text-align: center!important;
+			}
+		}
+
+
+		&.align-mob-right *{
+			@include xs-size-max {
+				text-align: right!important;
+			}
+		}
+		#{$heading}__subtitle {
+			display: block;
+			color: var(--c-dark);
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+		#{$heading}__title {
+			margin: 0;
+			span {
+				color: var(--c-active);
+			}
+
+			&.hr-dot::after{
+				content: '';
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				background: var(--c-active);
+
+			}
+		}
+
+	}
+
+}

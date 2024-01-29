@@ -1,0 +1,109 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-features {
+    $features: &;
+
+    &--bizy-creative {
+        display: flex;
+        &.columns-one{
+            #{$features}-block__wrap{
+                width: 100%;
+            }
+        }
+        &.columns-two{
+            #{$features}-block__wrap{
+                width: 50%;
+                @include xs-size-max{
+                    width: 100%;
+                }
+            }
+        }
+        &.columns-three{
+            #{$features}-block__wrap{
+                width: calc(100%/3);
+                @include xs-size-max{
+                    width: 100%;
+                }
+            }
+        }
+        &.columns-four{
+            #{$features}-block__wrap{
+                width: 25%;
+                @include sm-size-max{
+                    width: 50%;
+                }
+                @include xs-size-max{
+                    width: 100%;
+                }
+            }
+        }
+
+        #{$features}-block__wrap {
+            display: flex;
+            min-height: 165px;
+            align-items: center;
+            position: relative;
+            padding: 50px 45px;
+            background: rgba(var(--ca-dark), .8);
+            border: 1px solid rgba(var(--ca-light), .09);
+            transition: all .3s ease;
+
+            &:hover {
+                background: var(--c-light);
+
+                #{$features}-block__title {
+                    color: var(--c-dark);
+                }
+
+                #{$features}-block__inner{
+                    #{$features}-block__link {
+                        height: auto;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        #{$features}-block__content{
+            position: relative;
+        }
+        #{$features}-block {
+            &__image {
+                position: relative;
+                margin-right: 28px;
+            }
+
+            &__title {
+                visibility: hidden;
+                margin-bottom: 2px;
+                color: var(--c-light);
+                transition: all .3s ease;
+                opacity: 0;
+            }
+
+            &__link {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+        }
+        #{$features}-block__inner{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            #{$features}-block__title {
+                opacity: 1;
+                visibility: visible;
+            }
+            #{$features}-block__link {
+                height: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: all .3s ease;
+            }
+        }
+    }
+}

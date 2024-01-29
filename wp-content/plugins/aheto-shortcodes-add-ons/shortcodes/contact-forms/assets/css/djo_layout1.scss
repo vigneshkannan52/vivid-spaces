@@ -1,0 +1,118 @@
+@import '../../../../assets/css/mixin';
+
+.widget_aheto {
+	$p: &;
+
+	&__cf--djo__subscribe-simple {
+
+		#{$p}__form {
+			.wpcf7 {
+
+				div.wpcf7-response-output {
+					margin-right: 0;
+					margin-left: 0;
+					margin-top: 2.5em;
+					color: var(--c-active);
+				}
+
+				form p {
+					position: relative;
+					display: flex;
+					margin-bottom: 0;
+					color: inherit;
+
+					@media only screen and (max-width: 600px) {
+						flex-direction: column;
+					}
+				}
+
+				span:not(.ajax-loader) {
+					font: inherit;
+					color: inherit;
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+
+					span.wpcf7-not-valid-tip {
+						position: absolute;
+						left: 0;
+						top: 100%;
+						margin-top: 6px;
+						display: block;
+						width: 100%;
+						color: var(--c-active);
+
+						@media(max-width: 600px) {
+							position: relative;
+						}
+					}
+				}
+
+				input:not([type="submit"]) {
+					padding: 16px 70px 16px 20px;
+					border: 1px solid rgba(var(--ca-active), 0.3);
+					width: 100%;
+					color: var(--c-light);
+					max-width: 100%;
+					box-shadow: none;
+					border-radius: 0;
+
+					&:focus {
+						background-color: rgba(var(--ca-active),.1);
+					}
+
+					&::placeholder {
+						color: var(--c-light);
+						opacity: 0.66;
+						font-family: inherit;
+					}
+
+					@include xs-size-max {
+						min-height: 56px;
+					}
+				}
+
+				input[type="submit"] {
+					margin-left: 20px;
+					justify-content: center;
+
+					@media(max-width: 600px) {
+						margin-left: 0;
+						margin-top: 20px;
+					}
+				}
+
+				.ajax-loader {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					background-image: none;
+					background-color: rgba(var(--ca-active), 0.2);
+					margin: 0;
+					
+					&::before {
+						content: '';
+						position: absolute;
+						width: 45px;
+						height: 45px;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						background-size: 45px 45px;
+						background-image: url("./../../../../../../assets/images/ajax-loader.gif");
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+		
+		div.wpcf7-validation-errors, 
+		div.wpcf7-acceptance-missing,
+		div.wpcf7-mail-sent-ok {
+			border-color: var(--c-active);
+		}
+	}
+}

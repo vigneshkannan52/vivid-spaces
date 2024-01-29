@@ -1,0 +1,49 @@
+.aheto-list {
+  $p: &;
+  &--mooseoom-bullets {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 12px;
+      position: relative;
+      list-style: none;
+      vertical-align: middle;
+      transform: translateX(0px);
+      transition: all 0.5s;
+      &::before {
+        vertical-align: middle;
+        content:"";
+        border-style: solid;
+        border-width: 0px 0 0px 0px;
+        border-color: transparent transparent transparent var(--c-active);
+        transition: all 0.5s;
+        margin-right: 5px;
+        display: inline-block;
+        transform: translateY(-2px);
+        margin-left: -12px;
+        opacity: .5;
+      }
+      a {
+        color: inherit;
+        font-size: inherit;
+      }
+      &:hover {
+        a {
+          opacity: .7;
+          cursor: pointer;
+        }
+
+        &::before {
+          border-width: 5.5px 0 5.5px 10px;
+          transition: border-width 0.5s;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

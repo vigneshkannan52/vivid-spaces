@@ -1,0 +1,37 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt__snapster-horizontal-simple {
+	$cpt: &;
+
+	--img-height: 0;
+	--count-v: 1;
+	--spaces-v: 0;
+
+	.aheto-cpt-article {
+		--img-height: 0;
+	}
+
+	.swiper {
+		&-wrapper {
+			padding-bottom: 0;
+		}
+		&-slide {
+			padding: 0;
+			cursor: ew-resize;
+			max-width: 25%;
+			max-height: 75vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include md-size-max{
+				max-width: 35%;
+			}
+			@include sm-size-max{
+				max-width: 60%;
+			}
+			@include xs-size-max{
+				max-width: 100%;
+			}
+		}
+	}
+}

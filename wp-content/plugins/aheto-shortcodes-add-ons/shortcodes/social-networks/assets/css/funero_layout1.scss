@@ -1,0 +1,41 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials {
+  $p: &;
+
+  &-networks--funero {
+    #{$p} {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+    &#{$p}--left{
+      #{$p} {
+        justify-content: flex-start;
+      }
+      #{$p}__link{
+        margin: 0 14px 0 0;
+      }
+    }
+    #{$p}__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 19px;
+      height: 19px;
+      border: 1px solid var(--c-active);
+      color: var(--c-light);
+      background-color: var(--c-active);
+      border-radius: 50%;
+      font-size: 0.82em;
+      transition: 0.5s;
+      margin: 0 7px;
+
+      &:hover {
+        color: var(--c-active);
+        background-color: var(--c-light);
+      }
+    }
+  }
+}

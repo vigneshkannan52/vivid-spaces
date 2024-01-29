@@ -1,0 +1,36 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content {
+  $features: &;
+
+  &--famulus-no-image {
+    max-width: 400px;
+    margin: 0 auto;
+
+    #{$features}-block__heading {
+      margin-bottom: 3px;
+    }
+
+
+    #{$features}-block__title {
+      color: var(--c-alter);
+    }
+
+    #{$features}-block__after-title {
+      font-size: 0.6em;
+      vertical-align: super;
+    }
+
+    #{$features}-block__subtitle {
+      margin-bottom: 10px;
+      color: var(--c-alter);
+    }
+
+    #{$features}-block__info-text {
+      color: var(--c-dark2);
+      @include xs-size-max{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact {
+	$contact: &;
+
+	&--rela-slider {
+		#{$contact}__title {
+			margin-bottom: 25px;
+			@include xs-size-max {
+				margin-bottom: 20px;
+			}
+		}
+
+		#{$contact}__info {
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+			@include xs-size-max {
+				margin-bottom: 12px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			i {
+				display: inline-block;
+				margin-right: 12px;
+				color: var(--c-light);
+
+				&::before {
+					background-color: var(--c-active);
+					border-radius: 10px;
+					width: 20px;
+					height: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				&.icon_mail_alt::before {
+					padding: 3px 6px 7px;
+				}
+			}
+
+			p {
+				display: inline-block;
+				margin-bottom: 0;
+			}
+
+			a:hover {
+				color: var(--c-alter);
+			}
+		}
+
+		.swiper {
+			position: relative;
+
+			.swiper-slide {
+				padding-left: 2px;
+			}
+
+			&-button {
+				&-prev, &-next {
+					right: 12px;
+					left: initial;
+					color: var(--c-dark);
+					top: 10px;
+					opacity: .7;
+
+					&:hover {
+						color: var(--c-alter);
+					}
+
+					@media screen and (max-width: 1024px) {
+						display: none;
+					}
+
+				}
+
+				&-next {
+					&:before {
+						content: "\f3d3";
+					}
+				}
+
+				&-prev {
+					right: 58px;
+
+					&:before {
+						content: "\f3d2";
+					}
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 10px;
+						right: -19px;
+						height: 22px;
+						border-right: 1px solid rgba(var(--ca-dark), 0.23);
+					}
+				}
+			}
+		}
+	}
+
+	&__light_arrows {
+		.swiper {
+			&-button {
+				&-prev, &-next {
+					color: var(--c-light);
+
+					&:hover {
+						color: var(--c-alter);
+					}
+				}
+
+				&-prev {
+					&::after {
+						border-right: 1px solid rgba(var(--ca-light), 0.23);
+					}
+				}
+			}
+		}
+	}
+}

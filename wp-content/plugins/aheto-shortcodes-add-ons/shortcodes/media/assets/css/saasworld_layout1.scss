@@ -1,0 +1,23 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-media {
+	$media: &;
+	&--saasworld {
+		#{$media}__img {
+			display: none;
+		}
+		&-hide-mobile {
+			#{$media}__container{
+				background: transparent!important;
+			}
+			@include sm-size-max {
+				video {
+					display: none;
+				}
+				#{$media}__img {
+					display: block;
+				}
+			}
+		}
+	}
+}

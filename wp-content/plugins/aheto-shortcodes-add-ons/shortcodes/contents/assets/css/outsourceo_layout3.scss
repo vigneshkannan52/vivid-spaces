@@ -1,0 +1,63 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+	$p: &;
+
+	&--outsourceo-faq {
+		#{$p}__title {
+			margin: 0;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		#{$p}__item {
+			background: rgba(var(--ca-alter2), .15);
+			padding: 40px 70px 40px 40px;
+			margin-bottom: 20px;
+			position: relative;
+
+			@include xs-size-max {
+				padding: 30px 40px 30px 20px;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+			i {
+				position: absolute;
+				top: 45px;
+				right: 40px;
+				line-height: 1;
+				font-size: 1.25rem;
+				@include xs-size-max {
+					top: 30px;
+					right: 20px;
+				}
+			}
+
+			&.is-open {
+				i {
+					color: var(--c-active);
+				}
+				#{$p}__title {
+					color: var(--c-active);
+				}
+			}
+		}
+
+		#{$p}__panel {
+			display: none;
+		}
+
+		#{$p}__desc {
+			margin: 23px 0 0;
+
+			@media screen and (max-width: 768px) {
+				margin: 15px 0;
+			}
+		}
+	}
+}

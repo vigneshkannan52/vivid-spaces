@@ -1,0 +1,149 @@
+.aheto-contact {
+    $contact: &;
+
+    &--djo-modern {
+        #{$contact}__title {
+            margin-bottom: 25px;
+        }
+
+        #{$contact}__info {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-left: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                top: 2px;
+                font-style: inherit;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    color: var(--c-active);
+                    font-size: 1.1em;
+                    opacity: 0.7;
+                }
+            }
+
+            p {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: var(--c-active);
+                }
+            }
+
+        }
+
+        #{$contact}__arrows-wrap {
+            margin-left: 10px;
+            width: 50px;
+            height: 30px;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: '|';
+                display: inline-block;
+                font-size: 1.7em;
+                position: absolute;
+                top: calc(50% - 2px);
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: .23;
+                color: var(--c-light);
+
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: block!important;
+            }
+        }
+
+        .swiper {
+            .swiper-container {
+                width: calc(100% - 60px);
+                float: left;
+            }
+
+            .swiper-slide {
+                padding-left: 1px;
+            }
+
+            &-button {
+
+                &-prev,
+                &-next {
+                    top: 50%;
+                    right: 0;
+                    left: initial;
+                    color: var(--c-light);
+                    font-size: 0.94em;
+                    opacity: 0.7;
+                    transform: translateY(-50%);
+                    display: block;
+
+                    &:hover {
+                        color: var(--c-active);
+                        opacity: 1;
+                    }
+                }
+
+                &-prev {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+
+        &.dark-version {
+
+            #{$contact}__arrows-wrap::after,
+            #{$contact}__title {
+                color: var(--c-dark);
+            }
+
+            #{$contact}__info {
+
+                p,
+                a {
+                    color: var(--c-dark);
+                }
+
+                a:hover {
+                    color: var(--c-active);
+                }
+            }
+
+            .swiper {
+                &-button {
+
+                    &-prev,
+                    &-next {
+                        color: var(--c-dark);
+
+                        &:hover {
+                            color: var(--c-active);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

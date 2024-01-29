@@ -1,0 +1,147 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-tm {
+  $tm: &;
+
+  &-wrapper--ewo {
+    .swiper-slide {
+      height: auto;
+      padding-top: 11px;
+    }
+
+    .swiper-container {
+      .swiper-pagination-bullets {
+        margin-top: 80px !important;
+
+        @include sm-size-max {
+          margin-top: 40px !important;
+        }
+        .swiper-pagination-bullet {
+          margin: 0 7px;
+          background-color: var(--c-alter);
+          opacity: 0.4;
+          width: 10px;
+          height: 10px;
+          &-active {
+            position: relative;
+            opacity: 1;
+            background-color: var(--c-active);
+            &::after {
+              position: absolute;
+              content: "";
+              width: 17px;
+              height: 17px;
+              border-radius: 50%;
+              left: 50%;
+              top: 50%;
+              border: 1px solid var(--c-active);
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+    }
+
+    #{$tm}__modern {
+      position: relative;
+
+      &:hover {
+        .aheto-tm__content {
+          transform: translateY(-10px);
+        }
+        .aheto-tm__avatar {
+          &::after {
+            border-top: 1px solid var(--c-active);
+            border-left-width: 1px;
+            border-right-width: 1px;
+            transform: rotate(270deg);
+            transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+          }
+          &::before {
+            border-top-color: var(--c-active);
+            border-right-color: var(--c-active);
+            border-bottom-color: var(--c-active);
+            transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s,
+              border-bottom-color 0.15s linear 0.2s;
+          }
+        }
+      }
+
+      #{$tm}__content {
+        position: relative;
+        background-color: transparent;
+        border-radius: 5px;
+        transition: all 0.5s ease;
+        color: var(--c-light);
+        p {
+          color: var(--c-light);
+        }
+
+        &:before {
+          content: "“";
+          font-size: 3rem;
+          position: absolute;
+          top: -20px;
+          left: 0;
+        }
+      }
+
+      #{$tm}__text {
+        margin-bottom: 0;
+        padding: 22px 0;
+        text-indent: 25px;
+      }
+
+      #{$tm}__author {
+        display: flex;
+        align-items: center;
+      }
+
+      #{$tm}__avatar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        border-radius: 50%;
+        border: solid 1px transparent;
+        &::after {
+          top: -1px;
+          left: -1px;
+          box-sizing: inherit;
+          content: "";
+          position: absolute;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          border-radius: 100%;
+          border: 0 solid transparent;
+        }
+        &::before {
+          top: -1px;
+          left: -1px;
+          box-sizing: inherit;
+          content: "";
+          position: absolute;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          border-radius: 100%;
+          border: 1px solid transparent;
+        }
+        img {
+          width: 38px;
+          height: 38px;
+        }
+      }
+
+      #{$tm}__position {
+        margin-top: 3px;
+        margin-bottom: 0;
+      }
+
+      #{$tm}__name {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

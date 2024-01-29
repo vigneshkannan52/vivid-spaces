@@ -1,0 +1,111 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing {
+  $p: &;
+
+  &--soapy-simple  {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--c-light);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: 0.35s  all;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+
+    &#{$p}--soapy-active{
+      padding: 40px 0;
+      margin: -40px -10px;
+      z-index: 1;
+      background-color: var(--c-active);
+
+      @include xs-size-max{
+        padding: 0;
+        margin: 0 auto;
+      }
+      #{$p}--tableColumn {
+        background-color: var(--c-active);
+      }
+
+      #{$p}__content {
+        border: none;
+        padding-top: 24px;
+        @include sm-size-max {
+          padding-top: 8px;
+        }
+      }
+      #{$p}__btn {
+        border: 1px solid var(--c-active);
+        background-color: var(--c-light);
+        color: var(--c-alter);
+        margin-top: 37px;
+        &:hover{
+          color: var(--c-light);
+          border: 1px solid var(--c-light);
+          background-color: var(--c-active);
+        }
+        @include md-size-max {
+          margin-top: 20px;
+        }
+      }
+    }
+    #{$p}--tableColumn {
+      transition: 0.35s;
+      @include sm-size-max {
+        min-height: 250px!important;
+      }
+    }
+    #{$p}__btn {
+      padding: 13px 25px;
+      text-align: center;
+      min-width: 190px;
+      display: inline-block;
+      margin: 35px auto 0;
+      border: 1px solid var(--c-active);
+      background-color: var(--c-active);
+      color: var(--c-light);
+      font-family: var(--t-secondary-font-family);
+      &:hover{
+        color: var(--c-active);
+        background-color: var(--c-light);
+      }
+      @include md-size-max {
+        margin: 20px 0 0;
+      }
+    }
+
+
+
+
+
+    #{$p}__box-descr {
+      margin-bottom: 0;
+    }
+
+    #{$p}__content {
+      flex: 1;
+      padding: 28px 20px 45px;
+      border-top: 0;
+      @include sm-size-max {
+        padding: 10px 35px 35px;
+      }
+    }
+
+    #{$p}__box-title {
+      margin: 0 0 10px;
+      position: relative;
+      @include sm-size-max {
+        margin: 0 0 10px;
+      }
+      span{
+        color: var(--c-active);
+      }
+    }
+    #{$p}__subtitle {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+

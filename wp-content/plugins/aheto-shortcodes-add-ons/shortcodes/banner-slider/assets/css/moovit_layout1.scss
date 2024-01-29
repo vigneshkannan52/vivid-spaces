@@ -1,0 +1,184 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+
+	&--moovit-modern {
+
+		position: relative;
+
+		span.swiper-button-prev,
+		span.swiper-button-next {
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			top: auto;
+			right: auto;
+			transition: all .3s ease;
+			transform: none;
+			@include xs-size-max{
+				width: 50px;
+				height: 50px;
+			}
+			&:hover {
+				color: var(--c-dark);
+				background: var(--c-alter);
+			}
+		}
+
+		span.swiper-button-prev {
+			background: var(--c-light);
+			color: var(--c-dark);
+			&::before {
+				content: '\f3d5';
+				font-family: "Ionicons";
+			}
+		}
+
+		span.swiper-button-next {
+			left: 60px;
+			background: var(--c-active);
+			color: var(--c-light);
+			&::before {
+				content: '\f3d6';
+				font-family: "Ionicons";
+			}
+			@include xs-size-max{
+				left: 50px;
+			}
+		}
+
+		&.arrows-middle_modern{
+			span.swiper-button-prev,
+			span.swiper-button-next{
+				bottom: 50%;
+				width: 48px;
+				height: 48px;
+				left: 80px;
+				transform: translateY(-50%);
+				background: var(--c-light);
+				color: var(--c-dark);
+				&:hover{
+					color: var(--c-active);
+				}
+				@include sm-size-max{
+					left: 30px;
+				}
+				@include xs-size-max{
+					bottom: 30px;
+					transform: none;
+				}
+			}
+			span.swiper-button-next{
+				left: auto;
+				right: 80px;
+				@include sm-size-max{
+					right: 30px;
+				}
+				&::before{
+					content: '\f3d3';
+				}
+			}
+			span.swiper-button-prev{
+				&::before{
+					content: '\f3d2';
+				}
+			}
+		}
+
+		#{$banner_slider}-wrap {
+			min-height: 100vh;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		#{$banner_slider}__content {
+			max-width: 1085px;
+			padding: 140px 15px;
+			@include xs-size-max{
+				padding: 110px 15px;
+			}
+		}
+
+		.aheto-banner__title {
+			padding: 0 30px;
+			color: var(--c-light);
+
+			@include xs-size-max{
+				padding: 0;
+			}
+		}
+
+		#{$banner_slider}__add-image {
+			margin-bottom: 30px;
+
+			@include xs-size-max{
+				max-height: 50px;
+				width: auto;
+			}
+
+		}
+
+		#{$banner_slider}__desc {
+			color: var(--c-light);
+			opacity: .7;
+			margin-top: 27px;
+			padding: 0 15px;
+		}
+
+		#{$banner_slider}__links {
+			margin-top: 46px;
+			@include xs-size-max{
+				margin-top: 30px;
+			}
+			a {
+				margin: 5px 12px;
+			}
+
+		}
+		div.swiper-pagination {
+			position: absolute;
+			bottom: 47px;
+			left: 0;
+			width: 100%;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: rgba(var(--ca-light), .1);
+				transform: translateY(-50%);
+			}
+
+			.swiper-pagination-bullet {
+				width: 60px;
+				height: 2px;
+				margin: 2px 12px;
+				background-color: var(--c-light);
+				border-radius: 0;
+				border: none;
+
+				&-active {
+					background-color: var(--c-active);
+				}
+			}
+			@include xs-size-max{
+				display: none;
+			}
+		}
+		.moovit-swiper-arrows-wrap{
+			margin-bottom: 0;
+		}
+	}
+}

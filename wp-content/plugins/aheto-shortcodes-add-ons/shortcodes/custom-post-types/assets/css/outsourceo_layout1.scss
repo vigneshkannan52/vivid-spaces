@@ -1,0 +1,156 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt {
+	$p: &;
+
+	&--outsourceo-metro {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		#{$p}__post {
+			position: relative;
+			margin-bottom: 25px;
+			border-radius: 5px;
+			overflow: hidden;
+
+			&.first {
+				width: 100%;
+				.aheto-cpt__figure {
+					height: 485px;
+					@include sm-size-max {
+						height: 350px;
+					}
+				}
+			}
+
+			&.others {
+				width: calc(50% - 13px);
+				box-shadow: 0px 10px 50px 0 rgba(var(--ca-dark), 0.07);
+
+				@include sm-size-max {
+					width: 100%;
+				}
+				.aheto-cpt__figure {
+					height: 440px;
+
+					@include sm-size-max {
+						height: 350px;
+					}
+
+					.aheto-cpt__inner {
+						background-color: var(--c-light);
+						.aheto-cpt__tax {
+							margin-top: -13px;
+						}
+						.aheto-cpt__cats a {
+							background-color: var(--c-dark);
+						}
+						.aheto-cpt__title a {
+							color: var(--c-dark);
+						}
+					}
+				}
+			}
+		}
+
+		#{$p}__figure {
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+
+		#{$p}__info {
+			display: flex;
+			align-items: center;
+			margin-bottom: 15px;
+
+			@include sm-size-max {
+				flex-wrap: wrap;
+				margin-bottom: 10px;
+			}
+		}
+
+		#{$p}__cats {
+			a {
+				display: inline-block;
+				padding: 3px 31px 5px 31px;
+				background-color: var(--c-active);
+				color: var(--c-light);
+				border-top-right-radius: 12.5px;
+				border-bottom-right-radius: 12.5px;
+				margin-right: 3px;
+			}
+		}
+
+		#{$p}__author {
+			display: flex;
+			align-items: center;
+			margin-left: 15px;
+
+			img {
+				margin-right: 10px;
+				border-radius: 50%;
+			}
+		}
+
+		#{$p}__author-name {
+			color: var(--c-light);
+			opacity: 0.7;
+		}
+
+		#{$p}__date {
+			margin-left: 10px;
+
+			@include sm-size-max {
+				width: 100%;
+				margin-top: 15px;
+				margin-left: 20px;
+			}
+
+			&::before {
+				content: "/";
+				display: inline-block;
+				margin-right: 7px;
+
+				@include sm-size-max {
+					display: none;
+				}
+
+			}
+			p {
+				display: inline-block;
+				margin-bottom: 0;
+				color: var(--c-light);
+				opacity: 0.7;
+			}
+		}
+
+		#{$p}__title {
+			max-width: 590px;
+			padding: 0 21px;
+			margin-bottom: 25px;
+			a {
+				color: var(--c-light);
+				font-weight: inherit;
+				line-height: inherit;
+				font-size: inherit;
+
+				&::after {
+					content: '';
+					display: inline-block;
+					margin-left: 2px;
+					width: 3px;
+					height: 3px;
+					background: var(--c-active);
+				}
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+
+	}
+}
+

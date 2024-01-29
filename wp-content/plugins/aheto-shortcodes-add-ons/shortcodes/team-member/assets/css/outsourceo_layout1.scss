@@ -1,0 +1,20 @@
+.aheto-team-member {
+    $member: &;
+
+    &--outsourceo-simple {
+        background-color: rgba(var(--ca-alter3),.15);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        #{$member}__text {
+            padding: 29px 26px 12px;
+        }
+        #{$member}__name {
+            margin-bottom: 0;
+        }
+        #{$member}__img-holder {
+            img {
+                width: 100%!important;
+            }
+        }
+    }
+}

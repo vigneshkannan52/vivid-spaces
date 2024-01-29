@@ -1,0 +1,1882 @@
+# Copyright (C) 2018 aheto
+# This file is distributed under the same license as the aheto package.
+msgid ""
+msgstr ""
+"Project-Id-Version: aheto\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: The WordPress League\n"
+"Last-Translator: The WordPress League\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/admin/class-admin.php:93, includes/builders/elementor/class-elementor.php:58, includes/builders/visual-composer/abstract-shortcode.php:113
+msgid "Aheto"
+msgstr ""
+
+#: includes/admin/class-admin.php:109, includes/admin/views/import-export.php:3
+msgid "Import &amp; Export"
+msgstr ""
+
+#: includes/admin/class-admin.php:122
+msgid "Help"
+msgstr ""
+
+#: includes/admin/class-admin.php:167, includes/admin/class-admin.php:171, includes/admin/class-admin.php:175
+msgid "Settings could not be imported:"
+msgstr ""
+
+#: includes/admin/class-admin.php:175
+msgid "Upload failed."
+msgstr ""
+
+#: includes/admin/class-admin.php:195
+msgid "Settings successfully imported."
+msgstr ""
+
+#: includes/admin/class-admin.php:207
+msgid "Dashboard"
+msgstr ""
+
+#: includes/admin/class-admin.php:231, includes/class-builder-loader.php:97, includes/shortcodes/about/class-about.php:27
+msgid "About"
+msgstr ""
+
+#: includes/admin/class-admin.php:232
+msgid "System Info"
+msgstr ""
+
+#: includes/admin/class-admin.php:242, includes/admin/class-admin.php:242, includes/class-aheto.php:262
+msgid "Setup Wizard"
+msgstr ""
+
+#: includes/admin/class-metaboxes.php:44
+msgid "Header Options"
+msgstr ""
+
+#: includes/admin/class-metaboxes.php:63
+msgid "Footer Options"
+msgstr ""
+
+#: includes/admin/class-options.php:137
+msgid "Panel"
+msgstr ""
+
+#: includes/admin/class-options.php:213
+msgid "Search Options"
+msgstr ""
+
+#: includes/admin/class-page.php:113
+msgid "$id variable required"
+msgstr ""
+
+#: includes/admin/class-page.php:113, includes/admin/class-page.php:117
+msgid "Variable Required"
+msgstr ""
+
+#: includes/admin/class-page.php:117
+msgid "$title variable required"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:90
+msgid "Introduction"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:115
+msgid "Aheto &rsaquo; Setup Wizard"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:133
+msgid "Return to the WordPress Dashboard"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:200
+msgid "Continue"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:201
+msgid "Skip this step"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:227
+msgid "Welcome to WP ERP!"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:228
+msgid "Thank you for choosing WP-ERP. An easier way to manage your company! This quick setup wizard will help you configure the basic settings. <strong>It’s completely optional and shouldn’t take longer than three minutes.</strong>"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:229
+msgid "No time right now? If you don’t want to go through the wizard, you can skip and return to the WordPress dashboard. Come back anytime if you change your mind!"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:231
+msgid "Let's Go!"
+msgstr ""
+
+#: includes/admin/class-setupwizard.php:232
+msgid "Not right now"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:64, includes/settings/general.php:27
+msgid "Skins"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:65
+msgid "This tab contains the skins options."
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:70
+msgid "Colors"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:71
+msgid "This tab contains the colors options."
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:76
+msgid "Typography"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:77
+msgid "This tab contains the typography options."
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:82
+msgid "Headings"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:83
+msgid "This tab contains the heading options."
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:88
+msgid "Buttons"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:89
+msgid "This tab contains the buttons options."
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:94, includes/class-builder-loader.php:169, includes/shortcodes/testimonials/class-testimonials.php:27, includes/shortcodes/testimonials/class-testimonials.php:73
+msgid "Testimonials"
+msgstr ""
+
+#: includes/admin/class-skin-generator.php:95
+msgid "This tab contains the testimonials options."
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:41
+msgid "Get System Report"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:42
+msgid "Click the button to produce a report, then copy and paste into your support ticket."
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:48
+msgid "Copy for Support"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:103
+msgid "WordPress Enviornment"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:104
+msgid "Server Enviornment"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:105
+msgid "Client Enviornment"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:106
+msgid "Theme Information"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:107
+msgid "Installed Plugins"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:132
+msgid "Home URL"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:133
+msgid "The URL of your site's homepage"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:138
+msgid "Site URL"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:139
+msgid "The root URL of your site"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:144
+msgid "WP Version"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:145
+msgid "The version of WordPress installed on your site"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:150
+msgid "WP Multisite"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:151
+msgid "Whether or not you have WordPress Multisite enabled"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:152
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:152
+msgid "No"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:156
+msgid "WP Memory Limit"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:157
+msgid "The maximum amount of memory (RAM) that your site can use at one time"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:162
+msgid "WP Debug Mode"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:163
+msgid "Displays whether or not WordPress is in Debug Mode"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:164, includes/admin/class-systeminfo.php:241
+msgid "Enabled"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:164, includes/admin/class-systeminfo.php:241
+msgid "Disabled"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:168
+msgid "WP Language"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:169
+msgid "The current language used by WordPress. Default = English"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:175
+msgid "WP Uploads Directory"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:176
+msgid "Check the upload directory is writable"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:177
+msgid "Writable"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:177
+msgid "Readable"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:183
+msgid "Memory Usage"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:184
+msgid "Current system memory usage status"
+msgstr ""
+
+#. translators: 1. memory usage, 2. memory limit
+#: includes/admin/class-systeminfo.php:186
+msgid "%1$s MB OF %2$s MB"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:203
+msgid "Server Info"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:204
+msgid "Information about the web server that is currently hosting your site"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:209
+msgid "PHP Version"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:210
+msgid "The version of PHP installed on your hosting server"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:211
+msgid "Not sure"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:215
+msgid "MYSQL Version"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:216
+msgid "The version of MySQL installed on your hosting server"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:221
+msgid "PHP Post Max Size"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:222
+msgid "The largest file size that can be contained in one post"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:227
+msgid "PHP Max Execution Time"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:228
+msgid "The amount of time (in seconds) that your site will spend on a single operation before timing out (to avoid server lockups)"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:233
+msgid "PHP Max Input Vars"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:234
+msgid "The maximum number of variables your server can use for a single function to avoid overloads"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:239
+msgid "ZipArchive"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:240
+msgid "ZipArchive is required for importing"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:245
+msgid "Max Upload Size"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:246
+msgid "The largest file size that can be uploaded to your WordPress installation"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:258
+msgid "Default Time Zone"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:263
+msgid "cURL"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:264
+msgid "Not Enabled"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:268
+msgid "SimpleXML"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:269
+msgid "All good, extension is installed"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:269
+msgid "Oops! extension not installed, Icon Manager will not work"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:284
+msgid "Operating System"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:285
+msgid "Operating system you are using"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:290
+msgid "Browser"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:291
+msgid "Browser you are using"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:308, includes/shortcodes/team/class-team.php:81, includes/shortcodes/team/class-team.php:136, includes/shortcodes/testimonials/class-testimonials.php:57, includes/shortcodes/testimonials/class-testimonials.php:85
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:313
+msgid "Version"
+msgstr ""
+
+#: includes/admin/class-systeminfo.php:318
+msgid "Author"
+msgstr ""
+
+#. translators: author link
+#: includes/admin/class-systeminfo.php:349
+msgctxt "by author"
+msgid "by %s"
+msgstr ""
+
+#: includes/admin/views/dashboard-about.php:1
+msgid "Welcome sub-heading!"
+msgstr ""
+
+#: includes/admin/views/help.php:3, includes/admin/views/welcome.php:3
+msgid "Welcome to Aheto %s"
+msgstr ""
+
+#: includes/admin/views/help.php:6, includes/admin/views/welcome.php:6
+msgid "Trusted by over 7000+ Happy Users, Aheto is the most versatile WordPress plugin."
+msgstr ""
+
+#: includes/admin/views/import-export.php:6
+msgid "Import and Export your settings for re-use on (another) blog."
+msgstr ""
+
+#: includes/admin/views/import-export.php:19
+msgid "Export Settings"
+msgstr ""
+
+#: includes/admin/views/import-export.php:30
+msgid "Panels"
+msgstr ""
+
+#: includes/admin/views/import-export.php:31
+msgid "Choose the panels to export."
+msgstr ""
+
+#: includes/admin/views/import-export.php:52
+msgid "Export"
+msgstr ""
+
+#: includes/admin/views/import-export.php:66
+msgid "Import Settings"
+msgstr ""
+
+#: includes/admin/views/import-export.php:77
+msgid "Settings File"
+msgstr ""
+
+#: includes/admin/views/import-export.php:78
+msgid "Import settings by locating setting file and clicking \"Import settings\"."
+msgstr ""
+
+#: includes/admin/views/import-export.php:91
+msgid "Import"
+msgstr ""
+
+#: includes/builders/elementor/abstract-shortcode.php:125, includes/builders/visual-composer/abstract-shortcode.php:66
+msgid "Please define slug"
+msgstr ""
+
+#: includes/builders/elementor/abstract-shortcode.php:125, includes/builders/visual-composer/abstract-shortcode.php:66
+msgid "Variable Missing"
+msgstr ""
+
+#: includes/builders/elementor/abstract-shortcode.php:206, includes/shortcodes/banner/class-banner.php:69, includes/shortcodes/call-to-action/class-call-to-action.php:66
+msgid "Content"
+msgstr ""
+
+#. translators: 1. shortcode name, 2. default file
+#. translators: 1. shortcode name, 2. default file
+#: includes/builders/elementor/abstract-shortcode.php:232, includes/builders/visual-composer/abstract-shortcode.php:196
+msgid "Template file is missing for `%1$s` shortcode. Make sure you have atleast `%2$s` file in your theme or plugin folder."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:69
+msgid "Select element tag."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:70
+msgid "Select text alignment."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:71
+msgid "Enter font size."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:72
+msgid "Enter line height."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:73
+msgid "Select heading color."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:74
+msgid "Select font family."
+msgstr ""
+
+#: includes/builders/visual-composer/params/class-typography.php:75
+msgid "Select font style."
+msgstr ""
+
+#: includes/class-aheto.php:106
+msgid "Cloning is forbidden."
+msgstr ""
+
+#: includes/class-aheto.php:113
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: includes/class-aheto.php:259
+msgid "Settings"
+msgstr ""
+
+#: includes/class-aheto.php:282
+msgid "Getting Started"
+msgstr ""
+
+#: includes/class-aheto.php:283
+msgid "Documentation"
+msgstr ""
+
+#. translators: WordPress Version
+#: includes/class-aheto.php:308
+msgid "Aheto requires WordPress version %s or above. Please update WordPress to run this plugin."
+msgstr ""
+
+#. translators: PHP Version
+#: includes/class-aheto.php:322
+msgid "Aheto requires PHP version %s or above. Please update PHP to run this plugin."
+msgstr ""
+
+#: includes/class-builder-loader.php:68, includes/metaboxes/footer.php:18, includes/metaboxes/footer.php:26, includes/metaboxes/footer.php:33, includes/metaboxes/footer.php:40, includes/metaboxes/header.php:22, includes/metaboxes/header.php:30, includes/metaboxes/header.php:38, includes/metaboxes/header.php:46, includes/metaboxes/header.php:53, includes/metaboxes/header.php:60, includes/settings/general.php:21, includes/settings/general.php:36, includes/settings/general.php:44, includes/skin/buttons.php:25, includes/skin/buttons.php:38, includes/skin/buttons.php:48, includes/skin/buttons.php:55, includes/skin/buttons.php:61, includes/skin/buttons.php:67, includes/skin/buttons.php:73, includes/skin/buttons.php:79, includes/skin/buttons.php:85, includes/skin/buttons.php:96, includes/skin/buttons.php:102, includes/skin/buttons.php:108, includes/skin/buttons.php:154, includes/skin/buttons.php:160, includes/skin/buttons.php:166, includes/skin/buttons.php:176, includes/skin/buttons.php:182, includes/skin/buttons.php:188, includes/skin/buttons.php:194, includes/skin/buttons.php:249, includes/skin/buttons.php:255, includes/skin/buttons.php:261, includes/skin/buttons.php:293, includes/skin/buttons.php:299, includes/skin/buttons.php:305, includes/skin/buttons.php:311, includes/skin/colors.php:15, includes/skin/colors.php:22, includes/skin/colors.php:29, includes/skin/colors.php:36, includes/skin/colors.php:43, includes/skin/colors.php:50, includes/skin/colors.php:57, includes/skin/colors.php:64, includes/skin/headings.php:27, includes/skin/headings.php:43, includes/skin/headings.php:51, includes/skin/headings.php:59, includes/skin/headings.php:67, includes/skin/headings.php:75, includes/skin/headings.php:83, includes/skin/testimonials.php:17, includes/skin/testimonials.php:24, includes/skin/testimonials.php:31, includes/skin/testimonials.php:38, includes/skin/testimonials.php:45, includes/skin/testimonials.php:52, includes/skin/typography.php:28, includes/skin/typography.php:36, includes/skin/typography.php:45, includes/skin/typography.php:53, includes/skin/typography.php:70, includes/skin/typography.php:85, includes/skin/typography.php:105, includes/skin/typography.php:117, includes/skin/typography.php:124
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor."
+msgstr ""
+
+#: includes/class-builder-loader.php:101, includes/shortcodes/banner/class-banner.php:27
+msgid "Banner"
+msgstr ""
+
+#: includes/class-builder-loader.php:105, includes/shortcodes/button/class-button.php:27, includes/shortcodes/button/class-button.php:57, includes/shortcodes/pricing-tables/class-pricing-tables.php:87
+msgid "Button"
+msgstr ""
+
+#: includes/class-builder-loader.php:109, includes/shortcodes/call-to-action/class-call-to-action.php:28
+msgid "Call To Action"
+msgstr ""
+
+#: includes/class-builder-loader.php:113, includes/shortcodes/clients/class-clients.php:27, includes/shortcodes/clients/class-clients.php:43
+msgid "Clients"
+msgstr ""
+
+#: includes/class-builder-loader.php:117, includes/shortcodes/contents/class-contents.php:27
+msgid "Contents"
+msgstr ""
+
+#: includes/class-builder-loader.php:121, includes/shortcodes/contacts/class-contacts.php:27
+msgid "Contacts"
+msgstr ""
+
+#: includes/class-builder-loader.php:125, includes/shortcodes/contact-info/class-contact-info.php:27
+msgid "Contact Info"
+msgstr ""
+
+#: includes/class-builder-loader.php:129, includes/shortcodes/features/class-features.php:28, includes/shortcodes/pricing-tables/class-pricing-tables.php:73
+msgid "Features"
+msgstr ""
+
+#: includes/class-builder-loader.php:133, includes/shortcodes/banner/class-banner.php:61, includes/shortcodes/contacts/class-contacts.php:57, includes/shortcodes/features/class-features.php:86, includes/shortcodes/features/class-features.php:123, includes/shortcodes/features/class-features.php:146, includes/shortcodes/heading/class-heading.php:74, includes/shortcodes/info-teaser/class-info-teaser.php:42, includes/shortcodes/info-teaser/class-info-teaser.php:55, includes/shortcodes/pricing-tables/class-pricing-tables.php:57, includes/shortcodes/progress-bar/class-progress-bar.php:78, includes/skin/headings.php:26
+msgid "Heading"
+msgstr ""
+
+#: includes/class-builder-loader.php:137, includes/shortcodes/info-teaser/class-info-teaser.php:28
+msgid "Info Teaser"
+msgstr ""
+
+#: includes/class-builder-loader.php:141, includes/shortcodes/media/class-media.php:27
+msgid "Media"
+msgstr ""
+
+#: includes/class-builder-loader.php:145, includes/shortcodes/menu-link/class-menu-link.php:28
+msgid "Menu Link"
+msgstr ""
+
+#: includes/class-builder-loader.php:149, includes/shortcodes/pricing-tables/class-pricing-tables.php:27
+msgid "Pricing Tables"
+msgstr ""
+
+#: includes/class-builder-loader.php:153, includes/shortcodes/process/class-process.php:27
+msgid "Process"
+msgstr ""
+
+#: includes/class-builder-loader.php:157
+msgid "Progress Bar"
+msgstr ""
+
+#: includes/class-builder-loader.php:161, includes/shortcodes/recent-posts/class-recent-posts.php:27
+msgid "Recent Posts"
+msgstr ""
+
+#: includes/class-builder-loader.php:165, includes/shortcodes/team/class-team.php:27, includes/shortcodes/team/class-team.php:124
+msgid "Team"
+msgstr ""
+
+#: includes/class-builder-loader.php:173, includes/shortcodes/time-schedule/class-time-schedule.php:27
+msgid "Time Schedule"
+msgstr ""
+
+#. translators: ID of param.
+#. translators: ID of param.
+#: includes/class-params.php:39, includes/class-params.php:91
+msgid "ID: <strong>%s</strong>, didn't exists in the system"
+msgstr ""
+
+#. translators: ID of param.
+#: includes/class-params.php:75
+msgid "ID: <strong>%s</strong>, already exists in the system"
+msgstr ""
+
+#: includes/class-params.php:104
+msgid "Element ID"
+msgstr ""
+
+#: includes/class-params.php:105
+msgid "If you wish to style particular content element differently, then use this field to add unique id and then refer to it in your css file."
+msgstr ""
+
+#: includes/class-params.php:106, includes/class-params.php:113
+msgid "Extras"
+msgstr ""
+
+#: includes/class-params.php:111
+msgid "Extra class name"
+msgstr ""
+
+#: includes/class-params.php:112
+msgid "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: includes/class-params.php:118
+msgid "CSS box"
+msgstr ""
+
+#: includes/class-params.php:119
+msgid "Design Options"
+msgstr ""
+
+#: includes/class-params.php:124, includes/shortcodes/about/class-about.php:42, includes/shortcodes/contact-info/class-contact-info.php:61, includes/shortcodes/contents/class-contents.php:75, includes/shortcodes/menu-link/class-menu-link.php:66, includes/shortcodes/process/class-process.php:53, includes/shortcodes/recent-posts/class-recent-posts.php:62, includes/shortcodes/time-schedule/class-time-schedule.php:57
+msgid "Title"
+msgstr ""
+
+#: includes/class-params.php:130
+msgid "Limit"
+msgstr ""
+
+#: includes/class-params.php:136
+msgid "URL (Link)"
+msgstr ""
+
+#: includes/class-params.php:137
+msgid "Add link to button."
+msgstr ""
+
+#: includes/class-post-types.php:41
+msgctxt "Post Type General Name"
+msgid "Headers"
+msgstr ""
+
+#: includes/class-post-types.php:42
+msgctxt "Post Type Singular Name"
+msgid "Header"
+msgstr ""
+
+#: includes/class-post-types.php:43, includes/class-post-types.php:44
+msgid "Headers"
+msgstr ""
+
+#: includes/class-post-types.php:45
+msgid "Add New Header"
+msgstr ""
+
+#: includes/class-post-types.php:46
+msgid "New Header"
+msgstr ""
+
+#: includes/class-post-types.php:47
+msgid "Edit Header"
+msgstr ""
+
+#: includes/class-post-types.php:48
+msgid "Update Header"
+msgstr ""
+
+#: includes/class-post-types.php:49
+msgid "View Header"
+msgstr ""
+
+#: includes/class-post-types.php:50
+msgid "Search Header"
+msgstr ""
+
+#: includes/class-post-types.php:54
+msgid "Header"
+msgstr ""
+
+#: includes/class-post-types.php:56
+msgid "To create custom header using visual builder."
+msgstr ""
+
+#: includes/class-post-types.php:74
+msgctxt "Post Type General Name"
+msgid "Footers"
+msgstr ""
+
+#: includes/class-post-types.php:75
+msgctxt "Post Type Singular Name"
+msgid "Footer"
+msgstr ""
+
+#: includes/class-post-types.php:76, includes/class-post-types.php:77
+msgid "Footers"
+msgstr ""
+
+#: includes/class-post-types.php:78
+msgid "Add New Footer"
+msgstr ""
+
+#: includes/class-post-types.php:79
+msgid "New Footer"
+msgstr ""
+
+#: includes/class-post-types.php:80
+msgid "Edit Footer"
+msgstr ""
+
+#: includes/class-post-types.php:81
+msgid "Update Footer"
+msgstr ""
+
+#: includes/class-post-types.php:82
+msgid "View Footer"
+msgstr ""
+
+#: includes/class-post-types.php:83
+msgid "Search Footer"
+msgstr ""
+
+#: includes/class-post-types.php:87
+msgid "Footer"
+msgstr ""
+
+#: includes/class-post-types.php:89
+msgid "To create custom footer using visual builder."
+msgstr ""
+
+#: includes/class-post-types.php:107
+msgctxt "Post Type General Name"
+msgid "Portfolios"
+msgstr ""
+
+#: includes/class-post-types.php:108
+msgctxt "Post Type Singular Name"
+msgid "Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:109
+msgid "Portfolio items"
+msgstr ""
+
+#: includes/class-post-types.php:110
+msgid "Portfolio item"
+msgstr ""
+
+#: includes/class-post-types.php:111
+msgid "Portfolio item Archives"
+msgstr ""
+
+#: includes/class-post-types.php:112
+msgid "Add New Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:113
+msgid "New Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:114
+msgid "Edit Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:115
+msgid "Update Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:116
+msgid "View Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:117
+msgid "Search Portfolios"
+msgstr ""
+
+#: includes/class-post-types.php:118
+msgid "Insert into Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:122
+msgid "Portfolio"
+msgstr ""
+
+#: includes/class-post-types.php:148, includes/class-post-types.php:150
+msgctxt "Taxonomy General Name"
+msgid "Portfolio Categories"
+msgstr ""
+
+#: includes/class-post-types.php:151
+msgctxt "Taxonomy Singular Name"
+msgid "Portfolio Category"
+msgstr ""
+
+#: includes/class-post-types.php:152
+msgid "Categories"
+msgstr ""
+
+#: includes/class-settings.php:59
+msgid "General"
+msgstr ""
+
+#: includes/class-settings.php:60
+msgid "This tab contains the general options."
+msgstr ""
+
+#: includes/class-settings.php:65
+msgid "Blocks"
+msgstr ""
+
+#: includes/class-settings.php:66
+msgid "This tab contains the blocks options."
+msgstr ""
+
+#: includes/cmb2/class-box-shadow.php:100
+msgid "Outset"
+msgstr ""
+
+#: includes/cmb2/class-box-shadow.php:101
+msgid "Inset"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:89
+msgid "Off"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:90
+msgid "On"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:127
+msgid "Color"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:137
+msgid "Position"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:144, includes/cmb2/class-cmb2-fields.php:168, includes/cmb2/class-cmb2-fields.php:190
+msgid "None"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:145
+msgid "Left Top"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:146
+msgid "Left Center"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:147
+msgid "Left Bottom"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:148
+msgid "Right Top"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:149
+msgid "Right Center"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:150
+msgid "Right Bottom"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:151
+msgid "Center Top"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:152
+msgid "Center Center"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:153
+msgid "Center Bottom"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:161, includes/cmb2/class-cmb2-fields.php:169
+msgid "Repeat"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:170
+msgid "Repeat-X"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:171
+msgid "Repeat-Y"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:172
+msgid "Space"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:173
+msgid "Round"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:183
+msgid "Attachment"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:191
+msgid "Scroll"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:192
+msgid "Fixed"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:193
+msgid "Local"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:202
+msgid "Size"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:208
+msgid "auto, length, cover, contain"
+msgstr ""
+
+#: includes/cmb2/class-cmb2-fields.php:227, includes/shortcodes/banner/class-banner.php:57, includes/shortcodes/features/class-features.php:78, includes/shortcodes/info-teaser/class-info-teaser.php:51
+msgid "Image"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:143
+msgid "Font Family"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:160
+msgid "Font Weight"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:173
+msgid "Text Align"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:184
+msgid "Transform"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:195, includes/skin/buttons.php:95, includes/skin/buttons.php:153
+msgid "Font Size"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:207
+msgid "Line Height"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:219, includes/skin/buttons.php:101, includes/skin/buttons.php:159
+msgid "Letter Spacing"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:231
+msgid "Words Spacing"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:243, includes/skin/buttons.php:187
+msgid "Font Color"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:253
+msgid "Margin Top"
+msgstr ""
+
+#: includes/cmb2/class-typography.php:265
+msgid "Margin Bottom"
+msgstr ""
+
+#: includes/helpers/class-choices.php:56
+msgid "No Menu"
+msgstr ""
+
+#: includes/metaboxes/footer.php:16
+msgid "Text Color"
+msgstr ""
+
+#: includes/metaboxes/footer.php:24
+msgid "Link Color"
+msgstr ""
+
+#: includes/metaboxes/footer.php:32, includes/skin/buttons.php:37, includes/skin/buttons.php:107, includes/skin/testimonials.php:44
+msgid "Padding"
+msgstr ""
+
+#: includes/metaboxes/footer.php:39, includes/skin/buttons.php:54, includes/skin/buttons.php:175
+msgid "Background"
+msgstr ""
+
+#: includes/metaboxes/header.php:16
+msgid "Header Layout"
+msgstr ""
+
+#: includes/metaboxes/header.php:18
+msgid "Header 1"
+msgstr ""
+
+#: includes/metaboxes/header.php:19
+msgid "Header 2"
+msgstr ""
+
+#: includes/metaboxes/header.php:20
+msgid "Header 3"
+msgstr ""
+
+#: includes/metaboxes/header.php:28, includes/skin/colors.php:14
+msgid "Primary Color"
+msgstr ""
+
+#: includes/metaboxes/header.php:36, includes/skin/colors.php:21
+msgid "Secondary Color"
+msgstr ""
+
+#: includes/metaboxes/header.php:44
+msgid "Active Color"
+msgstr ""
+
+#: includes/metaboxes/header.php:52
+msgid "Menu Item Spacing"
+msgstr ""
+
+#: includes/metaboxes/header.php:59
+msgid "Logo Spacing"
+msgstr ""
+
+#: includes/settings/general.php:16
+msgid "Default Builder"
+msgstr ""
+
+#: includes/settings/general.php:18
+msgid "Elementor"
+msgstr ""
+
+#: includes/settings/general.php:19
+msgid "Visual Composer"
+msgstr ""
+
+#: includes/settings/general.php:34
+msgid "Global Header"
+msgstr ""
+
+#: includes/settings/general.php:35
+msgid "Select header"
+msgstr ""
+
+#: includes/settings/general.php:42
+msgid "Global Footer"
+msgstr ""
+
+#: includes/settings/general.php:43
+msgid "Select footer"
+msgstr ""
+
+#: includes/settings/general.php:50
+msgid "Additional Icon Font sets"
+msgstr ""
+
+#: includes/settings/general.php:51
+msgid "Select icon fonts sets you want to enable"
+msgstr ""
+
+#: includes/settings/general.php:53
+msgid "Elegant"
+msgstr ""
+
+#: includes/settings/general.php:54
+msgid "Font Awesome"
+msgstr ""
+
+#: includes/settings/general.php:55
+msgid "Ion Icons"
+msgstr ""
+
+#: includes/settings/general.php:56
+msgid "Stroke Icon 7"
+msgstr ""
+
+#: includes/settings/general.php:57
+msgid "Themify Icons"
+msgstr ""
+
+#: includes/shortcodes/about/class-about.php:29
+msgid "Add about us"
+msgstr ""
+
+#: includes/shortcodes/about/class-about.php:46, includes/shortcodes/clients/class-clients.php:51, includes/shortcodes/contact-info/class-contact-info.php:65
+msgid "Logo"
+msgstr ""
+
+#: includes/shortcodes/about/class-about.php:50, includes/shortcodes/contact-info/class-contact-info.php:69, includes/shortcodes/contents/class-contents.php:79, includes/shortcodes/features/class-features.php:103, includes/shortcodes/features/class-features.php:132, includes/shortcodes/features/class-features.php:150, includes/shortcodes/heading/class-heading.php:79, includes/shortcodes/info-teaser/class-info-teaser.php:64, includes/shortcodes/pricing-tables/class-pricing-tables.php:65, includes/shortcodes/process/class-process.php:62, includes/shortcodes/progress-bar/class-progress-bar.php:86, includes/shortcodes/team/class-team.php:97, includes/shortcodes/team/class-team.php:144
+msgid "Description"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:29
+msgid "Add banner"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:43, includes/shortcodes/button/class-button.php:43, includes/shortcodes/call-to-action/class-call-to-action.php:44, includes/shortcodes/contact-info/class-contact-info.php:43, includes/shortcodes/contacts/class-contacts.php:43, includes/shortcodes/contents/class-contents.php:43, includes/shortcodes/features/class-features.php:44, includes/shortcodes/heading/class-heading.php:44, includes/shortcodes/media/class-media.php:43, includes/shortcodes/menu-link/class-menu-link.php:44, includes/shortcodes/pricing-tables/class-pricing-tables.php:43, includes/shortcodes/process/class-process.php:43, includes/shortcodes/progress-bar/class-progress-bar.php:43, includes/shortcodes/recent-posts/class-recent-posts.php:44, includes/shortcodes/social-networks/class-social-networks.php:43, includes/shortcodes/team/class-team.php:43, includes/shortcodes/testimonials/class-testimonials.php:43, includes/shortcodes/time-schedule/class-time-schedule.php:43
+msgid "Templates"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:46
+msgid "Main With Right Heading"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:50, includes/shortcodes/features/class-features.php:51
+msgid "Simple"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:77, includes/shortcodes/contacts/class-contacts.php:93, includes/shortcodes/social-networks/class-social-networks.php:85, includes/shortcodes/team/class-team.php:105
+msgid "Networks"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:85, includes/shortcodes/contacts/class-contacts.php:101, includes/shortcodes/social-networks/class-social-networks.php:89
+msgid "Network"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:90, includes/shortcodes/contacts/class-contacts.php:106, includes/shortcodes/social-networks/class-social-networks.php:94
+msgid "Url"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:104, includes/shortcodes/contacts/class-contacts.php:120, includes/shortcodes/pricing-tables/class-pricing-tables.php:108, includes/shortcodes/social-networks/class-social-networks.php:108, includes/shortcodes/team/class-team.php:221
+msgid "Facebook"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:105, includes/shortcodes/contacts/class-contacts.php:121, includes/shortcodes/pricing-tables/class-pricing-tables.php:109, includes/shortcodes/social-networks/class-social-networks.php:109, includes/shortcodes/team/class-team.php:222
+msgid "Twitter"
+msgstr ""
+
+#: includes/shortcodes/banner/class-banner.php:106, includes/shortcodes/contacts/class-contacts.php:122, includes/shortcodes/pricing-tables/class-pricing-tables.php:110, includes/shortcodes/social-networks/class-social-networks.php:110, includes/shortcodes/team/class-team.php:223
+msgid "Skype"
+msgstr ""
+
+#: includes/shortcodes/button/class-button.php:29
+msgid "Add button"
+msgstr ""
+
+#: includes/shortcodes/button/class-button.php:46, includes/shortcodes/contacts/class-contacts.php:46, includes/shortcodes/features/class-features.php:71, includes/shortcodes/heading/class-heading.php:47, includes/shortcodes/pricing-tables/class-pricing-tables.php:46, includes/shortcodes/process/class-process.php:46, includes/shortcodes/team/class-team.php:46
+msgid "Classic"
+msgstr ""
+
+#: includes/shortcodes/button/class-button.php:50
+msgid "With Underline"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:30
+msgid "Add call to action"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:47
+msgid "Classic Vertical"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:51
+msgid "Simple With Double Button"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:58
+msgid "Background Image"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:70, includes/shortcodes/clients/class-clients.php:47, includes/shortcodes/features/class-features.php:111, includes/shortcodes/info-teaser/class-info-teaser.php:68
+msgid "Link"
+msgstr ""
+
+#: includes/shortcodes/call-to-action/class-call-to-action.php:74
+msgid "Link Double"
+msgstr ""
+
+#: includes/shortcodes/clients/class-clients.php:29
+msgid "Add clients"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:29
+msgid "Add contact info"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:46, includes/shortcodes/menu-link/class-menu-link.php:47, includes/shortcodes/recent-posts/class-recent-posts.php:47, includes/shortcodes/social-networks/class-social-networks.php:46, includes/shortcodes/time-schedule/class-time-schedule.php:46
+msgid "Layout 1"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:50, includes/shortcodes/menu-link/class-menu-link.php:51, includes/shortcodes/recent-posts/class-recent-posts.php:51, includes/shortcodes/social-networks/class-social-networks.php:50, includes/shortcodes/time-schedule/class-time-schedule.php:50
+msgid "Layout 2"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:54, includes/shortcodes/recent-posts/class-recent-posts.php:55, includes/shortcodes/social-networks/class-social-networks.php:54
+msgid "Layout 3"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:73, includes/shortcodes/contacts/class-contacts.php:69
+msgid "Address"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:77, includes/shortcodes/contacts/class-contacts.php:85
+msgid "Email"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:81, includes/shortcodes/contacts/class-contacts.php:89
+msgid "Phone"
+msgstr ""
+
+#: includes/shortcodes/contact-info/class-contact-info.php:85
+msgid "Schedule"
+msgstr ""
+
+#: includes/shortcodes/contacts/class-contacts.php:29
+msgid "Add contacts"
+msgstr ""
+
+#: includes/shortcodes/contacts/class-contacts.php:50, includes/shortcodes/features/class-features.php:63, includes/shortcodes/pricing-tables/class-pricing-tables.php:50, includes/shortcodes/team/class-team.php:54
+msgid "Modern"
+msgstr ""
+
+#: includes/shortcodes/contacts/class-contacts.php:61
+msgid "Sub Heading"
+msgstr ""
+
+#: includes/shortcodes/contacts/class-contacts.php:77
+msgid "Direction Link"
+msgstr ""
+
+#: includes/shortcodes/contents/class-contents.php:29
+msgid "Add contents"
+msgstr ""
+
+#: includes/shortcodes/contents/class-contents.php:46, includes/shortcodes/contents/class-contents.php:61
+msgid "List"
+msgstr ""
+
+#: includes/shortcodes/contents/class-contents.php:50
+msgid "Faq"
+msgstr ""
+
+#: includes/shortcodes/contents/class-contents.php:57
+msgid "Lists"
+msgstr ""
+
+#: includes/shortcodes/contents/class-contents.php:71
+msgid "Faqs"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:30
+msgid "Add features"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:47
+msgid "Classic Grid"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:55
+msgid "Simple Slider"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:59
+msgid "With Icon and Text"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:67
+msgid "With Icon and Text Centered"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:94, includes/shortcodes/features/class-features.php:127, includes/shortcodes/heading/class-heading.php:66, includes/shortcodes/info-teaser/class-info-teaser.php:59, includes/shortcodes/pricing-tables/class-pricing-tables.php:91, includes/shortcodes/process/class-process.php:57, includes/shortcodes/progress-bar/class-progress-bar.php:69, includes/shortcodes/team/class-team.php:113, includes/shortcodes/team/class-team.php:156
+msgid "Icon"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:119
+msgid "Features Slider"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:142
+msgid "Timeline"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:154, includes/shortcodes/team/class-team.php:61, includes/shortcodes/team/class-team.php:132, includes/shortcodes/testimonials/class-testimonials.php:81
+msgid "Display Image"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:158, includes/shortcodes/time-schedule/class-time-schedule.php:74
+msgid "Time"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:168, includes/shortcodes/team/class-team.php:165
+msgid "Slider Speed"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:176, includes/shortcodes/team/class-team.php:173
+msgid "Slider Slides"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:184, includes/shortcodes/team/class-team.php:181
+msgid "Slider Slides Space"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:192, includes/shortcodes/team/class-team.php:189
+msgid "Slides Small Screen"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:200, includes/shortcodes/team/class-team.php:197
+msgid "Slides Medium Screen"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:208, includes/shortcodes/team/class-team.php:205
+msgid "Slides Large Screen"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:224
+msgid "Cup"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:225
+msgid "Shield"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:226
+msgid "Face Smile"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:227
+msgid "Package"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:228
+msgid "Music Alt"
+msgstr ""
+
+#: includes/shortcodes/features/class-features.php:229
+msgid "Pencil Alt"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:28
+msgid "heading"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:30
+msgid "Add Heading Content"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:51
+msgid "Typing"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:55
+msgid "With Subtitle"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:59
+msgid "Typing With Icon"
+msgstr ""
+
+#: includes/shortcodes/heading/class-heading.php:75
+msgid "To Hightlight text insert text between: <strong>[[</strong> Your Text Here <strong>]]</strong>"
+msgstr ""
+
+#: includes/shortcodes/info-teaser/class-info-teaser.php:30
+msgid "Add Information Teaser"
+msgstr ""
+
+#: includes/shortcodes/info-teaser/class-info-teaser.php:44
+msgid "Style One"
+msgstr ""
+
+#: includes/shortcodes/info-teaser/class-info-teaser.php:45
+msgid "Style Two"
+msgstr ""
+
+#: includes/shortcodes/info-teaser/class-info-teaser.php:46
+msgid "Style Three"
+msgstr ""
+
+#: includes/shortcodes/media/class-media.php:29
+msgid "Add media"
+msgstr ""
+
+#: includes/shortcodes/media/class-media.php:46
+msgid "Simple Image"
+msgstr ""
+
+#: includes/shortcodes/media/class-media.php:53
+msgid "Images"
+msgstr ""
+
+#: includes/shortcodes/menu-link/class-menu-link.php:30
+msgid "Add menu link"
+msgstr ""
+
+#: includes/shortcodes/menu-link/class-menu-link.php:55
+msgid "Two Column Menu"
+msgstr ""
+
+#: includes/shortcodes/menu-link/class-menu-link.php:59, includes/shortcodes/social-networks/class-social-networks.php:58
+msgid "Layout 4"
+msgstr ""
+
+#: includes/shortcodes/menu-link/class-menu-link.php:70
+msgid "Menu"
+msgstr ""
+
+#: includes/shortcodes/pricing-tables/class-pricing-tables.php:29
+msgid "Add pricing tables"
+msgstr ""
+
+#: includes/shortcodes/pricing-tables/class-pricing-tables.php:61
+msgid "Price"
+msgstr ""
+
+#: includes/shortcodes/pricing-tables/class-pricing-tables.php:69
+msgid "Tag Line"
+msgstr ""
+
+#: includes/shortcodes/pricing-tables/class-pricing-tables.php:81
+msgid "Feature"
+msgstr ""
+
+#: includes/shortcodes/process/class-process.php:29
+msgid "Add process"
+msgstr ""
+
+#: includes/shortcodes/process/class-process.php:74
+msgid "Comment"
+msgstr ""
+
+#: includes/shortcodes/process/class-process.php:75
+msgid "Marker Alt"
+msgstr ""
+
+#: includes/shortcodes/process/class-process.php:76
+msgid "Paint Bucket"
+msgstr ""
+
+#: includes/shortcodes/process/class-process.php:77
+msgid "Heart"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:27
+msgid "Progressbar"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:29
+msgid "Add Progressbar"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:46
+msgid "Circle"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:50
+msgid "Progressbar with Numbers"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:54
+msgid "Numerical with Icon"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:58
+msgid "With Lines"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:65
+msgid "Percentage"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:102
+msgid "Blackboard"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:103
+msgid "Gift"
+msgstr ""
+
+#: includes/shortcodes/progress-bar/class-progress-bar.php:104
+msgid "Tablet"
+msgstr ""
+
+#: includes/shortcodes/recent-posts/class-recent-posts.php:29
+msgid "Add recent posts"
+msgstr ""
+
+#: includes/shortcodes/recent-posts/class-recent-posts.php:66
+msgid "Number Of posts"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:27, includes/shortcodes/team/class-team.php:148
+msgid "Social Networks"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:29
+msgid "Add social identities"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:62
+msgid "Layout 5"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:66
+msgid "Layout 6"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:70
+msgid "Layout 7"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:74
+msgid "Layout 8"
+msgstr ""
+
+#: includes/shortcodes/social-networks/class-social-networks.php:78
+msgid "Layout 9"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:29
+msgid "Add team"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:50
+msgid "Fullscreen Grid"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:69
+msgid "Image Position"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:71
+msgid "Left Side"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:72
+msgid "Right Side"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:89, includes/shortcodes/team/class-team.php:140
+msgid "Designation"
+msgstr ""
+
+#: includes/shortcodes/team/class-team.php:109, includes/shortcodes/team/class-team.php:152
+msgid "Network Link"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:29
+msgid "Add testimonials"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:46
+msgid "Classic Slider"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:50
+msgid "Single Testimonials"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:65, includes/shortcodes/testimonials/class-testimonials.php:93
+msgid "Testimonial"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:89
+msgid "Company"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:97
+msgid "Rating"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:99
+msgid "One"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:100
+msgid "Two"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:101
+msgid "Three"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:102
+msgid "Four"
+msgstr ""
+
+#: includes/shortcodes/testimonials/class-testimonials.php:103
+msgid "Five"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:29
+msgid "Add time schedule"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:61
+msgid "Schedules"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:65
+msgid "Highlight"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:69
+msgid "Day"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:88
+msgid "Monday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:89
+msgid "Tuesday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:90
+msgid "Wednesday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:91
+msgid "Thursday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:92
+msgid "Friday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:93
+msgid "Saturday"
+msgstr ""
+
+#: includes/shortcodes/time-schedule/class-time-schedule.php:94
+msgid "Sunday"
+msgstr ""
+
+#: includes/skin/buttons.php:17
+msgid "Button Styling"
+msgstr ""
+
+#: includes/skin/buttons.php:24
+msgid "Font"
+msgstr ""
+
+#: includes/skin/buttons.php:47, includes/skin/buttons.php:181
+msgid "Border"
+msgstr ""
+
+#: includes/skin/buttons.php:60, includes/skin/buttons.php:304
+msgid "Icon Size"
+msgstr ""
+
+#: includes/skin/buttons.php:66
+msgid "Icon Size Large"
+msgstr ""
+
+#: includes/skin/buttons.php:72
+msgid "Icon Margin"
+msgstr ""
+
+#: includes/skin/buttons.php:78
+msgid "Border Radius"
+msgstr ""
+
+#: includes/skin/buttons.php:84, includes/skin/buttons.php:193, includes/skin/buttons.php:260, includes/skin/buttons.php:310
+msgid "Box Shadow"
+msgstr ""
+
+#: includes/skin/buttons.php:122
+msgid "Button Large Styling"
+msgstr ""
+
+#: includes/skin/buttons.php:134
+msgid "Button Small Styling"
+msgstr ""
+
+#: includes/skin/buttons.php:146
+msgid "Button Inline Styling"
+msgstr ""
+
+#: includes/skin/buttons.php:165
+msgid "Weight"
+msgstr ""
+
+#: includes/skin/buttons.php:204
+msgid "Button Secondary Color"
+msgstr ""
+
+#: includes/skin/buttons.php:217
+msgid "Button Light Color"
+msgstr ""
+
+#: includes/skin/buttons.php:229
+msgid "Button Dark Color"
+msgstr ""
+
+#: includes/skin/buttons.php:241
+msgid "Button Gradient"
+msgstr ""
+
+#: includes/skin/buttons.php:248
+msgid "Circle Degree"
+msgstr ""
+
+#: includes/skin/buttons.php:254
+msgid "Default"
+msgstr ""
+
+#: includes/skin/buttons.php:273
+msgid "Button Big Size"
+msgstr ""
+
+#: includes/skin/buttons.php:285
+msgid "Button Circle"
+msgstr ""
+
+#: includes/skin/buttons.php:292
+msgid "Width"
+msgstr ""
+
+#: includes/skin/buttons.php:298
+msgid "Height"
+msgstr ""
+
+#: includes/skin/colors.php:28
+msgid "Tertiary Color"
+msgstr ""
+
+#: includes/skin/colors.php:35
+msgid "Quaternary Color"
+msgstr ""
+
+#: includes/skin/colors.php:42
+msgid "Grey Color"
+msgstr ""
+
+#: includes/skin/colors.php:49
+msgid "Light Color"
+msgstr ""
+
+#: includes/skin/colors.php:56
+msgid "Dark Color"
+msgstr ""
+
+#: includes/skin/colors.php:63
+msgid "Dark2 Color"
+msgstr ""
+
+#: includes/skin/headings.php:42
+msgid "Heading 1"
+msgstr ""
+
+#: includes/skin/headings.php:50
+msgid "Heading 2"
+msgstr ""
+
+#: includes/skin/headings.php:58
+msgid "Heading 3"
+msgstr ""
+
+#: includes/skin/headings.php:66
+msgid "Heading 4"
+msgstr ""
+
+#: includes/skin/headings.php:74
+msgid "Heading 5"
+msgstr ""
+
+#: includes/skin/headings.php:82
+msgid "Heading 6"
+msgstr ""
+
+#: includes/skin/skins.php:16
+msgid "Saved Skins"
+msgstr ""
+
+#: includes/skin/skins.php:25
+msgid "New Skin Name"
+msgstr ""
+
+#: includes/skin/testimonials.php:16
+msgid "Background Color"
+msgstr ""
+
+#: includes/skin/testimonials.php:23
+msgid "Avatar Size"
+msgstr ""
+
+#: includes/skin/testimonials.php:30
+msgid "Author Name Color"
+msgstr ""
+
+#: includes/skin/testimonials.php:37
+msgid "Author Name Title Size"
+msgstr ""
+
+#: includes/skin/testimonials.php:51
+msgid "Stars Color"
+msgstr ""
+
+#: includes/skin/typography.php:27
+msgid "Primary Font"
+msgstr ""
+
+#: includes/skin/typography.php:35
+msgid "Secondary Font"
+msgstr ""
+
+#: includes/skin/typography.php:44
+msgid "Tertiary Font"
+msgstr ""
+
+#: includes/skin/typography.php:52
+msgid "Subtitle Font"
+msgstr ""
+
+#: includes/skin/typography.php:69
+msgid "Paragraph Font"
+msgstr ""
+
+#: includes/skin/typography.php:84
+msgid "Links"
+msgstr ""
+
+#: includes/skin/typography.php:104
+msgid "Widget Title"
+msgstr ""
+
+#: includes/skin/typography.php:116
+msgid "Widget Title Border"
+msgstr ""
+
+#: includes/skin/typography.php:123
+msgid "Widget Title Padding"
+msgstr ""
+
+#: includes/traits/class-ajax.php:42
+msgid "Error: Nonce verification failed"
+msgstr ""
+
+#: includes/traits/class-cmb2.php:118
+msgid "Something"
+msgstr ""

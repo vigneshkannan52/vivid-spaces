@@ -1,0 +1,41 @@
+{
+	"name": "aheto-shortcodes-add-ons",
+	"version": "1.1.0",
+	"main": "script.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"browser-sync": "^2.18.13",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^4.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^3.7.0",
+		"gulp-notify": "^3.0.0",
+		"gulp-plumber": "^1.1.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sourcemaps": "^1.12.1",
+		"gulp-strip-comments": "^2.5.2",
+		"gulp-uglify": "^3.0.0"
+	},
+	"dependencies": {
+		"gulp-sass": "^3.1.0",
+		"install": "^0.10.2",
+		"normalize-scss": "^7.0.0",
+		"npm": "^5.6.0",
+		"streamqueue": "^1.1.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aheto-shortcodes-add-ons/aheto-shortcodes-add-ons.git"
+	},
+	"bugs": {
+		"url": "https://github.com/aheto-shortcodes-add-ons/aheto-shortcodes-add-ons/issues"
+	},
+	"homepage": "https://github.com/aheto-shortcodes-add-ons/aheto-shortcodes-add-ons#readme",
+	"description": ""
+}

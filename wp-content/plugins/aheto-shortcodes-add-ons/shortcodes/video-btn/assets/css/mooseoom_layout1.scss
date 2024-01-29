@@ -1,0 +1,30 @@
+@import "../../../../assets/css/mixin";
+
+.aheto_video-btn---mooseoom {
+  .aheto-video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .aheto_video-btn__image {
+    position: absolute;
+    z-index: 0;
+  }
+  .aheto-btn {
+    &--dark:hover {
+      border: none;
+    }
+    &-video {
+      background: transparent;
+      z-index: 1;
+      border: none;
+      &:before {
+        display: none;
+      }
+      .ion-ios-play {
+        display: none;
+      }
+    }
+  }
+}

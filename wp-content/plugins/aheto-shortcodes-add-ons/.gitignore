@@ -1,0 +1,4 @@
+.DS_Store
+.idea
+# Ignore everything
+node_modules/*

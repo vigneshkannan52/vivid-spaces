@@ -1,0 +1,53 @@
+/**
+ * Editor styles for the admin
+ */
+.qb-block-post-grid .qb-block-post-grid-title a {
+  text-decoration: none; }
+
+.qodeblock-hide-query .components-base-control:nth-of-type(3) {
+  display: none; }
+
+.qb-block-post-grid-markup-settings .components-base-control__help {
+  margin-top: 8px; }
+
+.qb-block-post-grid-image {
+  position: relative; }
+  .qb-block-post-grid-image:hover .qb-post-grid-no-image-placeholder {
+    opacity: 1;
+    z-index: 1; }
+
+.qb-post-grid-no-image-placeholder {
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #f3f3f4;
+  transition: .2s ease; }
+  .qb-post-grid-no-image-placeholder svg {
+    margin-bottom: 10px; }
+
+.qb-post-grid-no-image-icon {
+  position: absolute;
+  top: 10px;
+  background: #ffe606;
+  right: 10px;
+  padding: 6px;
+  line-height: 1;
+  height: 32px;
+  transition: .2s ease;
+  border-radius: 5px;
+  z-index: 1; }
+
+.block-editor__container .components-placeholder__fieldset .qb-post-grid-image-help {
+  display: inline-block;
+  font-weight: bold; }
+  .block-editor__container .components-placeholder__fieldset .qb-post-grid-image-help a {
+    color: #0073aa;
+    text-decoration: underline; }
+    .block-editor__container .components-placeholder__fieldset .qb-post-grid-image-help a:hover {
+      color: #00a0d2; }
+
+/*# sourceMappingURL=editor.css.map */

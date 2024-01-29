@@ -1,0 +1,38 @@
+@import '../../../../assets/css/mixin';
+
+.main-header {
+  $p: &;
+
+  &--funero-footer {
+
+    a {
+      padding-left: 0;
+      position: relative;
+      display: table;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: var(--c-alter);
+        left: 0;
+        top: 50%;
+        transition: 0.3s;
+        opacity: 0;
+      }
+
+      &:hover {
+        color: var(--c-active)!important;
+        padding-left: 30px;
+
+        &:before {
+          background-color: var(--c-active);
+          width: 23px;
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+}

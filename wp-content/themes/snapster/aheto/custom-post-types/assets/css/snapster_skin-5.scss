@@ -1,0 +1,77 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+	$p: &;
+
+	&--snapster_skin-5 {
+		--img-height: 70;
+
+		#{$p}__title {
+			word-break: break-word;
+			color: var(--c-dark);
+
+			em,
+			b {
+				color: inherit;
+			}
+
+			a {
+				color: inherit;
+				line-height: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				letter-spacing: inherit;
+				font-style: inherit;
+				text-transform: inherit;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+		#{$p}__img  {
+			clip-path: inset(0 0 0 0);
+			transition: all .5s cubic-bezier(.25,.46,.45,.94);
+		}
+		&:hover #{$p}__img  {
+			clip-path: inset(15px 15px 15px 15px);
+
+		}
+		&:hover #{$p}__content  {
+			top: -15px;
+		}
+		#{$p}__content {
+			background: var(--c-light);
+			width: 500px;
+			max-width: calc(100% - 30px);
+			margin-top: -100px;
+			position: relative;
+			left: 50px;
+			top: 0;
+			padding: 40px 50px;
+			transition: all .5s cubic-bezier(.25,.46,.45,.94);
+			@include xs-size-max{
+				left: 15px;
+				padding: 25px;
+			}
+		}
+
+		#{$p}__excerpt {
+			margin-top: 20px;
+			@include xs-size-max{
+				margin-top: 15px;
+			}
+			& > *{
+				color: inherit;
+				line-height: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				letter-spacing: inherit;
+				font-style: inherit;
+				text-transform: inherit;
+			}
+		}
+	}
+}

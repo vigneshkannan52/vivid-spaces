@@ -1,0 +1,30 @@
+/**
+ * Accordion styles
+ * Loads on front end and back end
+ */
+
+ .qb-block-accordion {
+	 margin-bottom: 1.2em; 
+
+	.qb-accordion-title {
+		background: #f6f9ff;
+		padding: 15px 20px;
+		
+		p {
+			display: inline;
+		}
+	}
+
+	.qb-accordion-text {
+		padding: 15px 20px;
+	}
+
+	.editor-rich-text .editor-rich-text__inline-toolbar {
+		display: block;
+		left: 40%;
+	}
+}
+
+.qb-block-accordion + .qb-block-accordion {
+	margin-top: -.6em;
+}

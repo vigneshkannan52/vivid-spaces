@@ -1,0 +1,24 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-quote {
+  $quote: &;
+
+  &--famulus-modern{
+    border: none;
+
+    &::before{
+      display: none;
+    }
+    #{$quote}__author{
+      color: var(--c-alter);
+    }
+    #{$quote}__quote{
+      color: inherit;
+      margin-bottom: 20px;
+      font-size: inherit;
+    }
+    #{$quote}__position{
+      font-size: 0.5em;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--soapy_skin-6{
+    &:nth-child(2n - 1) {
+      transform: scale(1.05, 1.2);
+      z-index: 1;
+      @include sm-size-max{
+        transform: scale(1);
+      }
+
+      #{$p}__content {
+        transform: scale(0.95, 0.85);
+        padding: 23px 30px 20px;
+
+        @include sm-size-max{
+          transform: scale(1);
+          padding: 20px 15px 20px;
+        }
+      }
+      #{$p}__img {
+        &::after {
+          bottom: -1px;
+        }
+      }
+    }
+    #{$p}__img {
+      padding: 0;
+      width: 100%;
+      height: 230px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 25px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("../../assets/images/banner-bottom.png");
+      }
+    }
+
+    #{$p}__inner {
+      position: relative;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+      background-color: var(--c-light) ;
+    }
+
+
+    #{$p}__title {
+      margin-bottom: 15px;
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+
+    #{$p}__excerpt {
+      color: rgba(var(--ca-alter), 0.6);
+
+      p {
+        color: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        margin-bottom: 20px;
+        @include sm-size-max{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    #{$p}__content {
+      padding: 25px 30px 30px;
+      @include sm-size-max{
+        padding: 20px 15px 20px;
+      }
+    }
+
+    #{$p}__links {
+      text-align: center;
+      a {
+        color: var(--c-alter);
+        position: relative;
+        padding-right: 50px;
+        padding-left: 15px;
+        &::after {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          font-family: 'Ionicons';
+          transform: translate(-50% , -50%);
+          content: '\f3d6';
+          transition: 0.5s;
+          margin-left: 5px;
+          font-size: 1.4em;
+        }
+
+        &:hover {
+          color: var(--c-active);
+
+          &::after {
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+}

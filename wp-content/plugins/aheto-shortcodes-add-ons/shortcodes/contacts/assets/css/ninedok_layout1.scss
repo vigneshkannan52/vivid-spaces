@@ -1,0 +1,82 @@
+.aheto-contact {
+  $contact: &;
+
+  &--ninedok-slider {
+    #{$contact}__title {
+      margin-bottom: 25px;
+    }
+    #{$contact}__info {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      i {
+        display: inline-block;
+        margin-right: 12px;
+        color: var(--c-light);
+        &::before {
+          background-color: var(--c-active);
+          border-radius: 50%;
+          padding: 5px;
+          display: block;
+        }
+        &.icon_mail_alt::before {
+          padding: 3px 6px 7px;
+        }
+      }
+      p {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+      a {
+        color: inherit;
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+
+    }
+
+    .swiper {
+      position: relative;
+      &-button {
+        &-prev, &-next {
+          right: 7px;
+          left: initial;
+          color: var(--c-light);
+          font-size: 1.7rem;
+          top: 15px;
+          &:before {
+            font-family: 'Ionicons';
+          }
+          &:hover {
+            color: var(--c-active);
+          }
+        }
+        &-next {
+
+          &:before {
+            content: '\f3d3';
+          }
+        }
+        &-prev {
+          right: 56px;
+          &:before {
+            content: '\f3d2';
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            right: -20px;
+            height: 22px;
+            border-right: 1px solid rgba(var(--ca-light), 0.23);
+          }
+        }
+      }
+    }
+  }
+}

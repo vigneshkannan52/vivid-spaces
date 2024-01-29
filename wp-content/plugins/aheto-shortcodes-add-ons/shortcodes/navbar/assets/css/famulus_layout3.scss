@@ -1,0 +1,70 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-navbar {
+  $navbar: &;
+  &--famulus-links {
+
+	  #{$navbar}__title {
+		  color: var(--c-alter);
+		  margin-bottom: 23px;
+		  span{
+			  color: var(--c-active);
+		  }
+	  }
+	  #{$navbar}__links{
+		  display: flex;
+		  color: var(--c-alter);
+		  align-items: center;
+		  transition: 0.5s;
+		  margin-bottom: 10px;
+		  @include xs-size-max{
+			  margin-bottom: 5px;
+		  }
+		  span{
+			  display: block;
+			  width: 0;
+			  overflow: hidden;
+			  transition: width 0.5s;
+
+			  &::after{
+				  font-family: 'Ionicons';
+				  content: "\f3d6";
+				  font-size: 1.2em;
+			  }
+		  }
+		  &:hover{
+			  color: var(--c-active);
+			  span{
+				  width: 20px;
+			  }
+		  }
+	  }
+	  #{$navbar}__main-link{
+		  display: flex;
+		  color: var(--c-alter);
+		  align-items: center;
+		  margin-top: 40px;
+		  transition: 0.5s;
+		  @include xs-size-max{
+			  margin-top: 15px;
+		  }
+		  span{
+			  display: block;
+			  transition: 0.5s;
+			  margin-left: 10px;
+			  &::after{
+				  font-family: 'Ionicons';
+				  content: "\f3d6";
+				  font-weight: inherit;
+				  font-size: 1.2em;
+			  }
+		  }
+		  &:hover{
+			  color: var(--c-active);
+			  span{
+				  transform: translateX(50%);
+			  }
+		  }
+	  }
+  }
+}

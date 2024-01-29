@@ -1,0 +1,167 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-banner-slider {
+  $p: &;
+  &--vestry-modern {
+    #{$p}__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.85;
+      z-index: 1;
+    }
+
+    #{$p}-wrap {
+      height: 100%;
+    }
+
+    #{$p}__content {
+      margin: auto;
+      min-height: 100vh;
+      max-width: 1024px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      padding-top: 167px;
+      padding-bottom: 113px;
+
+      @media screen and (max-width: 1200px) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @include xs-size-max {
+        padding-top: 75px;
+        padding-bottom: 30px;
+      }
+    }
+
+    #{$p}__sub-title {
+      text-align: center;
+      color: var(--c-light);
+      margin-bottom: 26px;
+    }
+
+    .aheto-btn-video {
+      margin-bottom: 30px;
+    }
+
+    #{$p}__title {
+      text-align: center;
+      color: var(--c-light);
+      margin-bottom: 22px;
+    }
+
+    #{$p}__descr {
+      text-align: center;
+      color: var(--c-light);
+      margin-bottom: 60px;
+      max-width: 700px;
+      @include xs-size-max {
+        margin-bottom: 40px;
+      }
+    }
+
+    #{$p}__links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      br {
+        display: none;
+      }
+      @include xs-size-max {
+        br {
+          display: block;
+        }
+      }
+      a {
+        @include xs-size-max {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .aheto-btn--full-width {
+        margin-bottom: 15px;
+        text-align: center;
+        &:nth-of-type(2) {
+          margin: 0;
+        }
+      }
+    }
+
+    .aheto-btn:nth-of-type(2) {
+      margin-left: 30px;
+      @include xs-size-max {
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+    }
+
+    .swiper-container {
+      .swiper-pagination {
+        position: absolute;
+        left: auto;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        bottom: auto;
+        margin-top: 0;
+        @media screen and (max-width: 1300px) {
+          right: 50px;
+          margin-top: 50px;
+        }
+        @include md-size-max {
+          top: auto;
+          bottom: 100px;
+          right: 50%;
+          transform: translateX(50%);
+          flex-direction: row;
+        }
+        @include xs-size-max {
+          display: none;
+        }
+        &-bullet {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 60px;
+          height: 60px;
+          color: var(--c-light);
+          border-radius: 0;
+          background-color: transparent;
+          border-left: 2px solid rgba(var(--ca-light), 0.1);
+          @include md-size-max {
+            border-left: none;
+            border-bottom: 2px solid rgba(var(--ca-light), 0.1);
+          }
+          &-active {
+            background-color: transparent;
+            border-left: 2px solid var(--c-light);
+            @include md-size-max {
+              border-left: none;
+              border-bottom: 2px solid var(--c-light);
+            }
+          }
+        }
+        span {
+          counter-increment: span;
+        }
+        span:before {
+          content: counter(span);
+        }
+      }
+    }
+  }
+}

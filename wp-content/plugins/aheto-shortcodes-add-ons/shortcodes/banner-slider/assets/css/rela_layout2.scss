@@ -1,0 +1,90 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+
+	&--rela-creative {
+		position: relative;
+
+		#{$banner_slider}-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 1085px;
+			padding: 295px 0;
+			background-size: cover;
+			background-position: center center;
+			@include xs-size-max {
+				padding: 250px 0;
+			}
+			@media screen and (max-width: 480px) {
+				padding: 150px 0;
+			}
+		}
+
+		div.swiper-pagination {
+			position: absolute;
+			bottom: 24px;
+			left: 67px;
+			width: unset;
+			color: var(--c-light);
+
+			.swiper-pagination-bullet {
+				display: none;
+
+				&-active {
+					background-color: transparent;
+					display: block;
+				}
+			}
+
+			.swiper-pagination-bullet.swiper-pagination-bullet-active {
+				background-color: transparent;
+			}
+
+			@include sm-size-max {
+				display: none;
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			color: var(--c-light);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: -10px;
+			top: auto;
+			right: auto;
+			transition: all .3s ease;
+
+			&:hover {
+				color: var(--c-alter);
+			}
+
+			@include sm-size-max {
+				display: none;
+			}
+		}
+
+		.swiper-button-prev {
+			left: 30px;
+
+			&:before {
+				margin-right: 10px;
+				content: '\f3d5';
+			}
+		}
+
+		.swiper-button-next {
+			left: 100px;
+
+			&:before {
+				order: 1;
+				margin-left: 10px;
+				content: '\f3d6';
+			}
+		}
+	}
+}

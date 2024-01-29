@@ -1,0 +1,49 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-features {
+  $features: &;
+  &--rela-modern {
+    #{$features}-block {
+      &__wrap {
+        display: block;
+        padding-top: 140px;
+        padding-bottom: 130px;
+        transition: .3s all;
+        @media screen and (max-width: 1024px) {
+          padding-top: 80px;
+          padding-bottom: 70px;
+        }
+        @include xs-size-max {
+          padding-top: 50px;
+          padding-bottom: 40px;
+        }
+
+        &:hover {
+          background-color: rgba(var(--ca-active), .7);
+        }
+      }
+
+      &__image-wrap {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__image {
+        max-width: 50px;
+      }
+
+      &__title {
+        margin-top: 10px;
+
+        span {
+          color: var(--c-active);
+        }
+      }
+    }
+  }
+}

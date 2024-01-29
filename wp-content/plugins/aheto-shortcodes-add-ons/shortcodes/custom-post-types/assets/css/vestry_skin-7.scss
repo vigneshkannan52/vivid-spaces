@@ -1,0 +1,136 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-cpt-article {
+  $p: &;
+  
+  &__vestry-7 {
+    #{$p}__inner {
+      margin: 35px;
+      display: flex;
+      box-shadow: 0 10px 30px 0 rgba(var(--ca-dark), 0.05);
+      background-color: var(--c-light);
+      z-index: 2;
+      transition: all .3s ease;
+
+      &:hover {
+        box-shadow: 0 10px 30px 0 rgba(var(--ca-dark), 0.01);
+      }
+
+      @include sm-size-max {
+        margin: 30px 20px;
+      }
+      @include xs-size-max {
+        margin: 0 10px 20px;
+      }
+    }
+
+    #{$p}__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 25px 70px;
+      min-height: 160px;
+      flex: 1;
+      @include sm-size-max {
+        padding: 35px;
+      }
+      @include xs-size-max {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 65px 30px 40px;
+      }
+    }
+
+    #{$p}__title-wrapper {
+      max-width: 280px;
+      @include sm-size-max {
+        max-width: 220px;
+      }
+      #{$p}__title {
+        margin-bottom: 0;
+        a {
+          color: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+        }
+      }
+      @include xs-size-max {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    #{$p}__excerpt {
+      margin-bottom: 14px;
+    }
+
+    #{$p}__date {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      background-color: var(--c-active);
+      top: 0;
+      left: 70px;
+      transform: translateY(-55%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 5px 20px 0 rgba(var(--ca-active), 0.4);
+      @include xs-size-max {
+        left: 55px;
+      }
+      p {
+        margin: 0;
+        color: var(--c-light);
+      }
+    }
+
+    #{$p}__infos {
+      display: flex;
+      @include sm-size-max {
+        flex-direction: column;
+      }
+      @include xs-size-max {
+        margin-bottom: 30px;
+      }
+      p {
+        color: var(--c-dark);
+        margin: 0;
+        max-width: 180px;
+      }
+    }
+    
+    .widget_aheto__icon {
+      color: var(--c-active);
+      margin-right: 20px;
+      padding-top: 3px;
+      @include lg-size-max {
+        margin-right: 15px;
+      }
+    }
+    
+    #{$p}__info {
+      display: flex;
+      &:first-child {
+        margin-right: 66px;
+        @include sm-size-max {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    #{$p}__link .cs-btn.vestry_layout1 {
+      @include xs-size-max {
+        border-radius: 0;
+        padding: 22px 38px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<title>404 &#8211; Outsourceo &#8211; Your IT Solutions</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C800%2C800i%26amp%3Bsubset%3Dlatin%2Clatin-ext%7CRaleway%3A400%7CLato%3A300%2C400%7CMuli%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=latin-ext&#038;display=swap" />
+<style type="text/css" media="screen">#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,body #booked-profile-page input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar thead,body table.booked-calendar thead th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .booked-tabs li.active a,body #booked-profile-page .booked-tabs li.active a:hover,body #booked-profile-page .appt-block .google-cal-button > a:hover,#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header{ background:#141733 !important; }body #booked-profile-page input[type=submit].button-primary:hover,body table.booked-calendar input[type=submit].button-primary:hover,body .booked-list-view button.button:hover, body .booked-list-view input[type=submit].button-primary:hover,body .booked-modal input[type=submit].button-primary:hover,body table.booked-calendar th,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,body #booked-profile-page .booked-profile-header,body #booked-profile-page .appt-block .google-cal-button > a:hover{ border-color:#141733 !important; }body table.booked-calendar tr.days,body table.booked-calendar tr.days th,body .booked-calendarSwitcher.calendar,body #booked-profile-page .booked-tabs,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th{ background:#141733 !important; }body table.booked-calendar tr.days th,body #booked-profile-page .booked-tabs{ border-color:#141733 !important; }#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block,body #booked-profile-page .appt-block .google-cal-button > a,body .booked-modal p.booked-title-bar,body table.booked-calendar td:hover .date span,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,.booked-ms-modal .booked-book-appt /* Multi-Slot Booking */{ background:#ff6138; }body #booked-profile-page input[type=submit].button-primary,body table.booked-calendar input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-list-view button.button, body .booked-list-view input[type=submit].button-primary,body .booked-modal input[type=submit].button-primary,body #booked-profile-page .appt-block .google-cal-button > a,body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover{ border-color:#ff6138; }body .booked-modal .bm-window p i.fa,body .booked-modal .bm-window a,body .booked-appt-list .booked-public-appointment-title,body .booked-modal .bm-window p.appointment-title,.booked-ms-modal.visible:hover .booked-book-appt{ color:#ff6138; }.booked-appt-list .timeslot.has-title .booked-public-appointment-title { color:inherit; }</style><meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Outsourceo - Your IT Solutions &raquo; Feed" href="http://dev.viewdemo.co/wp/outsourceo/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Outsourceo - Your IT Solutions &raquo; Comments Feed" href="http://dev.viewdemo.co/wp/outsourceo/comments/feed/" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wc-block-vendors-style-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style.css?ver=2.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=2.7.1' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-icons-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/css/icons.css?ver=2.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-tooltipster-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/tooltipster/css/tooltipster.css?ver=3.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-tooltipster-theme-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/tooltipster/css/themes/tooltipster-light.css?ver=3.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-animations-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/css/animations.css?ver=2.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-styles-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/css/styles.css?ver=2.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='booked-responsive-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/css/responsive.css?ver=2.2.6' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.2' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='wpdp-style2-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/wp-datepicker/css/front-styles.css?t=1598948727&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpdp-style3-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/wp-datepicker/css/jquery-ui.css?ver=5.3.2' type='text/css' media='all' />
+
+<link rel='stylesheet' id='bootstrap-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/css/lib/bootstrap.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ionicons-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/fonts/ionicons.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-general-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/css/general.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-shop-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/css/shop.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-main-style-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/css/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-style-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.13' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.13' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/elementor/css/global.css?ver=1586353955' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1149-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/elementor/css/post-1149.css?ver=1589391858' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-qtip-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/style/jquery.qtip.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cc-template-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/fonts/template/style.css?ver=5.3.2' type='text/css' media='all' />
+
+
+<link rel='stylesheet' id='cost_calculator_style-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/style/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cost_calculator_style_responsive-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/style/responsive.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='preloader-with_image-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/css/preloader-with_image.css' type='text/css' media='all' />
+
+<link rel='stylesheet' id='elegant-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/fonts/elegant.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='style-main-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='style-skin-css'  href='//dev.viewdemo.co/wp/outsourceo/wp-content/uploads/aheto-styles/aheto-style_1208.css?timestamp=1594818764' type='text/css' media='all' />
+
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/WP_Estimation_Form/assets/js/lfb_frontend.min.js?ver=9.681'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/wp-datepicker/js/scripts-front.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/wp-datepicker/js/wpdp_auto_script.js?ver=5.3.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dev.viewdemo.co/wp/outsourceo/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dev.viewdemo.co/wp/outsourceo/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<meta name="generator" content="WooCommerce 4.3.0" />
+<link rel="canonical" href="http://dev.viewdemo.co/wp/outsourceo/404-2/" />
+<link rel='shortlink' href='http://dev.viewdemo.co/wp/outsourceo/?p=1149' />
+<link rel="alternate" type="application/json+oembed" href="http://dev.viewdemo.co/wp/outsourceo/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdev.viewdemo.co%2Fwp%2Foutsourceo%2F404-2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://dev.viewdemo.co/wp/outsourceo/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdev.viewdemo.co%2Fwp%2Foutsourceo%2F404-2%2F&#038;format=xml" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/2019/08/cropped-banner-slider-logo-01-150x150.png" sizes="32x32" />
+<link rel="icon" href="http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/2019/08/cropped-banner-slider-logo-01-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/2019/08/cropped-banner-slider-logo-01-300x300.png" />
+<meta name="msapplication-TileImage" content="http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/2019/08/cropped-banner-slider-logo-01-300x300.png" />
+<style type="text/css">.aheto-header { display:none !important }.aheto-footer { display:none !important }</style>    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="page-template page-template-aheto_canvas page page-id-1149 theme-outsourceo woocommerce-no-js no-sidebar elementor-default elementor-kit-4848 elementor-page elementor-page-1149">
+                    <div class="aheto-preloader with_image">
+
+                        <img src="http://dev.viewdemo.co/wp/outsourceo/wp-content/uploads/2019/08/banner-slider-logo-01.png" alt="Outsourceo &#8211; Your IT Solutions">
+
+                    </div>
+				<div class="container">		<div data-elementor-type="wp-post" data-elementor-id="1149" class="elementor elementor-1149" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-9e5a25e elementor-section-stretched elementor-section-full_width elementor-section-height-min-height elementor-section-content-middle elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="9e5a25e" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-50fe2fd elementor-column elementor-col-100 elementor-top-column" data-id="50fe2fd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-a8027e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a8027e1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cfb7d89 elementor-column elementor-col-100 elementor-inner-column" data-id="cfb7d89" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2e75ea6 elementor-invisible elementor-widget elementor-widget-aheto_heading" data-id="2e75ea6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--main  align-tablet-default align-mob-default aheto_heading_5f4e0577dcc50 ">
+
+	
+	<h2 class="aheto-heading__title ">404</h2>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-de51256 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="de51256" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-574d056 elementor-column elementor-col-100 elementor-inner-column" data-id="574d056" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-637a123 elementor-invisible elementor-widget elementor-widget-aheto_heading" data-id="637a123" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--outsourceo__simple  align-tablet-default align-mob-default aheto_heading_5f4e0577dfb9b ">
+
+	<h2 class="aheto-heading__title">The Page You are Looking for Does Not <span class="outsourceo-dot dot-primary">Exist</span></h2>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7b90f9b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-inner-section" data-id="7b90f9b" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;,&quot;animation_delay&quot;:300}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b612872 elementor-column elementor-col-100 elementor-inner-column" data-id="b612872" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ed7e5a4 elementor-widget elementor-widget-aheto_title-bar" data-id="ed7e5a4" data-element_type="widget" data-widget_type="aheto_title-bar.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-titlebar aheto-titlebar--title-with-search aheto_title-bar_5f4e0577e1dea ">
+
+    <div class="aheto-titlebar__main">
+        <div class="aheto-titlebar__content">
+            <div class="aheto-titlebar__content-inner">
+				
+				                    <div class="aheto-titlebar__input aheto-form-btn aheto-btn--primary    ">
+                        <form role="search" class="w-800" method="get" id="searchform"
+                              action="http://dev.viewdemo.co/wp/outsourceo/">
+                            <label class="screen-reader-text" for="s">Search: </label>
+                            <input type="text" value="" name="s" id="s"
+                                   placeholder="Search..."/>
+							                                <div class="submit-wrap ion-android-search">
+                                    <input class="not-value" type="submit" id="searchsubmit" value=""/>
+                                </div>
+							                        </form>
+                    </div>
+				            </div>
+        </div>
+
+    </div>
+
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-195f8ce elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-inner-section" data-id="195f8ce" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ee7cbfa elementor-column elementor-col-100 elementor-inner-column" data-id="ee7cbfa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d6bb906 elementor-invisible elementor-widget elementor-widget-aheto_heading" data-id="d6bb906" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:300}" data-widget_type="aheto_heading.default">
+				<div class="elementor-widget-container">
+			
+<div class="aheto-heading aheto-heading--main  align-tablet-default align-mob-default aheto_heading_5f4e0577e4d44 ">
+
+	
+	<h6 class="aheto-heading__title ">The page you were looking for is not here. Maybe you want to perform a search or go back to the Homepage?</h6>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7391605 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="7391605" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e7c32b5 elementor-column elementor-col-100 elementor-inner-column" data-id="e7c32b5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-85275f6 elementor-invisible elementor-widget elementor-widget-aheto_button" data-id="85275f6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="aheto_button.default">
+				<div class="elementor-widget-container">
+			<div class="aheto_button_5f4e0577e686d  ">
+	<div class="aheto-btn-container t-center tablet- mobile-">
+
+		<a href='http://dev.viewdemo.co/wp/outsourceo/' class='aheto-btn aheto-btn--primary    ' target='_self' aria-label='Back to Homepage'>Back to Homepage</a>
+	</div>
+</div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+		</div>    <div class="site-search" id="search-box">
+        <button class="close-btn js-close-search"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="form-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form role="search" method="get" class="search-form" action="http://dev.viewdemo.co/wp/outsourceo/"
+                              autocomplete="off">
+                            <div class="input-group">
+                                <input type="search" value="" name="s" class="search-field"
+                                       placeholder="Enter Keyword" required="">
+                            </div>
+                        </form>
+                        <p class="search-description">Input your search keywords and press Enter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		<script type="text/javascript">
+		function qodeblockBlocksShare( url, title, w, h ){
+			var left = ( window.innerWidth / 2 )-( w / 2 );
+			var top  = ( window.innerHeight / 2 )-( h / 2 );
+			return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=600, height=600, top='+top+', left='+left);
+		}
+	</script>
+		<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<link rel='stylesheet' id='heading-style-1-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/shortcodes/heading/assets/css/layout1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-heading-simple-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/aheto/heading/assets/css/cs_layout1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='outsourceo-titlebar-title-with-search-css'  href='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/aheto/title-bar/assets/css/cs_layout1.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/spin.min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/spin.jquery.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var booked_js_vars = {"ajax_url":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/wp-admin\/admin-ajax.php?wpml_lang=en","profilePage":"","publicAppointments":"","i18n_confirm_appt_delete":"Are you sure you want to cancel this appointment?","i18n_please_wait":"Please wait ...","i18n_wrong_username_pass":"Wrong username\/password combination.","i18n_fill_out_required_fields":"Please fill out all required fields.","i18n_guest_appt_required_fields":"Please enter your name to book an appointment.","i18n_appt_required_fields":"Please enter your name, your email address and choose a password to book an appointment.","i18n_appt_required_fields_guest":"Please fill in all \"Information\" fields.","i18n_password_reset":"Please check your email for instructions on resetting your password.","i18n_password_reset_error":"That username or email is not recognized."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/booked/assets/js/functions.js?ver=2.2.6'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var get = {"ajaxurl":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/js/frontend.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp\/outsourceo\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/wp\/outsourceo\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4.3.0'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/qodeblock/dist/assets/js/dismiss.js?ver=1572425039'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/comment-reply.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/js/navigation.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/js/lib/skip-link-focus-fix.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/vendors/isotope/isotope.min.js'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/js/lib/fitvids.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/themes/outsourceo/assets/js/script.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/selectmenu.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/js/jquery.ui.touch-punch.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/js/jquery.costCalculator.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/js/jquery.qtip.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/js/jquery.blockUI.min.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cost_calculator_config = [];
+cost_calculator_config = {"ajaxurl":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/wp-admin\/admin-ajax.php","is_rtl":0};;
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/ql-cost-calculator/js/cost_calculator.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/vendors/typed/typed.min.js'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/vendors/lazyload/lazyload.min.js?ver=0.9.0'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/vendors/script.min.js'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.13'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/aheto/assets/frontend/vendors/swiper/swiper.min.js'></script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.13'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.13","urls":{"assets":"http:\/\/dev.viewdemo.co\/wp\/outsourceo\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":1149,"title":"404%20%E2%80%93%20Outsourceo%20%E2%80%93%20Your%20IT%20Solutions","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='http://dev.viewdemo.co/wp/outsourceo/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.13'></script>
+		<script type="text/javascript">
+			function initElements($scope) {
+				if(typeof elementor !== "undefined") {
+					elementor.widgetsCache["aheto_custom-post-types"].controls.taxonomies.select2options.ajax = {
+						url: 'http://dev.viewdemo.co/wp/outsourceo/wp-admin/admin-ajax.php',
+						dataType: 'json',
+						data: function (params) {
+							return {
+								query: params.term,
+								action: 'autocomplete_aheto_taxonomies'
+							}
+						},
+						processResults: function (data) {
+							return {
+								results: data
+							}
+						}
+					}
+					elementor.widgetsCache["aheto_custom-post-types"].controls.exclude.select2options.ajax = {
+						url: 'http://dev.viewdemo.co/wp/outsourceo/wp-admin/admin-ajax.php',
+						dataType: 'json',
+						data: function (params) {
+							return {
+								query: params.term,
+								action: 'autocomplete_aheto_exclude_field_search',
+								postType: jQuery('select', '.elementor-control-post_type.elementor-control-type-select').val()
+							}
+						},
+						processResults: function (data) {
+							return {
+								results: data
+							}
+						}
+					}
+					elementor.widgetsCache["aheto_custom-post-types"].controls.include.select2options.ajax = {
+						url: 'http://dev.viewdemo.co/wp/outsourceo/wp-admin/admin-ajax.php',
+						dataType: 'json',
+						data: function (params) {
+							return {
+								query: params.term,
+								action: 'autocomplete_aheto_include_field_search'
+							}
+						},
+						processResults: function (data) {
+							return {
+								results: data
+							}
+						}
+					}
+				}
+			}
+			window.addEventListener('load', function() {
+				setTimeout(() => {
+					initElements();
+				}, 4000);
+			});
+			(typeof elementor !== "undefined") && elementor.hooks.addAction( 'panel/open_editor/widget', function( panel, model, view ) {
+				if ( 'aheto_custom-post-types' === model.attributes.widgetType ) {
+					initElements();
+					setTimeout(() => {
+						initElements();
+					}, 1000);
+				}
+			} );
+		</script>
+		</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1598948727 -->

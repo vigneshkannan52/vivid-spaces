@@ -1,0 +1,91 @@
+/**
+ * Button styles
+ * Loads on front end and back end
+ */
+
+ .qb-block-button {
+	margin: 0 0 1.2em 0;
+	position: relative;
+
+	.blocks-rich-text {
+		display: inline-flex;
+	}
+
+	.components-autocomplete {
+		display: inline-block;
+		width: auto;
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+.qb-button {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1 !important;
+	background-color: #2A74ED;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	padding: 21px 37px;
+	font-weight: 500!important;
+	letter-spacing: 1.4px;
+	text-decoration: none;
+	word-break: break-word;
+	transition: .3s ease;
+	display: inline-block;
+	outline: none;
+	&:hover {
+		color: #fff;
+		opacity: .8;
+	}
+}
+
+
+.qb-button-shape-square,
+input[type="submit"].qb-button-shape-square {
+	border-radius: 0;
+}
+
+.qb-button-shape-rounded,
+input[type="submit"].qb-button-shape-rounded {
+	border-radius: 5px;
+}
+
+.qb-button-shape-circular,
+input[type="submit"].qb-button-shape-circular {
+	border-radius: 100px;
+}
+
+.qb-button-size-small,
+input[type="submit"].qb-button-size-small {
+	font-size: 14px;
+}
+
+.qb-button-size-medium,
+input[type="submit"].qb-button-size-medium {
+	font-size: 20px;
+}
+
+.qb-button-size-large,
+input[type="submit"].qb-button-size-large {
+	font-size: 26px;
+	padding: .8em 1.2em;
+}
+
+.qb-button-size-extralarge,
+input[type="submit"].qb-button-size-extralarge {
+	font-size: 34px;
+	padding: .8em 1.2em;
+}
+
+.qb-button-right {
+	transform: translateX(-100%);
+	left: 100%;
+	position: relative;
+}
+
+.qb-button-center {
+	margin: 0 auto;
+}

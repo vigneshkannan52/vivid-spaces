@@ -1,0 +1,21 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block{
+  $features: &;
+  &--soapy-simple{
+    #{$features}__title{
+      margin-bottom: 10px;
+    }
+    #{$features}__image{
+      max-width: 50px;
+      &.left{
+        margin-right: 15px;
+        margin-left: -10px;
+      }
+      &.right{
+        margin-left: 15px;
+        margin-right: -10px;
+      }
+    }
+  }
+}

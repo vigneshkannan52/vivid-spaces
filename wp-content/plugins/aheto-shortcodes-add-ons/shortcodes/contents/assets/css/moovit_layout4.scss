@@ -1,0 +1,21 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+	$p: &;
+
+	&--moovit-cl_w_img {
+		#{$p}__item {
+			display: flex;
+			align-items: center;
+			&:not(:last-of-type){
+				margin-bottom: 25px;
+			}
+			img{
+				margin-right: 10px;
+			}
+			a:hover{
+				opacity: .7;
+			}
+		}
+	}
+}

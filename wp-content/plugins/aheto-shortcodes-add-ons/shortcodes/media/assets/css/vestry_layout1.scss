@@ -1,0 +1,190 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-media {
+  &--par {
+    .par-wrapper {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      height: 700px;
+      max-width: 1000px;
+      margin-left: auto;
+    }
+    .par-item {
+      margin-bottom: 40px;
+      position: absolute;
+      border-radius: 5px;
+      box-shadow: -20px 0px 30px 0px rgba(var(--ca-dark), 0.15);
+      overflow: hidden;
+      img {
+        border-radius: 5px;
+      }
+      &:nth-child(1) {
+        top: 0;
+        left: 16%;
+        width: 355px;
+        z-index: 5;
+      }
+      &:nth-child(2) {
+        top: 21%;
+        right: 4%;
+        width: 315px;
+        z-index: 2;
+      }
+      &:nth-child(3) {
+        top: 30%;
+        left: 0;
+        width: 350px;
+        z-index: 3;
+      }
+      &:nth-child(4) {
+        top: 42%;
+        left: 42%;
+        width: 280px;
+        z-index: 4;
+      }
+      &:nth-child(5) {
+        bottom: 0;
+        left: 24%;
+        width: 355px;
+        z-index: 1;
+      }
+
+      @media screen and (max-width: 1500px) {
+        &:nth-child(1) {
+          top: 0;
+          left: 12%;
+          width: 320px;
+        }
+        &:nth-child(2) {
+          top: 23%;
+          right: 5%;
+          width: 300px;
+        }
+        &:nth-child(3) {
+          top: 30%;
+          left: 0;
+          width: 315px;
+        }
+        &:nth-child(4) {
+          top: 48%;
+          left: 48%;
+          width: 255px;
+        }
+        &:nth-child(5) {
+          bottom: 0;
+          left: 24%;
+          width: 315px;
+        }
+      }
+
+      @media screen and (max-width: 1350px) {
+        &:nth-child(1) {
+          top: 0;
+          left: 9%;
+        }
+        &:nth-child(2) {
+          top: 23%;
+          right: 0%;
+        }
+      }
+
+      @media screen and (max-width: 1199px) {
+        &:nth-child(1) {
+          top: 0;
+          left: 15%;
+          right: auto;
+        }
+        &:nth-child(2) {
+          top: 27%;
+          right: 4%;
+          z-index: 4;
+        }
+        &:nth-child(3) {
+          top: 33%;
+          left: 0;
+        }
+        &:nth-child(4) {
+          top: 77%;
+          left: auto;
+          right: 4%;
+        }
+        &:nth-child(5) {
+          bottom: 0;
+          left: 14%;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        &:nth-child(1) {
+          top: 0;
+          left: 15%;
+          right: auto;
+          width: 355px;
+        }
+        &:nth-child(2) {
+          top: 24%;
+          right: 4%;
+          z-index: 4;
+          width: 315px;
+        }
+        &:nth-child(3) {
+          top: 33%;
+          left: 0;
+          width: 350px;
+        }
+        &:nth-child(4) {
+          top: 56%;
+          left: auto;
+          right: 4%;
+          width: 280px;
+        }
+        &:nth-child(5) {
+          bottom: 32px;
+          left: 5%;
+          width: 355px;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        &:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 0;
+          right: 0;
+        }
+        &:nth-child(3) {
+          top: 33%;
+          left: calc((100% - 350px) / 2);
+        }
+        &:nth-child(4) {
+          top: auto;
+          bottom: 0;
+          left: auto;
+          right: 0;
+        }
+        &:nth-child(5) {
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    @include xs-size-max {
+      .par-wrapper {
+        position: relative;
+        padding: 10px;
+        height: 100%;
+        &:nth-child(3) {
+          left: 0;
+          width: 100%;
+        }
+      }
+      .par-item {
+        width: 100%;
+        position: static;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

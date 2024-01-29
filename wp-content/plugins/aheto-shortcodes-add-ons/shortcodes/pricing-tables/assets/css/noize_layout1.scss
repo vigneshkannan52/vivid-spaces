@@ -1,0 +1,115 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing-tables--noize-lay1 {
+    $pricing: &;
+
+    #{$pricing}__box {
+        width: calc(50% - 10px);
+        background-color: rgba(var(--ca-dark),.03);
+        margin-bottom: 15px;
+        padding: 30px 35px;
+        padding-bottom: 15px;
+
+        @include xs-size-max {
+            width: 100%;
+            padding: 30px 20px;
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #{$pricing}__box-descr {
+            color: rgba(var(--ca-dark), .9);
+        }
+
+        &-title {
+            position: relative;
+            vertical-align: middle;
+            margin-bottom: 30px;
+
+            @include xs-size-max {
+                word-break: break-word;
+                padding-right: 10px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 42px;
+                height: 2px;
+                background-color: var(--c-active);
+                left: 0;
+                bottom: -10px;
+            }
+
+            span {
+                vertical-align: middle;
+                color: var(--c-active);
+                font-size: 0.87rem;
+                margin-left: 10px;
+                font-weight: normal;
+            }
+        }
+
+        &-price {
+            font-family: var(--t-secondary-font-family);
+            color: var(--c-active);
+        }
+
+        &.is-label {
+            #{$pricing}__box-price {
+                color: var(--c-active);
+            }
+        }
+    }
+
+    #{$pricing}__list {
+        background-color: rgba(var(--ca-dark),.1);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include xs-size-max {
+            flex-direction: column;
+            align-items: center;
+            display: block;
+            text-align: center;
+            padding: 15px;
+        }
+
+        &-item {
+            margin-right: 50px;
+            padding-top: 17.5px;
+            padding-bottom: 17.5px;
+            position: relative;
+
+            @include xs-size-max {
+                margin-right: 0;
+                display: inline-block;
+                padding: 5px 15px;
+            }
+
+            &.active {
+                a {
+                    color: var(--c-active)!important;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--c-active);
+
+                    @include xs-size-max {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

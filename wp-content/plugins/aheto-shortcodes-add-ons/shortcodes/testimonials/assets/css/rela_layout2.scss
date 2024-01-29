@@ -1,0 +1,80 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-tm {
+	$tm: &;
+
+	&-wrapper--rela-minimal {
+
+		.swiper-slide {
+			height: auto;
+		}
+
+		.swiper-container {
+			padding-bottom: 40px;
+			margin-bottom: -40px;
+		}
+
+		#{$tm}__minimal {
+			position: relative;
+			padding: 0 15px;
+			text-align: center;
+
+			#{$tm}__author {
+				display: flex;
+				align-items: center;
+			}
+
+			#{$tm}__info {
+				flex: 1;
+				margin-top: 30px;
+				@include xs-size-max {
+					margin-top: 20px;
+				}
+			}
+
+			#{$tm}__position {
+				margin-top: 2px;
+				margin-bottom: 0;
+				opacity: 0.5;
+				font-family: var(--t-primary-font-family);
+			}
+		}
+
+		div.swiper-pagination {
+			width: 100%;
+			margin-top: 55px;
+			@media screen and (max-width: 1024px) {
+				margin-top: 30px;
+			}
+
+			.swiper-pagination-bullet {
+				margin: 0 17px;
+				width: 8px;
+				height: 8px;
+				background-color: transparent;
+				border-radius: 4px;
+				position: relative;
+
+				&:after {
+					content: '';
+					position: absolute;
+					height: 16px;
+					width: 16px;
+					border: 1px solid var(--c-dark);
+					border-radius: 8px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&-active {
+					background-color: var(--c-dark);
+				}
+			}
+
+			@include xs-size-max {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact{
+	$contact : &;
+
+	&--hr-classic{
+		#{$contact}__title{
+			margin-bottom: 25px;
+		}
+
+		#{$contact}__info{
+			margin-bottom: 20px;
+			display: flex;
+			align-items: center;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			i{
+				display: inline-block;
+				font-style: inherit;
+				margin-right: 8px;
+
+				&::before{
+					color: var(--c-light);
+					background-color: var(--c-active);
+					border-radius: 50%;
+					padding: 5px;
+				}
+				&.icon_mail_alt::before{
+					padding: 3px 6px 7px;
+				}
+			}
+			p{
+				display: inline-block;
+				margin-bottom: 0;
+			}
+			a{
+				color: inherit;
+				&:hover{
+					color: var(--c-active);
+				}
+			}
+
+		}
+		.swiper {
+			&-button {
+				&-prev, &-next {
+					@media (min-width: 320px) {
+						display: block!important;
+					}
+					top: 0;
+					left: initial;
+					color: var(--c-light);
+					&::before {
+						content: '\f107';
+					}
+
+				}
+				&-next {
+					top: -1px;
+					right: -13px;
+					-webkit-transform: rotate(-180deg);
+					-moz-transform: rotate(-180deg);
+					-ms-transform: rotate(-180deg);
+					-o-transform: rotate(-180deg);
+					transform: rotate(-180deg);
+					@include md-size-max {
+						right: 10px;
+					}
+					@include sm-size-max {
+						right: 12px;
+					}
+				}
+				&-prev {
+					right: 40px;
+					top: 20px;
+					&::after {
+						content: '';
+						position: absolute;
+						top: 10px;
+						left: 30px;
+						height: 22px;
+						border-right: 1px solid rgba(var(--ca-light),.23);
+					}
+					@include md-size-max {
+						right: 62px;
+					}
+					@include sm-size-max {
+						right: 65px;
+					}
+				}
+			}
+		}
+	}
+
+	&--hr-dark {
+		.swiper {
+			&-button {
+				&-prev, &-next {
+					right: 70px;
+					&:hover {
+						&::before {
+							color: var(--c-active);
+							opacity: 1;
+						}
+
+					}
+					@include sm-size-max {
+						right: 12px;
+					}
+				}
+				&-next {
+					transform: rotate(0deg);
+					top: 10px;
+					&::before {
+						content: '\f125';
+						color: var(--c-dark);
+						opacity: 0.23;
+					}
+					@include md-size-max {
+						top: 0px;
+					}
+
+				}
+				&-prev {
+					right: 125px;
+					top: 25px;
+					&::before {
+						content: '\f124';
+						color: var(--c-dark);
+						opacity: 0.23;
+
+					}
+					&::after {
+						content: '';
+						border-right: 1px solid rgba(var(--ca-dark),.23);
+						top: 5px;
+
+					}
+					@include md-size-max {
+						top: 15px;
+					}
+					@include sm-size-max {
+						right: 65px;
+					}
+
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,114 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-content-block {
+  $features: &;
+
+  &--soapy-modern {
+    position: relative;
+    max-width: 550px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 10px;
+    @include sm-size-max{
+      height: auto;
+    }
+
+    #{$features}__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      padding: 60px;
+      @include md-size-max{
+        padding: 20px;
+      }
+    }
+
+    #{$features}__text {
+      width: 100%;
+      padding: 20px 25px 15px;
+      background-color: var(--c-light);
+      min-height: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.5s;
+      @include md-size-max{
+        padding: 35px 15px 25px;
+      }
+      @include sm-size-max {
+        padding: 30px 15px 25px;
+        min-height: 100%;
+      }
+      &:hover {
+        min-height: 100%;
+
+        #{$features}__info {
+          opacity: 1;
+          max-height: 500px;
+          @include sm-size-max{
+            max-height: 100%;
+          }
+          &-text {
+            margin: 15px 0 25px;
+            @include sm-size-max{
+              margin: 5px 0 10px;
+            }
+          }
+        }
+      }
+    }
+
+    #{$features}__title {
+      margin: 0 0 6px 0;
+
+    }
+
+    #{$features}__info {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.4s;
+    @include sm-size-max{
+      opacity: 1;
+      max-height: 100%;
+      &-text{
+        margin: 5px 0 10px;
+      }
+    }
+    }
+
+    #{$features}__link-wrap.t-right {
+      padding-right: 55px;
+    }
+    #{$features}__link {
+      color: var(--c-alter);
+      position: relative;
+      padding-right: 30px;
+        &:hover{
+          &::after{
+            right: -10px;
+          }
+        }
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-family: 'Ionicons';
+        transform: translate(0 , -50%);
+        content: '\f3d6';
+        transition: 0.5s;
+        margin-left: 5px;
+        font-size: 1.4em;
+      }
+
+      &:hover {
+        color: var(--c-active);
+      }
+    }
+  }
+}
+

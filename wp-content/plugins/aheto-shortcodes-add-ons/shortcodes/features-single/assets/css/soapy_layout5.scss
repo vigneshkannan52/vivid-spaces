@@ -1,0 +1,34 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block{
+  $features: &;
+  &--soapy-year {
+    display: flex;
+
+    #{$features}__title,
+    #{$features}__year{
+      margin-bottom: 5px;
+    }
+    #{$features}__year-desc{
+      margin-bottom: 0;
+    }
+    #{$features}__info-year{
+      width: 150px;
+      @include xs-size-max{
+        width: 100px;
+      }
+    }
+    #{$features}__info {
+      width: calc(100% - 150px);
+      padding-left: 30px;
+      @include xs-size-max{
+        width: calc(100% - 100px);
+        padding-left: 20px;
+      }
+
+    }
+    #{$features}__info-text{
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-list{
+
+  $list: &;
+
+  &--mooseoom-noborder-links{
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    @include xs-size-max{
+      display: block;
+      text-align: center;
+    }
+    #{$list}--main-row{
+      display: table-row;
+      #{$list}--column{
+        padding: 0 0 15px;
+        color: var(--c-dark);
+        line-height: inherit;
+        @include sm-size-max{
+          padding: 0 15px 5px;
+        }
+      }
+      @include xs-size-max{
+        display: none;
+      }
+    }
+    #{$list}--row {
+      display: table-row;
+      position: relative;
+      &:after {
+        background-color: var(--c-dark);
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%,0);
+        width: 100%;
+        @include xs-size-max {
+          display: none;
+        }
+      }
+
+
+      @include xs-size-max{
+        display: block;
+      }
+      &:not(:last-of-type){
+        margin-bottom: 15px;
+        @include xs-size-max {
+          margin-bottom: 0;
+        }
+      }
+      #{$list}--column{
+        padding: 19px 0;
+        vertical-align: middle;
+        @include md-size-max {
+          padding: 19px 0;
+        }
+        .aheto-banner-slider__links {
+          @include xs-size-max {
+            border-bottom: 1px solid var(--c-dark);
+            padding-bottom: 15px;
+          }
+        }
+        h5{
+          margin-bottom: 0;
+          @media screen and (min-width: 768px) and (max-width: 991px) {
+            text-align: left!important;
+          }
+          @include xs-size-max {
+            text-align: center!important;
+          }
+          text-align: left;
+        }
+        p {
+          margin-bottom: 0;
+          color: var(--c-dark);
+          
+        }
+        &-heading{
+          display: none;
+          @include xs-size-max{
+            display: block;
+          }
+        }
+        &-heading + h5 {
+          @include xs-size-max {
+            color: var(--c-grey);
+          }
+        }
+        &-heading + p {
+          @include xs-size-max {
+            margin-bottom: 0;
+            font-weight: inherit;
+            font-family: var(--t-secondary-font-family);
+          }
+        }
+        @include sm-size-max{
+          padding: 10px 15px;
+        }
+        @include xs-size-max{
+          padding: 5px 15px;
+        }
+        &:first-of-type{
+          padding-top: 24px;
+        }
+        &:last-of-type{
+          text-align: right;
+          white-space: nowrap;
+          @include xs-size-max{
+            text-align: center;
+            white-space: initial;
+            padding-bottom: 25px;
+          }
+        }
+        &:not(:first-of-type){
+          min-width: 140px;
+          @include md-size-max {
+            min-width: 150px;
+          }
+          @include sm-size-max {
+            min-width: 110px;
+          }
+          @include xs-size-max{
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+    #{$list}--column{
+      display: table-cell;
+      @include xs-size-max{
+        display: block;
+      }
+    }
+  }
+}

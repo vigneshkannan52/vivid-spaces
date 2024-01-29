@@ -1,0 +1,146 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-cpt-article {
+  $p: &;
+  
+  
+  &__vestry-5 {
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    &:last-child {
+      margin-bottom: 20px;
+    }
+    margin-bottom: 
+    #{$p}--size {
+      margin-top: 0;
+    }
+    #{$p}__inner {
+      height: 100%;
+      background-color: var(--c-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      min-height: 450px;
+      box-shadow: 0 10px 40px 0 rgba(var(--ca-dark), 0.05);
+      padding: 74px 40px 40px 40px;
+      background-color: var(--c-light);
+      z-index: 2;
+      @include lg-size-max {
+        padding: 74px 35px 40px 35px;
+      }
+
+      &:hover {
+        box-shadow: 0 10px 40px 0 rgba(var(--ca-dark), 0.01);
+      }
+      @include xs-size-max {
+        padding: 74px 30px 30px 30px;
+      }
+    }
+
+    #{$p}__title {
+      padding-top: 0;
+      margin-bottom: 19px;
+      word-break: break-word;
+
+      em,
+      b {
+        color: inherit;
+      }
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    #{$p}__excerpt {
+      margin-bottom: 14px;
+    }
+
+    #{$p}__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    #{$p}__date {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      background-color: var(--c-active);
+      top: 0;
+      left: 40px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0 5px 20px 0 rgba(var(--ca-dark), 0.4);
+      p {
+        margin: 0;
+        color: var(--c-light);
+        text-transform: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        font-size: 2.1em;
+      }
+    }
+
+    #{$p}__infos {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: auto;
+      
+      p {
+        color: var(--c-dark);
+        margin: 0;
+        max-width: 180px;
+      }
+    }
+    
+    .widget_aheto__icon {
+      color: var(--c-active);
+      margin-right: 20px;
+      padding-top: 3px;
+      @include lg-size-max {
+        margin-right: 15px;
+      }
+    }
+    
+    #{$p}__date-dur {
+      display: flex;
+      margin-top: 20px;
+      &>div {
+        &:first-child {
+          margin-bottom: 28px;
+        }
+      }
+    }
+
+    #{$p}__address {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    #{$p}__link {
+      margin-top: 40px;
+      @include lg-size-max {
+        margin-top: 25px;
+      }
+    }
+  }
+}

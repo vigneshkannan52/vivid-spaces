@@ -1,0 +1,37 @@
+@import '../../../../assets/css/mixin';
+
+
+.widget_aheto {
+  $contact: &;
+
+  &__contact_info--soapy-simple{
+    #{$contact}__logo {
+     img{
+       max-height: 105px;
+       width: auto;
+     }
+    }
+    #{$contact}__title {
+      margin-bottom: 15px;
+      @include xs-size-max{
+        margin-bottom: 0;
+      }
+    }
+
+    #{$contact}__infos  {
+
+      p {
+        margin-bottom: 0;
+
+      }
+      #{$contact}__line{
+        display: inline;
+      }
+      a{
+        &:hover{
+          color: var(--c-active);
+        }
+      }
+    }
+  }
+}

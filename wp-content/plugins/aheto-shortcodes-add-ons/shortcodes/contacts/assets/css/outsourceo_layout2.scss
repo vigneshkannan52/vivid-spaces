@@ -1,0 +1,92 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contact {
+	$contact: &;
+
+	&--outsourceo-classic {
+		#{$contact}__title {
+			margin-bottom: 35px;
+			color: var(--c-light);
+		}
+
+		#{$contact}__info {
+			margin-bottom: 20px;
+			display: flex;
+			align-items: flex-start;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			i {
+				display: inline-block;
+				margin-right: 20px;
+				padding-top: 6px;
+				font-style: initial;
+				@include sm-size-max {
+					margin-right: 10px;
+				}
+
+				&::before {
+					color: var(--c-light);
+					background-color: var(--c-active);
+					border-radius: 50%;
+					padding: 5px;
+				}
+				&.icon_mail_alt::before {
+					padding: 3px 6px 7px;
+				}
+			}
+			p {
+				display: inline-block;
+				margin-bottom: 0;
+				color: var(--c-light);
+			}
+			a {
+				color: var(--c-light);
+				&:hover {
+					color: var(--c-active);
+				}
+			}
+		}
+
+		.swiper {
+			&-button {
+				&-prev, &-next {
+					top: 18px;
+					right: 0;
+					left: initial;
+					color: var(--c-light);
+					@include sm-size-max {
+						display: block;
+					}
+					@include xs-size-min {
+						display: block;
+					}
+				}
+				&-next {
+					top: 21px;
+					&::before {
+						content: "\f363";
+						font-size: 1.44rem;
+					}
+					@include sm-size-max {
+						top: 20px;
+					}
+				}
+				&-prev {
+					right: 7px;
+					&::before {
+						content: "\f107";
+						font-size: 1rem;
+					}
+					&::after {
+						content: '|';
+						margin: 0 20px;
+						display: inline-block;
+						font-size: 1.43rem;
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+}

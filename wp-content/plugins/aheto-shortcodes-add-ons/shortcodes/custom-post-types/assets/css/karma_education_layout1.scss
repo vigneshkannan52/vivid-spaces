@@ -1,0 +1,70 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt {
+  $p: &;
+
+  &--karma-education-slider {
+	--img-height: 100;
+	--count-v: 1;
+	--spaces-v: 0;
+
+	.swiper-container {
+	  padding: 150px 15px 0;
+	  margin: -50px -15px -30px;
+		@include md-size-max{
+			padding: 75px 15px 0;
+		}
+	}
+
+	.swiper-wrapper {
+	  padding-bottom: 30px;
+	}
+	.swiper {
+		position: relative;
+		&-button-prev,
+		&-button-next {
+			top: 0;
+			bottom: auto;
+			border: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			width: 50px;
+			height: 50px;
+			border-radius: 5px;
+			background-color: var(--c-light);
+			transform: translate(0, 0);
+			box-shadow: 0 4px 6px rgba(var(--ca-dark), 0.07);
+			opacity: 1;
+			color: var(--c-active);
+			&:hover {
+				background-color: var(--c-active);
+				color: var(--c-light);
+			}
+
+			&::before {
+				font-size: 0.9em;
+
+			}
+		}
+		&-button-prev {
+			right: 60px;
+			left: auto;
+
+			&::before {
+				content: "\f3d2" ;
+			}
+
+		}
+
+		&-button-next {
+			right: 0;
+			&:before {
+				content: "\f3d3" ;
+			}
+
+		}
+	}
+  }
+}

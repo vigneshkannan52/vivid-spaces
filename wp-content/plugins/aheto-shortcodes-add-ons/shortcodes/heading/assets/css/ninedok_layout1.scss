@@ -1,0 +1,21 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+  $heading: &;
+
+  &--ninedok__simple {
+    #{$heading}__title {
+      span {
+        color: var(--c-active);
+      }
+
+    }
+    #{$heading}__subtitle {
+      margin-bottom: 1.4em;
+      @include xs-size-max {
+        margin-bottom: 0.6em;
+      }
+    }
+  }
+
+}

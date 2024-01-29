@@ -1,0 +1,123 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+	&--masonry {
+		@include md-size-max {
+			margin-bottom: 40px;
+		}
+
+	}
+
+	$p: &;
+	@include xs-size-max {
+		width: 100%;
+	}
+	&--mooseoom_skin-6 {
+		#{$p}__inner {
+			position: relative;
+			max-width: 405px;
+			@include md-size-max {
+				padding: 0 15px;
+			}
+			@include md-size-max {
+				margin: 0 auto;
+			}
+		}
+		#{$p}__content {
+			#{$p}__tags {
+				margin-top: 12px;
+				a {
+					text-decoration: none;
+					color: var(--c-dark);
+					&:hover {
+						color: rgba(var(--ca-dark), .7);
+					}
+				}
+			}
+		}
+
+		#{$p}__title {
+			margin-top: 3px;
+			margin-bottom: 0;
+			a {
+				color: inherit;
+				letter-spacing: inherit;
+				font-size: inherit;
+				line-height: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				transform: translateZ(0);
+				&:hover {
+					color: rgba(var(--ca-dark), .7);
+				}
+			}
+		}
+
+		#{$p}__img {
+			position: relative;
+			img {
+				width: 100%;
+			}
+		}
+
+	}
+}
+
+.aheto-cpt--masonry {
+	.aheto-cpt-filter.center-filter {
+		justify-content: flex-start;
+		margin: 0 0 40px 17.5%;
+		align-items: center;
+		@media screen and (min-width: 1300px) and (max-width: 1441px) {
+			margin: 0 0 40px 7.9%;
+		}
+		@media screen and (min-width: 1279px) and (max-width: 1299px) {
+			margin: 0 0 40px 2.6%;
+		}
+		@media screen and (min-width: 1000px) and (max-width: 1025px) {
+			margin: 0 0 40px 0;
+		}
+		@include sm-size-max {
+			margin: 0 0 40px 0;
+			flex-wrap: wrap;
+		}
+		.aheto-cpt-filter__item {
+			margin: 0 15px;
+			&:first-child {
+				align-self: flex-start;
+			}
+		}
+	}
+}
+
+.aheto-cpt--masonry {
+
+	.aheto-cpt-filter__item {
+
+		a {
+			font-weight: inherit;
+
+			&:after {
+				content: '+';
+				opacity: 0;
+				margin-left: 10px;
+			}
+			&.is-active {
+				font-weight: inherit;
+				&:after {
+					content: '+';
+					opacity: 1;
+					margin-left: 10px;
+				}
+			}
+		}
+
+	}
+	.aheto-cpt-load--button {
+		margin-top: 82px;
+		@include xs-size-max {
+			margin-top: 45px;
+		}
+	}
+}
+

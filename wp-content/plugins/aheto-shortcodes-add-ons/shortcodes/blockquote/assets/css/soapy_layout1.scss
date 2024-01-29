@@ -1,0 +1,23 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-quote {
+  $quote: &;
+
+  &--soapy-simple {
+    border: none ;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+
+    #{$quote}__quote {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+
+
+
+

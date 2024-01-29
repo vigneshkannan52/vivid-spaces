@@ -1,0 +1,123 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-titlebar {
+  $p: &;
+
+  &--title-with-search {
+
+	#{$p}__title {
+	  margin: 0 20px 0 0;
+	  width: 100%;
+	  &::after {
+		content: '';
+		display: inline-block;
+		margin-left: 2px;
+		width: 8px;
+		height: 8px;
+		background: var(--c-active);
+	  }
+	  b {
+		font-weight: inherit;
+	  }
+	}
+
+	h4, h5, h6 {
+	  &.aheto-titlebar__title {
+		&::after {
+		  margin-left: 1px;
+		  width: 3px;
+		  height: 3px;
+		}
+	  }
+	}
+
+	#{$p}__input {
+	  flex-basis: 100%;
+	  margin-bottom: auto;
+
+	  @media (max-width: 1200px) {
+		margin-top: 45px;
+	  }
+
+	  @media (max-width: 991px) {
+		margin-top: 30px;
+	  }
+
+	  form {
+		position: relative;
+		font-size: 0.81em;
+
+		label {
+		  display: none;
+		}
+	  }
+
+	  input:not([type="submit"]) {
+		padding: 21px 70px 20px 20px;
+		width: 100%;
+		font: inherit;
+		max-width: 100%;
+		border: 1px solid rgba(var(--ca-dark), 0.4);
+		color: rgba(var(--ca-dark), 0.4);
+		&::placeholder {
+		  color: rgba(var(--ca-dark), 0.4);
+		}
+	  }
+
+	  input[type="submit"] {
+		margin-top: 15px;
+
+	  }
+
+	  .submit-wrap {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 50px;
+		height: 100%;
+		transform: translate(0, -50%) rotate(90deg);
+		font-size: 1.25em;
+		color: rgba(var(--ca-dark), 0.4);
+
+		&::before {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  display: flex;
+		  height: inherit;
+		  width: inherit;
+		  font-size: 160%;
+		  align-items: center;
+		  justify-content: center;
+		  background: transparent;
+		  transition: all .3s ease;
+		  color: rgba(var(--ca-dark), 0.5);
+		}
+		&:hover::before {
+		  color: var(--c-active);
+		}
+
+		input[type="submit"] {
+		  margin-top: 0;
+		  height: inherit;
+		  width: inherit;
+		  margin-top: 0;
+		  background: transparent;
+		  position: relative;
+		  padding: 0 20px;
+		  box-shadow: none;
+		  border: 0;
+		  border-radius: 0;
+		  outline: none;
+		  color: transparent;
+		  &:hover {
+			background: transparent;
+			border-color: transparent;
+		  }
+		}
+	  }
+
+	}
+  }
+
+}

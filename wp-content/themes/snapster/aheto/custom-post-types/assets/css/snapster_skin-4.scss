@@ -1,0 +1,34 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+	$p: &;
+
+	&--snapster_skin-4 {
+		--img-height: 70;
+
+		#{$p}__inner {
+			position: relative;
+			&.grayscale {
+				filter: grayscale(1);
+			}
+			&:hover .aheto-cpt-article__title {
+				display: inline-block;
+			}
+		}
+		
+		#{$p}__title {
+			display: none;
+			top: 30px;
+			left: 15px;
+			position: absolute;
+			z-index: 9999;
+			color: var(--c-light);
+			white-space: nowrap;
+			pointer-events: none;
+		}
+		#{$p}__img-link:hover {
+			background: rgba(var(--ca-dark), .5);
+		}
+
+	}
+}

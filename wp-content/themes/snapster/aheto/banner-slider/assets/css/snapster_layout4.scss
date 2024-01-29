@@ -1,0 +1,225 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+	
+	&__overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+	
+	&--snapster-creative {
+		position: relative;
+		
+		#{$banner_slider}-wrap {
+			height: 100vh;
+			max-height: 730px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		#{$banner_slider}__content {
+			max-width: 1250px;
+			padding: 140px 15px;
+			z-index: 1;
+			@include xs-size-max {
+				padding: 110px 15px;
+			}
+		}
+		#{$banner_slider}__links {
+			display: flex;
+			justify-content: center;
+		}
+		
+		.aheto-banner__title {
+			span {
+				position: relative;
+				opacity: 0;
+			}
+		}
+		
+		div.swiper-pagination {
+			position: absolute;
+			top: 50%;
+			right: 50px;
+			left: auto;
+			width: unset;
+			height: 25px;
+			color: var(--c-light);
+			transform: translateY(-50%);
+			
+			.swiper-pagination-bullet {
+				display: none;
+				
+				&-active {
+					background-color: transparent;
+					display: block;
+				}
+			}
+			
+			.swiper-pagination-bullet.swiper-pagination-bullet-active {
+				background-color: transparent;
+			}
+			
+			@include sm-size-max {
+				position: absolute;
+				bottom: 35px;
+				top: auto;
+				left: 50%;
+				right: auto;
+				transform: translateX(-50%);
+			}
+		}
+		
+		div.swiper-button-prev,
+		div.swiper-button-next {
+			width: 100px;
+			height: 30px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			transition: all .3s ease;
+			transform: none;
+			overflow: hidden;
+			
+			&:hover {
+				color: var(--c-active);
+			}
+		}
+		div.swiper-button-next {
+			right: 14px;
+			left: auto;
+			bottom: calc(50% - 100px);
+			top: auto;
+			position: absolute;
+			transform: rotate(-90deg);
+			@include sm-size-max {
+				top: auto;
+				left: 50%;
+				bottom: 32px;
+				right: auto;
+				transform: translateX(50px) rotate(-180deg);
+			}
+			&::before {
+				content: '\f124';
+				left: 0;
+				font-size: 16px;
+				color: var(--c-light);
+				position: absolute;
+			}
+			span {
+				&:after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: var(--c-light);
+					transition: .4s ease-out;
+					top: 50%;
+					transform: translate(100px, -50%);
+					left: 0;
+					margin-left: 3px;
+					transition-delay: 300ms;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: var(--c-light);
+					transition: .4s ease-out;
+					top: 50%;
+					transform: translate(0, -50%);
+					left: 0;
+					margin-left: 3px;
+				}
+			}
+			&:hover {
+				span {
+					&:before {
+						transform: translate(-105px, -50%);
+					}
+					&:after {
+						transform: translate(0px, -50%);
+					}
+				}
+				&::before {
+					color: var(--c-light);;
+				}
+			}
+		}
+		
+		div.swiper-button-prev {
+			right: 14px;
+			left: auto;
+			top: calc(50% - 100px);
+			position: absolute;
+			transform: rotate(90deg);
+			@include sm-size-max {
+				top: auto;
+				left: 50%;
+				bottom: 32px;
+				right: auto;
+				transform: translateX(-150px);
+			}
+			&::before {
+				content: '\f124';
+				left: 0;
+				font-size: 16px;
+				color: var(--c-light);;
+				position: absolute;
+			}
+			span {
+				&:after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: var(--c-light);
+					transition: .4s ease-out;
+					top: 50%;
+					transform: translate(100px, -50%);
+					left: 0;
+					margin-left: 3px;
+					transition-delay: 300ms;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 2px;
+					background-color: var(--c-light);
+					transition: .4s ease-out;
+					top: 50%;
+					transform: translate(0, -50%);
+					left: 0;
+					margin-left: 3px;
+				}
+			}
+			&:hover {
+				span {
+					&:before {
+						transform: translate(-105px, -50%);
+					}
+					&:after {
+						transform: translate(0px, -50%);
+					}
+				}
+				&::before {
+					color: var(--c-light);
+				}
+			}
+		}
+		
+	}
+}

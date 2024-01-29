@@ -1,0 +1,145 @@
+@import '../../../../assets/css/mixin';
+
+.widget_aheto{
+  $p: &;
+
+  &__cf--acacio-classic-form{
+
+    #{$p}__title{
+	 margin-bottom: 40px;
+	 @include xs-size-max{
+	   margin-bottom: 30px;
+	 }
+    }
+
+    #{$p}__form{
+	 @include md-size-max {
+	   max-width: 100%!important;
+	 }
+	 &.count-two{
+	   .wpcf7 span.wpcf7-form-control-wrap{
+		flex: 1 0 50%;
+
+		@include xs-size-max{
+		  flex: 1 0 100%;
+		}
+	   }
+	 }
+	 .wpcf7{
+	   form p{
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -8px;
+	   }
+	   span.wpcf7-form-control-wrap{
+		font: inherit;
+		color: var(--c-dark);
+		flex: 1 0 25%;
+		display: block;
+		padding: 8px;
+		@include sm-size-max{
+		  flex: 1 0 50%;
+		}
+		@include xs-size-max{
+		  flex: 1 0 100%;
+		}
+	   }
+	   textarea{
+		resize: none;
+		height: 200px;
+	   }
+	   textarea,
+	   select,
+	   input:not([type="submit"]){
+		padding: 16px 18px;
+		border: none;
+		width: 100%;
+		color: inherit;
+		max-width: 100%;
+		box-shadow: none;
+		&:active, &:focus {
+		  border: 1px solid var(--c-active);
+		  &::placeholder {
+		    color: var(--c-dark);
+		  }
+		}
+		&::placeholder {
+		  font-size: inherit;
+		}
+	   }
+
+	   input[type=file] {
+		cursor: pointer;
+		width: 180px;
+		height: 34px;
+		overflow: hidden;
+	   }
+
+
+	   input[type=file]::-webkit-file-upload-button {
+		visibility: hidden;
+	   }
+	   input[type=date] {
+		color: rgba(var(--ca-grey), .5);
+	   }
+	   input[type='submit'] {
+		&:focus, &:active {
+		  outline: none;
+		  border: none;
+		}
+	   }
+	   select{
+		max-height: calc(1.6em + 36px);
+		height: calc(1.6em + 36px);
+		-webkit-appearance: none;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23dddddd'><polygon points='0,0 100,0 50,50'/></svg>");
+		background-size: 12px;
+		background-position: calc(100% - 17px) 55%;
+		background-repeat: no-repeat;
+		border: none;
+		outline: none!important;
+		border-radius: 0;
+		color: rgba(var(--ca-grey), .5);
+		&.selected{
+		  color: inherit;
+		}
+	   }
+	   input::placeholder {
+		opacity: .7;
+	   }
+	   textarea::placeholder {
+		opacity: .7;
+	   }
+	   .textarea-wrap,
+	   .submit-wrap{
+		flex: 0 0 100%;
+	   }
+	   .submit-wrap{
+		padding: 7px;
+		margin-bottom: 10px;
+		margin-top: 20px;
+	   }
+	   .ajax-loader{
+		display: none;
+	   }
+	 }
+    }
+    &.full_width_button{
+	 #{$p}__form{
+	   .wpcf7{
+		input[type="submit"]{
+		  width: 100%;
+		  display: block;
+		  text-align: center;
+		  &:focus, &:active {
+		    outline: none;
+		    border: none;
+		  }
+		}
+	   }
+	 }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-member{
+	$member: &;
+	&--funero-simple {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include sm-size-max{
+			justify-content: center;
+		}
+		#{$member}__wrap{
+			width: 25%;
+			transition: 0.5s;
+			&:hover{
+				#{$member}__img-holder{
+					&::before{
+						opacity: 0;
+					}
+					&::after{
+						opacity: 0.56;
+					}
+				}
+			}
+
+			@include sm-size-max{
+				width: 50%;
+				max-width: 350px;
+			}
+			@include xs-size-max{
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+		#{$member}__img-holder{
+			width: 100%;
+			padding-bottom: 123%;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			transition: 0.5s;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 0;
+				transition: 0.5s;
+				background-image: linear-gradient(to top, var(--c-alter) 0%, var(--c-light) 100%);
+				opacity: 0.56;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 0;
+				transition: 0.5s;
+				background-image: linear-gradient(to top, var(--c-active) 0%, var(--c-light) 100%);
+				opacity: 0;
+			}
+		}
+		#{$member}__text{
+			padding: 35px 15px;
+			box-sizing: border-box;
+		}
+		#{$member}__name{
+			margin: 0;
+		}
+		#{$member}__position{
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-clients {
+	$clients: &;
+
+	&--rela {
+		display: flex;
+		flex-wrap: wrap;
+
+		#{$clients}__holder {
+			display: flex;
+			flex: 1;
+			flex-basis: 100%;
+			align-items: center;
+			justify-content: center;
+			width: 150px;
+			min-width: 130px;
+			margin: 20px 0;
+			height: 130px;
+
+			@include md-size-max {
+				height: 110px;
+			}
+
+			@include sm-size-max {
+				height: 90px;
+			}
+
+			a {
+				height: inherit;
+			}
+		}
+
+		&.grayscale {
+			img {
+				opacity: 1;
+				filter: grayscale(100%);
+
+				&:hover {
+					filter: grayscale(0);
+				}
+			}
+		}
+
+		&.darkness {
+			img {
+				opacity: 1;
+				filter: brightness(0);
+
+				&:hover {
+					filter: brightness(100%);
+				}
+			}
+		}
+
+		&.opacity_d {
+			img {
+				opacity: 1;
+
+				&:hover {
+					opacity: 0.6;
+				}
+			}
+		}
+
+		a {
+			display: flex;
+		}
+
+		img {
+			transition: all 0.3s ease-out;
+			opacity: 0.3;
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		&.aheto-clients--2-in-row {
+			#{$clients}__holder {
+				flex-basis: 50%;
+			}
+		}
+
+		&.aheto-clients--3-in-row {
+			#{$clients}__holder {
+				flex-basis: 33.33%;
+			}
+		}
+
+		&.aheto-clients--4-in-row {
+			#{$clients}__holder {
+				flex-basis: 25%;
+			}
+		}
+
+		&.aheto-clients--5-in-row {
+			#{$clients}__holder {
+				flex-basis: 20%;
+			}
+		}
+
+		&.aheto-clients--6-in-row {
+			#{$clients}__holder {
+				flex-basis: calc(100% / 6);
+			}
+		}
+	}
+}
+

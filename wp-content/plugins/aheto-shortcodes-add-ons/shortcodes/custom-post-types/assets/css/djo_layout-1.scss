@@ -1,0 +1,18 @@
+
+.djo-cpt {
+    &--slider {
+        div.swiper-button-next,
+        div.swiper-button-prev {
+            &:before {
+                content: '';
+            }
+
+            &.swiper-button-disabled {
+				opacity: 0.7;
+				.path {
+					stroke: var(--c-light);
+				}
+			}
+        }
+    }
+}

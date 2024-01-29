@@ -1,0 +1,1 @@
+{"version":3,"sources":["skin.scss"],"names":[],"mappings":"AAGA,KACC,SAAA,QACA,UAAA,KACA,WAAA,GAAA,CAAA,GAAA,CAAA,IACA,SAAA","file":"skin.css","sourcesContent":["/**\n\tDefault color variables\n */\nhtml{\n\t--c-grey: #B2B2B2;\n\t--c-light: #fff;\n\t--ca-light: 255, 255, 255;\n\t--c-dark: #1b1b1b;\n}\n"]}

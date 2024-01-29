@@ -1,0 +1,119 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-tm{
+	$tm : &;
+
+	&-wrapper--hr-modern{
+		position: relative;
+		#{$tm}__bg-text{
+			color: rgba(var(--ca-grey), .1);
+			position: absolute;
+			bottom: -20px;
+			left: 50%;
+			width: 100%;
+			max-width: 1720px;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+
+			@include sm-size-max{
+				text-align: center;
+			}
+			@media only screen and (max-width: 600px){
+				display: none;
+			}
+		}
+
+		#{$tm}__slide-wrap{
+			padding: 0 15px;
+		}
+		#{$tm}__content{
+			background-color: var(--c-light);
+			padding: 35px 42px;
+			position: relative;
+			box-shadow: 0px 10px 30px 0 rgba(var(--ca-dark), 0.06);
+			margin-bottom: 31px;
+			margin-top: 10px;
+			@include lg-size-max{
+				padding: 42px;
+			}
+			@include xs-size-max{
+				padding: 20px;
+			}
+			&::before{
+				content: '';
+				width: 0;
+				height: 0;
+				border-bottom: 0px solid transparent;
+				border-right: 9px solid transparent;
+				border-left: 9px solid transparent;
+				border-top: 17px solid var(--c-light);
+				position: absolute;
+				bottom: -17px;
+				left: 40px;
+				@include sm-size-max {
+					left: 50%;
+					-webkit-transform: translateX(-50%);
+					-moz-transform: translateX(-50%);
+					-ms-transform: translateX(-50%);
+					-o-transform: translateX(-50%);
+					transform: translateX(-50%);
+				}
+			}
+		}
+		#{$tm}__text{
+			margin-bottom: 0;
+		}
+		#{$tm}__author{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: center;
+			margin-left: 20px;
+			@include sm-size-max {
+				justify-content: center;
+				margin-left: 0;
+			}
+		}
+		#{$tm}__rating {
+			margin-bottom: 16px;
+			i {
+				font-style: inherit;
+			}
+
+			color: var(--c-active);
+		}
+		#{$tm}__avatar{
+			height: 63px;
+			width: 63px;
+			background-position: center;
+			background-size: cover;
+			border-radius: 50%;
+			margin-right: 20px;
+
+		}
+		#{$tm}__name{
+			margin-bottom: 0px;
+
+		}
+		#{$tm}__position{
+			margin-bottom: 0;
+
+		}
+
+		&.hide-pagination {
+			.swiper-pagination {
+				@include sm-size-min {
+					display: none;
+				}
+				@include xs-size-max {
+					margin-top: 20px;
+				}
+			}
+		}
+
+	}
+
+}

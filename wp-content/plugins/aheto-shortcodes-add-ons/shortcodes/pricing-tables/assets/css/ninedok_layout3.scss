@@ -1,0 +1,125 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing {
+  $pricing: &;
+
+  &--ninedok-narrow {
+
+    #{$pricing}__header {
+	 padding: 16px 15px;
+	 position: relative;
+	 &:after{
+	   content: '';
+	   position: absolute;
+	   display: block;
+	   height: 100%;
+	   width: 100%;
+	   background-color: rgba(var(--ca-active),.1);
+	   top: 0px;
+	   left: 0px;
+	   mix-blend-mode: multiply;
+	 }
+	 @media screen and (max-width: 485px) {
+	   padding: 44px 15px 36px 15px;
+	 }
+    }
+    &.aheto-pricing__active{
+	 background-color: var(--c-active);
+	 box-shadow: rgba(var(--ca-active), 0.5) 0px 10px 50px 0px;
+	 border-radius: 3px;
+    }
+    #{$pricing}__content {
+	 padding: 24px 35px 50px 35px;
+	 @media screen and (max-width: 1024px) {
+	   padding: 24px 55px 50px 55px;
+	 }
+	 @media screen and (max-width: 485px) {
+	   padding: 20px 20px 30px 20px;
+	 }
+    }
+
+    #{$pricing}__title {
+	 margin-bottom: 0;
+	 position: relative;
+	 z-index: 2;
+    }
+
+    #{$pricing}__cost {
+	 margin-top: 50px;
+	 text-align: center;
+    }
+
+    #{$pricing}__cost-time {
+	 color: var(--c-active);
+	 display: block;
+	 margin-top: 10px;
+    }
+
+    #{$pricing}__list-item-wrap {
+	 border-bottom: 1px solid rgba(var(--ca-dark), 0.1);
+	 padding-bottom: 4px;
+	 margin-bottom: 4px;
+
+	 &:last-child {
+	   border: none;
+	 }
+    }
+
+    #{$pricing}__list-item {
+	 color: var(--c-dark);
+	 font-weight: initial;
+	 opacity: 0.8;
+	 margin: 0px;
+    }
+
+    #{$pricing}__link {
+	 margin-top: 40px;
+
+	 a {
+	   width: 100%;
+	   justify-content: center;
+	 }
+    }
+
+    &.aheto-pricing__active {
+	 .aheto-pricing{
+	   &__cost{
+		&-value{
+		  color: var(--c-light);
+		}
+		&-time {
+		  color: var(--c-light);
+		}
+	   }
+	   &__list-item{
+		color: var(--c-light);
+	   }
+	 }
+	 #{$pricing}__list-item-wrap {
+	   border-bottom: 1px solid rgba(var(--ca-light), 0.32);
+	   &:last-child {
+		border: none;
+	   }
+	 }
+	 #{$pricing}__header {
+	   position: relative;
+	   &:after{
+		background-color: rgba(var(--ca-active), 0.2);
+	   }
+
+	  }
+
+	}
+
+
+    #{$pricing}__list-item.line-through {
+	 text-decoration: line-through;
+    }
+
+    #{$pricing}__list-item.opacity {
+	 opacity: 0.24;
+    }
+
+  }
+
+}

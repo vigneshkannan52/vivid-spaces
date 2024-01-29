@@ -1,0 +1,91 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt {
+    $p: &;
+
+    &--bizy-modern {
+        --img-height: 100;
+        --count: 0;
+        --count-lg: 0;
+        --count-md: 0;
+        --count-sm: 0;
+        --count-xs: 0;
+        --spaces: 0;
+        --spaces-lg: 0;
+        --spaces-md: 0;
+        --spaces-sm: 0;
+        --spaces-xs: 0;
+        position: relative;
+        padding-bottom: 78px;
+
+        &::before,
+        &::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .swiper-container {
+            margin-bottom: -30px;
+            max-width: 1230px;
+            padding: 0 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .swiper{
+            position: relative;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next{
+            transform: none;
+            top: auto;
+            bottom: -78px;
+            width: 48px;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s ease;
+            background: var(--c-dark);
+            color: var(--c-light);
+            box-shadow: 0 9px 13px rgba(var(--ca-black), 0.2);
+            &::before{
+                font-size: 1.17rem;
+            }
+
+            &:hover {
+                background: var(--c-active);
+                color: var(--c-light);
+            }
+        }
+        .swiper-button-prev {
+            left: 15px;
+            &::before {
+                content: '\f124';
+                font-family: "Ionicons";
+            }
+        }
+        .swiper-button-next {
+            right: 15px;
+            &::before {
+                content: '\f125';
+                font-family: "Ionicons";
+            }
+            & + .swiper-hr{
+                height: 1px;
+                background: rgba(var(--ca-light),.1);
+                position: relative;
+                top: 54px;
+                z-index: 0;
+                width: calc(100% - 166px);
+                left: 83px;
+            }
+        }
+
+        .swiper-wrapper {
+            padding-bottom: 30px;
+        }
+    }
+}

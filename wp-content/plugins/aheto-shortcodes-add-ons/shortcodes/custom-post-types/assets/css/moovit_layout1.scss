@@ -1,0 +1,110 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt {
+	$p: &;
+
+	&--moovit-modern {
+		--img-height: 100;
+		--count: 0;
+		--count-lg: 0;
+		--count-md: 0;
+		--count-sm: 0;
+		--count-xs: 0;
+		--spaces: 0;
+		--spaces-lg: 0;
+		--spaces-md: 0;
+		--spaces-sm: 0;
+		--spaces-xs: 0;
+
+		position: relative;
+
+		&::before,
+		&::after{
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.moovit-shape{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 90px);
+			z-index: -1;
+		}
+
+
+		#{$p}__small-image {
+			width: 50%;
+			text-align: right;
+			float: right;
+			padding-right: 10px;
+			img{
+				margin-top: -100px;
+			}
+
+		}
+
+		.swiper-container {
+			margin-bottom: -30px;
+			max-width: 1230px;
+			padding: 0 15px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.swiper{
+			position: relative;
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next{
+			position: static;
+			transform: none;
+			width: 60px;
+			height: 60px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			transition: all .3s ease;
+			margin-top: 30px;
+			@include xs-size-max{
+				width: 50px;
+				height: 50px;
+			}
+
+			&:hover {
+				color: var(--c-light);
+				background: var(--c-dark);
+			}
+		}
+
+		.swiper-button-prev {
+			background: var(--c-light);
+			color: var(--c-dark);
+			&::before {
+				content: '\f3d5';
+				font-family: "Ionicons";
+			}
+		}
+
+		.swiper-button-next {
+			left: 60px;
+			background: var(--c-active);
+			color: var(--c-light);
+			&::before {
+				content: '\f3d6';
+				font-family: "Ionicons";
+			}
+			@include xs-size-max{
+				left: 50px;
+			}
+		}
+
+		.swiper-wrapper {
+			padding-bottom: 30px;
+		}
+	}
+}

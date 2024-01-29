@@ -1,0 +1,90 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--snapster_skin-9 {
+    #{$p}__title {
+	 em,
+	 b {
+	   color: inherit;
+	 }
+
+	 a {
+	   color: inherit;
+	   line-height: inherit;
+	   font-size: inherit;
+	   font-family: inherit;
+	   font-weight: inherit;
+	   font-style: inherit;
+	   letter-spacing: inherit;
+	 }
+    }
+    #{$p}__inner {
+	 overflow: hidden;
+	 &:hover {
+	   #{$p}__img {
+		transform: scale(1.03) translateX(1.5%);
+	   }
+	 }
+    }
+    #{$p}__excerpt {
+	 p {
+	   color: inherit;
+	   line-height: inherit;
+	   font-size: inherit;
+	   font-family: inherit;
+	   font-weight: inherit;
+	   font-style: inherit;
+	   letter-spacing: inherit;
+	 }
+    }
+    #{$p}__img {
+	 transition: .4s ease-out;
+	 transform: scale(1.03);
+	 will-change: transform;
+    }
+    #{$p}__terms {
+	 a {
+	   color: inherit;
+	   line-height: inherit;
+	   font-size: inherit;
+	   font-family: inherit;
+	   font-weight: inherit;
+	   font-style: inherit;
+	   letter-spacing: inherit;
+	 }
+    }
+
+    #{$p}__link {
+	 position: relative;
+	 &:hover {
+	   a {
+		&:after {
+		  width: 100%;
+		  left: 0;
+		}
+	   }
+	 }
+	 a {
+	   position: relative;
+
+	   &:hover {
+		color: initial;
+	   }
+	   &:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 1px;
+		background-color: currentColor;
+		bottom: 0;
+		right: 0;
+		-webkit-transition: width .4s;
+		-o-transition: width .4s;
+		transition: width .4s;
+	   }
+	 }
+    }
+  }
+}

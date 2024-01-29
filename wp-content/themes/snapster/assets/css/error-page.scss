@@ -1,0 +1,86 @@
+@import 'mixin';
+
+.snapster-error{
+	&--wrap{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 100px 20px;
+		position: relative;
+		text-align: center;
+	}
+	&--small-title{
+		color: var(--c-active);
+		font-weight: bold;
+		line-height: 1;
+		font-size: 160px;
+		margin-bottom: 15px;
+
+		@include sm-size-max{
+			font-size: 120px;
+		}
+
+		@media only screen and (max-width: 600px){
+			font-size: 60px;
+		}
+
+	}
+	&--big-title{
+		line-height: 1;
+		font-size: 250px;
+		margin: 0;
+		color: var(--c-grey);
+		position: absolute;
+		top: 50%;
+		font-weight: bold;
+		z-index: -1;
+		opacity: .3;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include sm-size-max{
+			font-size: 200px;
+		}
+
+		@include xs-size-max{
+			font-size: 150px;
+		}
+
+		@media only screen and (max-width: 600px){
+			font-size: 90px;
+		}
+
+	}
+	&--title{
+		margin-bottom: 60px;
+		line-height: 1.3;
+
+		@include sm-size-max{
+			margin-bottom: 50px;
+		}
+
+		@media only screen and (max-width: 600px){
+			margin-bottom: 25px;
+		}
+
+	}
+	&--button{
+		display: inline-block;
+		padding: 20px 30px;
+		line-height: 1.5;
+		border: none;
+		background-color: var(--c-active);
+		color: var(--c-light);
+		cursor: pointer;
+		font-weight: 500;
+		transition: all .3s ease;
+
+		&:hover,
+		&:focus{
+			background-color: var(--c-dark);
+			opacity: .6;
+			color: var(--c-light);
+		}
+	}
+}

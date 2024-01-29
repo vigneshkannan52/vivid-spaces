@@ -1,0 +1,38 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content {
+	$content: &;
+
+  &--ninedok-minimal {
+    #{$content}-block {
+      &__wrap {
+        display: flex;
+
+        @include xs-size-max {
+          justify-content: flex-start;
+        }
+      }
+      &__info {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        @include sm-size-max {
+          margin-left: 16px;
+        }
+      }
+
+      &__description {
+        margin-bottom: 2px;
+      }
+      &__image {
+        padding-top: 20px;
+        width: 50px;
+        height: auto;
+        @include xs-size-max {
+          padding-top: 0px;
+        }
+      }
+    }
+  }
+
+}

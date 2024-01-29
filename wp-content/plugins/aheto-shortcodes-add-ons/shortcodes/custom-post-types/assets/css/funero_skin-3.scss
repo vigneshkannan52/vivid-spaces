@@ -1,0 +1,126 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-cpt-article {
+  $p: &;
+
+  &__funero-3 {
+    --img-height: 100;
+
+    #{$p}__inner{
+      background-color: var(--c-light);
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #{$p}__img {
+      min-height: 370px;
+      &:after {
+        content: "\f217";
+        position: absolute;
+        font-family: "Ionicons";
+        font-size: 1.76em;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 0;
+        color: var(--c-light);
+        line-height: 1;
+        transition: all .3s ease;
+        pointer-events: none;
+      }
+      
+      
+      &:hover:after {
+        opacity: 1;
+      }
+      
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transition: all .3s ease;
+      }
+      
+      &:hover:before {
+        background-color: rgba(var(--ca-dark), .6);
+      }
+    }
+
+    #{$p}__title {
+      padding-top: 0;
+      margin-bottom: 2px;
+      word-break: break-word;
+
+      em,
+      b {
+        color: inherit;
+      }
+
+      a {
+        text-align: center;
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+    #{$p}__price {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    #{$p}__content {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      @include xs-size-max {
+        padding: 20px;
+      }
+    }
+
+    #{$p}__figure {
+      padding-bottom: 54%;
+      position: relative;
+      background-color: var(--c-alter2);
+    }
+
+    #{$p}__gallery-image {
+      flex: 0 0 33.33%;
+      padding-bottom: calc(77% * 0.33);
+      position: relative;
+
+      a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(var(--ca-alter), 0.7);
+        opacity: 0;
+        visibility: hidden;
+        color: var(--c-light);
+      }
+
+      &:hover {
+        a {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

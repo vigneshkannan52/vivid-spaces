@@ -1,0 +1,46 @@
+.aheto-contact{
+	$contact : &;
+
+	&--moovit-classic{
+		#{$contact}__title{
+			margin-bottom: 25px;
+		}
+
+		#{$contact}__info{
+			margin-bottom: 20px;
+			display: flex;
+			align-items: flex-start;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			i{
+				display: inline-block;
+				font-style: normal;
+				margin-right: 10px;
+				margin-top: calc((25px - 1em)/2);
+				color: var(--c-light);
+
+				&::before{
+					color: inherit;
+					background-color: var(--c-active);
+					border-radius: 50%;
+					padding: 5px;
+				}
+				&.icon_mail_alt::before{
+					padding: 3px 6px 7px;
+				}
+			}
+			p{
+				display: inline-block;
+				margin-bottom: 0;
+			}
+			a{
+				color: inherit;
+				&:hover{
+					color: var(--c-active);
+				}
+			}
+
+		}
+	}
+}

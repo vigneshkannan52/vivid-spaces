@@ -1,0 +1,47 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-counter {
+	$counter: &;
+
+	&--outsourceo-simple-number {
+		position: relative;
+		text-align: center;
+
+		#{$counter}__number-wrap {
+			display: flex;
+			justify-content: center;
+		}
+
+		&.t-right{
+			text-align: right;
+			#{$counter}__number-wrap {
+				justify-content: flex-end;
+			}
+		}
+
+		&.t-left{
+			text-align: left;
+			#{$counter}__number-wrap {
+				justify-content: flex-start;
+			}
+		}
+
+		#{$counter}__number {
+			text-align: inherit;
+
+			&.outsourceo-dot::after {
+				content: '';
+				display: inline-block;
+				margin-left: 2px;
+				width: 8px;
+				height: 8px;
+				background: var(--c-active);
+			}
+		}
+
+		#{$counter}__desc {
+			color: var(--c-dark);
+			font-size: 1rem;
+		}
+	}
+}

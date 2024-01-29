@@ -1,0 +1,27 @@
+@import '../../../../assets/css/mixin';
+
+.aheto_video-btn--ninedok__modern {
+  .aheto-video-container {
+    display: inherit;
+  }
+
+  .aheto-btn {
+    &-video {
+      color: var(--c-active);
+      padding-top: 1px;
+      padding-left: 4px;
+
+      &:before {
+        border-width: 6px;
+      }
+
+      &__text {
+        margin-bottom: 0;
+      }
+    }
+    &--primary {
+      color: var(--c-light);
+    }
+  }
+}
+

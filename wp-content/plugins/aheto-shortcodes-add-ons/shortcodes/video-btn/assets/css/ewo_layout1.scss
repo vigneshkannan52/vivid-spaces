@@ -1,0 +1,24 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-video-container {
+  $video: &;
+
+  &--ewo {
+    #{$video}__image {
+      display: inline-block;
+      a {
+        transition: all 0.5s;
+        border: 1px solid var(--c-light);
+        i {
+          margin-left: 10px;
+        }
+        &::before {
+          display: none;
+        }
+        &:hover {
+          color: var(--c-alter3);
+        }
+      }
+    }
+  }
+}

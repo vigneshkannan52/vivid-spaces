@@ -1,0 +1,41 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block{
+  $features: &;
+  &--soapy-rounded {
+    #{$features}__img-wrap  {
+      width: 140px;
+      height: 140px;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+      background-color: var(--c-light);
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    #{$features}__number{
+      position: absolute;
+      right: 0;
+      bottom:0;
+      width: 48px;
+      height: 46px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      #{$features}__title{
+      word-break: break-word;
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+}

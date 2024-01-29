@@ -1,0 +1,88 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-features {
+	$features: &;
+
+	&--acacio-simple-scaled {
+		margin-bottom: 50px;
+		padding-top: 37px;
+		position: relative;
+
+		@include md-size-max {
+			padding-top: 0;
+		}
+		&.active {
+			#{$features}-block {
+				&__wrap {
+					transform: scale(1.1);
+					z-index: 2;
+					@include md-size-max {
+						-webkit-transform: scale(1);
+						-moz-transform: scale(1);
+						-ms-transform: scale(1);
+						-o-transform: scale(1);
+						transform: scale(1);
+					}
+				}
+
+			}
+		}
+		#{$features}-block {
+			&__wrap {
+				min-height: 410px;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				box-shadow: 0px 10px 50px 0 rgba(var(--ca-dark), 0.06);
+				text-align: center;
+				margin-bottom: -50px;
+				background: var(--c-light);
+
+				-webkit-transition: all .3s ease;
+				-moz-transition: all .3s ease;
+				-ms-transition: all .3s ease;
+				-o-transition: all .3s ease;
+				transition: all .3s ease;
+                transform: scale(1);
+                z-index: 1;
+            }
+            &__content {
+                padding-bottom: 50px;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+			&__image {
+				position: relative;
+				top: -37px;
+				height: 205px;
+				@include md-size-max {
+					top: 0;
+					margin-bottom: 20px;
+					width: 100%;
+					object-fit: cover;
+				}
+
+			}
+			&__title {
+				margin-bottom: 11px;
+			}
+			&__links {
+				margin-top: auto;
+
+			}
+			&__info {
+				margin-top: 17px;
+			}
+		}
+		#{$features}__links {
+			.aheto-link.aheto-btn--dark.aheto-btn--no-underline {
+				&:hover {
+					color: var(--c-active);
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+}

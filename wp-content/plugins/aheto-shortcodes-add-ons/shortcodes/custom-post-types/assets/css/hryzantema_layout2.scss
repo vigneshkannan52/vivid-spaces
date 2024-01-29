@@ -1,0 +1,11 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt {
+  $p: &;
+  &--hr-metro {
+    &-sizer {
+      width: calc(100%/6);
+    }
+  }
+}

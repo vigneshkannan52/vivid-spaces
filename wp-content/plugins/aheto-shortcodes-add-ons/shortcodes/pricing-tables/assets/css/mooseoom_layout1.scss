@@ -1,0 +1,78 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-pricing {
+  $pricing: &;
+  &--mooseoom-classic {
+    background-color: var(--c-light);
+    padding: 50px;
+    text-align: center;
+    border: solid 1px var(--c-dark);
+    margin: 0 25px;
+    @media screen and (min-width: 1200px) and (max-width: 1571px) {
+      padding: 22px;
+      margin: 0 5px;
+    }
+    @include xs-size-max {
+      padding: 40px 15px;
+    }
+    #{$pricing}__title {
+      margin-bottom: 13px;
+    }
+    #{$pricing}__cost-value {
+      color: var(--c-dark);
+      line-height: inherit;
+      margin: 0;
+    }
+    #{$pricing}__list {
+      margin-top: 31px;
+      @include xs-size-max {
+        margin-top: 30px;
+      }
+    }
+    #{$pricing}__list-item {
+      margin-bottom: 20px;
+      color: var(--c-dark);
+
+      @include xs-size-max {
+        margin-bottom: 15px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    #{$pricing}__link {
+      margin-top: 52px;
+      margin-bottom: 8px;
+
+      a {
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+
+    &.aheto-pricing__active {
+      padding: 70px 50px;
+      position: relative;
+      z-index: 10;
+      background: var(--c-dark);
+      @media screen and (min-width: 1200px) and (max-width: 1571px) {
+        padding: 42px 32px;
+      }
+      @include xs-size-max {
+        padding: 42px 29px;
+      }
+
+      #{$pricing}__title {
+        margin-bottom: 13px;
+        color: var(--c-light);
+      }
+      #{$pricing}__cost-value {
+        color: var(--c-light);
+      }
+      #{$pricing}__list-item {
+        color: var(--c-light);
+      }
+    }
+  }
+}

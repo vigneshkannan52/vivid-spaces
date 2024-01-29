@@ -1,0 +1,109 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-titlebar {
+	$p: &;
+
+	&--ewo {
+		background-color: transparent;
+
+		#{$p}__title {
+			margin: 0 20px 20px 0;
+			width: 100%;
+			&::after {
+			content: '';
+			display: inline-block;
+			margin-left: 2px;
+			width: 8px;
+			height: 8px;
+			}
+		}
+
+		#{$p}__input {
+			flex-basis: 100%;
+			margin-bottom: auto;
+			background-color: transparent;
+
+			@media (max-width: 1200px) {
+			margin-top: 45px;
+			}
+
+			@media (max-width: 991px) {
+			margin-top: 30px;
+			}
+
+			form {
+				position: relative;
+				display: flex;
+
+				label {
+					display: none;
+				}
+			}
+
+			input:not([type="submit"]) {
+				padding: 23px 70px 23px 20px;
+				width: 100%;
+				max-width: 100%;
+				border-radius: 0;
+				border: none;
+				color: var(--c-alter3);
+				background-color: transparent;
+				border-top: 1px solid var(--c-alter3);
+				&::placeholder {
+					color: var(--c-alter3);
+				}
+				&:-webkit-autofill,
+				&:-webkit-autofill:focus{
+					-webkit-text-fill-color: var(--c-alter3);
+				}
+			}
+
+			.submit-wrap {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 62px;
+				height: 100%;
+				transform: translate(0, -50%);
+				color: var(--c-alter3);
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: flex;
+					height: inherit;
+					width: inherit;
+					font-size: 160%;
+					align-items: center;
+					justify-content: center;
+					background: transparent;
+					transition: all .3s ease;
+					color: var(--c-alter3);
+					transform: scaleX(-1);
+				}
+				&:hover::before {
+					color: var(--c-active);
+				}
+
+				input[type="submit"] {
+					margin-top: 0;
+					height: inherit;
+					width: inherit;
+					margin-top: 0;
+					background: transparent;
+					position: relative;
+					padding: 0 20px;
+					box-shadow: none;
+					border: 0;
+					border-radius: 0;
+					outline: none;
+					color: transparent;
+					&:hover {
+					background: transparent;
+					border-color: transparent;
+					}
+				}
+			}
+		}
+  }
+}

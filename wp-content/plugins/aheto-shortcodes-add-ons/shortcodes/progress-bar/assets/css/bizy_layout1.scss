@@ -1,0 +1,106 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-counter {
+    $counter: &;
+
+    &--bizy-simple-number {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #{$counter}__number-bg,
+        #{$counter}__number-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        &.t-right{
+            justify-content: flex-end;
+            #{$counter}__number-bg,
+            #{$counter}__number-wrap {
+                justify-content: flex-end;
+            }
+        }
+
+        &.t-left{
+            justify-content: flex-start;
+            #{$counter}__number-bg,
+            #{$counter}__number-wrap {
+                justify-content: flex-start;
+            }
+        }
+
+        @media only screen and (max-width: 1024px){
+            &.tablet-t-center{
+                justify-content: center;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: center;
+                }
+            }
+            &.tablet-t-right{
+                justify-content: flex-end;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: flex-end;
+                }
+            }
+
+            &.tablet-t-left{
+                justify-content: flex-start;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 767px){
+            &.mobile-t-center{
+                justify-content: center;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: center;
+                }
+            }
+            &.mobile-t-right{
+                justify-content: flex-end;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: flex-end;
+                }
+            }
+
+            &.mobile-t-left{
+                justify-content: flex-start;
+                #{$counter}__number-bg,
+                #{$counter}__number-wrap {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        #{$counter}__number {
+            text-align: inherit;
+            position: relative;
+            z-index: 10;
+            margin-right: 25px;
+        }
+
+        #{$counter}__number-bg {
+            display: block;
+            position: absolute;
+            z-index: 1;
+            font-size: 3rem;
+            top: 50%;
+            color: var(--c-light);
+            transform: translate(0,-50%);
+            text-shadow: 0 9px 13px rgba(var(--ca-dark),.08);
+        }
+        #{$counter}__desc {
+            position: relative;
+            z-index: 10;
+        }
+    }
+}

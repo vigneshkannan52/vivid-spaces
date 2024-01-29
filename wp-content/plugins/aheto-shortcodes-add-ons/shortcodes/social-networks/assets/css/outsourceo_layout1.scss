@@ -1,0 +1,94 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-socials {
+	$p: &;
+
+	&.justify-align {
+		text-align: justify;
+		text-align-last: justify;
+		@include sm-size-max {
+			text-align: center;
+			text-align-last: center;
+		}
+	}
+	&.center-align {
+		text-align: center;
+	}
+	&.left-align {
+		text-align: left;
+		@include sm-size-max {
+			text-align: center;
+		}
+	}
+	&.right-align {
+		text-align: right;
+		@include sm-size-max {
+			text-align: center;
+		}
+	}
+
+	@include sm-size-max {
+		&.justify-align-mob {
+			text-align: justify;
+			text-align-last: justify;
+		}
+		&.center-align-mob {
+			text-align: center;
+		}
+		&.left-align-mob {
+			text-align: left;
+		}
+		&.right-align-mob {
+			text-align: right;
+		}
+	}
+
+	&--outsourceo-networks {
+		#{$p}--default {
+			margin-right: -10px;
+			margin-left: -10px;
+			width: calc(100% + 20px);
+			#{$p}__link {
+				margin: 0 56px 0 10px;
+				display: inline-block;
+				vertical-align: middle;
+				text-transform: capitalize;
+				color: var(--c-light);
+				@include xs-size-max {
+					margin-right: 5px;
+				}
+				i {
+					margin: 0 5px 0 0;
+					width: auto;
+					vertical-align: middle;
+					transition: color .3s ease;
+					font-size: 1.1em;
+				}
+				&:hover {
+					color: var(--c-active);
+
+					i {
+						color: var(--c-active);
+					}
+				}
+
+			}
+		}
+		#{$p}--dark {
+			#{$p}__link {
+				color: var(--c-dark);
+				i {
+					color: inherit;
+				}
+				&:hover {
+					color: var(--c-active);
+
+					i {
+						color: var(--c-active);
+					}
+				}
+
+			}
+		}
+	}
+}

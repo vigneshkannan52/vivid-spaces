@@ -1,0 +1,15 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents--noize-lay2 {
+    p {
+        margin: 0!important;
+
+        a {
+            color: inherit!important;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}

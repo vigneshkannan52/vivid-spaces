@@ -1,0 +1,153 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+
+	&--moovit-creative {
+
+		position: relative;
+
+		#{$banner_slider}-wrap {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-position: center;
+			background-size: cover;
+		}
+
+		#{$banner_slider}__content {
+			max-width: 1085px;
+			padding: 140px 15px;
+			@include xs-size-max{
+				padding: 110px 15px;
+			}
+		}
+
+
+		.aheto-banner__title {
+			padding: 0 30px;
+			color: var(--c-light);
+
+			@include xs-size-max{
+				padding: 0;
+			}
+			.moovit-dot{
+				white-space: nowrap;
+				&::after{
+					content: '';
+					display: inline-block;
+					width: calc(1em/100*18);
+					height: calc(1em/100*18);
+					background: var(--c-active);
+				}
+				&.dot-dark::after{
+					background: var(--c-dark);
+				}
+				&.dot-white::after{
+					background: var(--c-light);
+				}
+			}
+		}
+
+		#{$banner_slider}__add-image {
+			margin-bottom: 30px;
+
+			@include xs-size-max{
+				max-height: 50px;
+				width: auto;
+			}
+
+		}
+
+		#{$banner_slider}__links {
+			margin-top: 46px;
+			a {
+				margin: 5px 12px;
+			}
+
+		}
+		div.swiper-pagination {
+			position: absolute;
+			bottom: 47px;
+			left: 0;
+			width: 100%;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: rgba(var(--ca-light), .1);
+				transform: translateY(-50%);
+			}
+
+			.swiper-pagination-bullet {
+				width: 60px;
+				height: 2px;
+				margin: 2px 12px;
+				background-color: var(--c-light);
+				border-radius: 0;
+				border: none;
+
+				&-active {
+					background-color: var(--c-active);
+				}
+			}
+			@include xs-size-max{
+				display: none;
+			}
+
+		}
+		.moovit-swiper-arrows-wrap{
+			margin-bottom: 0;
+		}
+
+		div.swiper-button-prev,
+		div.swiper-button-next {
+			width: 60px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			top: auto;
+			right: auto;
+			transition: all .3s ease;
+			transform: none;
+			@include xs-size-max{
+				width: 50px;
+				height: 50px;
+			}
+			&:hover {
+				color: var(--c-dark);
+				background: var(--c-alter);
+			}
+		}
+
+		div.swiper-button-prev {
+			background: var(--c-dark);
+			color: var(--c-light);
+			&::before {
+				content: '\f3d5';
+				font-family: "Ionicons";
+			}
+		}
+
+		div.swiper-button-next {
+			left: 60px;
+			background: var(--c-light);
+			color: var(--c-dark);
+			&::before {
+				content: '\f3d6';
+				font-family: "Ionicons";
+			}
+			@include xs-size-max{
+				left: 50px;
+			}
+		}
+	}
+}

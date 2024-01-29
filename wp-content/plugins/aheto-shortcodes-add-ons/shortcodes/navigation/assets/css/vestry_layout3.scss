@@ -1,0 +1,36 @@
+@import "../../../../assets/css/mixin";
+
+.main-footer {
+  $p: &;
+  &--vestry {
+    .widget-footer-menu--vestry {
+      .widget-footer-menu__menu {
+        li {
+          margin-bottom: 15px;
+          padding-left: 20px;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--c-active);
+          }
+          a {
+            color: var(--c-light);
+            * {
+              font-weight: inherit;
+            }
+            &:hover {
+              color: var(--c-active);
+            }
+          }
+        }
+      }
+    }
+  }
+}

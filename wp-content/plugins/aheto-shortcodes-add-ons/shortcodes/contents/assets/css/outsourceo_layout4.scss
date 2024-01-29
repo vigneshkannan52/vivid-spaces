@@ -1,0 +1,19 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content--outsourceo-simple {
+	p {
+		margin: 0!important;
+
+		a {
+			color: inherit!important;
+			font-weight: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			letter-spacing: inherit;
+
+			&:hover {
+				color: var(--c-active)!important;
+			}
+		}
+	}
+}

@@ -1,0 +1,175 @@
+@import '../../../../assets/css/mixin';
+
+
+@mixin shape{
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	height: calc(100% - 120px);
+	background: var(--c-light);
+	@include xs-size-max{
+		top: 60vw;
+		height: calc(100% - 60vw);
+	}
+}
+
+.aheto-contents{
+
+	$contents: &;
+
+	&--hr-creative-slider{
+
+		position: relative;
+
+		&.creative-version{
+			#{$contents}--shape{
+				box-shadow: 0 10px 50px 0 rgba(var(--ca-dark),.07);
+			}
+			.swiper-button-prev{
+				background: var(--c-active);
+				&:hover{
+					background: var(--c-alter);
+				}
+			}
+		}
+
+
+		.swiper{
+			display: flex;
+			padding-left: 60px;
+			@include xs-size-max{
+				padding-left: 0;
+				flex-direction: column;
+			}
+		}
+
+		#{$contents}--shape{
+			@include shape;
+		}
+		#{$contents}-swiper-left{
+			width: 50%;
+			@include xs-size-max{
+				width: 100%;
+				height: 60vw;
+			}
+			#{$contents}-slider-wrap{
+				background-color: var(--c-dark);
+				height: 100%;
+			}
+		}
+
+		#{$contents}-swiper-right{
+			width: 50%;
+			@include xs-size-max{
+				width: 100%;
+			}
+		}
+
+		#{$contents}-slider-wrap{
+			height: 100%;
+		}
+
+		#{$contents}-slider__content{
+			height: 100%;
+			padding: 145px 0 133px 65px;
+			@media only screen and (max-width: 1024px) {
+				padding: 125px 45px 115px;
+			}
+			@include xs-size-max{
+				padding: 40px 15px 35px;
+			}
+
+			&::before{
+				content: '';
+				z-index: -1;
+				@include shape;
+				@include xs-size-max{
+					top: 0;
+					height: 100%;
+				}
+			}
+		}
+
+		#{$contents}__title{
+			margin-bottom: 20px;
+
+			.hr-dot{
+				white-space: nowrap;
+				&::after{
+					content: '';
+					display: inline-block;
+					width: calc(1em/100*18);
+					height: calc(1em/100*18);
+					background: var(--c-active);
+				}
+				&.dot-dark::after{
+					background: var(--c-dark);
+				}
+				&.dot-white::after{
+					background: var(--c-light);
+				}
+			}
+		}
+
+		#{$contents}__links{
+			margin: 36px -20px 0;
+			a{
+				margin: 5px 20px;
+			}
+			@include xs-size-max{
+				margin-top: 20px;
+			}
+		}
+
+		div.swiper-button-prev,
+		div.swiper-button-next {
+			width: 60px;
+			height: 60px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			bottom: 60px;
+			z-index: 10;
+			left: 0;
+			top: auto;
+			right: auto;
+			transition: all .3s ease;
+			transform: none;
+			@include xs-size-max{
+				width: 50px;
+				height: 50px;
+				bottom: calc(100% - 60vw);
+			}
+			&:hover {
+				color: var(--c-light);
+				background: var(--c-dark);
+			}
+		}
+
+		div.swiper-button-prev {
+			background: var(--c-dark);
+			color: var(--c-light);
+			&::before {
+				content: '\f3d5';
+				font-family: "Ionicons";
+			}
+		}
+
+		div.swiper-button-next {
+			left: 60px;
+			background: var(--c-light);
+			color: var(--c-dark);
+			&::before {
+				content: '\f3d6';
+				font-family: "Ionicons";
+			}
+			@include xs-size-max{
+				left: 50px;
+			}
+		}
+
+	}
+}

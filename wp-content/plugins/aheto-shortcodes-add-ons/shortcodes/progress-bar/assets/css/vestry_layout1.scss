@@ -1,0 +1,16 @@
+@import "../../../../assets/css/mixin";
+
+.aheto-counter {
+  $counter: &;
+  &--vestry-modern {
+    text-align: center;
+    #{$counter}__number-wrap {
+      margin-bottom: 20px;
+    }
+    #{$counter}__desc {
+      max-width: 220px;
+      margin: 0 auto;
+      margin-top: 22px;
+    }
+  }
+}

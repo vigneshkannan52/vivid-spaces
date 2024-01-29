@@ -1,0 +1,99 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing{
+  $pricing: &;
+
+  &--soapy-isotope {
+
+    #{$pricing}__box{
+      width: calc(50% - 8px);
+      min-height: 165px;
+      box-shadow: 0 10px 20px 0 rgba(var(--ca-dark), 0.09);
+      margin-bottom: 20px;
+      padding: 17px 35px 25px 35px;
+      background-color: var(--c-light);
+      @include xs-size-max {
+        width: 100%;
+        padding: 15px 15px 25px;
+      }
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0;
+      }
+      #{$pricing}__box-title-wrap {
+        display: flex;
+        align-items: center;
+      }
+      &-title {
+        margin-bottom: 0;
+      }
+      &-label {
+        font-family: var(--t-primary-font-family);
+        color: var(--c-active);
+        margin-left: 15px;
+      }
+      &-price{
+        margin-bottom: 0;
+      }
+      &-descr{
+        @include xs-size-max{
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    #{$pricing}__content {
+      padding-bottom: 30px;
+    }
+
+    #{$pricing}__list {
+      background-color: var(--c-active);
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 20px 20px 15px 20px;
+      @include xs-size-max {
+        flex-wrap: wrap;
+        padding: 15px;
+      }
+
+      &-item {
+        margin: 0 30px;
+        position: relative;
+        @include xs-size-max {
+          margin: 0 15px;
+        }
+        @include xs-size-min {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        &.active,
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+        &::before {
+          content: '';
+          opacity: 0;
+          position: absolute;
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          background-color: var(--c-light);
+          transform: translateY(-50%);
+          top: calc(50% - 2px);
+          left: -20px;
+          transition: 0.5s;
+          color: var(--c-light);
+        }
+        a {
+          color: var(--c-light);
+        }
+      }
+    }
+  }
+}

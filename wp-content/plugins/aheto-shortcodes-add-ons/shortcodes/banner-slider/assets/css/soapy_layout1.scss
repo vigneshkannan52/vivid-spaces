@@ -1,0 +1,188 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+  $banner_slider: &;
+
+  &--soapy-simple{
+    position: relative;
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      color: var(--c-alter);
+      @include xs-size-max{
+        padding: 10px 0;
+      }
+      .swiper-slides-prev,
+      .swiper-slides-next{
+        position: relative;
+        &::after{
+          content: '/';
+          margin: 0 3px;
+        }
+        @include xs-size-max{
+          display: none;
+        }
+      }
+      .swiper-slides-total{
+        @include xs-size-max{
+          display: none;
+        }
+        
+      }
+    }
+    .swiper-button-next{
+      right: 65px;
+      @include md-size-max{
+        right: 20px;
+      }
+      &::before{
+        display: none;
+      }
+      &::after{
+        content: '';
+        width: 33px;
+        height: 13px;
+        background-size: cover;
+        background-image: url("../../assets/images/arrow.png");
+        margin-left: 16px;
+        @include xs-size-max{
+          width: 20px;
+          height: 7px;
+        }
+      }
+    }
+
+    .swiper-button-prev{
+      left: 65px;
+      @include md-size-max{
+        left: 20px;
+      }
+      &::before{
+        content: '';
+        width: 33px;
+        height: 13px;
+        background-size: cover;
+        background-image: url("../../assets/images/arrow.png")  ;
+        transform: rotate(180deg);
+        margin-right: 16px;
+        @include xs-size-max{
+          width: 20px;
+          height: 7px;
+        }
+      }
+    }
+    #{$banner_slider}-wrap {
+      height: auto ;
+      min-height: calc(100vh - 100px);
+      background-size: cover;
+      background-position: center center;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      @include xs-size-max{
+        min-height: auto;
+        padding: 60px 20px;
+      }
+    }
+
+    .swiper-slide-border-top {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      background-size: auto 100%;
+      z-index: 2;
+      background-repeat: repeat-x;
+      @include xs-size-max{
+        height: 20px;
+        top: -10px
+      }
+    }
+
+    .swiper-slide-border-bottom {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 100%;
+      height: 35px;
+      background-size: auto 100%;
+      z-index: 2;
+      background-repeat: repeat-x;
+      @include xs-size-max{
+        height: 20px;
+        bottom: -10px
+      }
+    }
+    #{$banner_slider}__content{
+      position: relative;
+      z-index: 2;
+      max-width: 768px;
+      &-bordered{
+        border-style: solid;
+        border-image-slice: 40;
+        border-image-width: 30px;
+        padding: 140px 75px 115px;
+        @include lg-size-max{
+          padding: 75px;
+        }
+        @include md-size-max{
+          padding: 75px 30px;
+        }
+        @include xs-size-max{
+          padding: 55px 20px;
+          width: 100%;
+        }
+        #{$banner_slider}__title{
+          margin-bottom: 47px;
+        }
+      }
+    }
+    #{$banner_slider}__image{
+      max-width: 90px;
+      height: auto;
+      margin-bottom: 10px;
+      position: relative;
+      @include md-size-max{
+        max-width: 50px;
+      }
+    }
+    #{$banner_slider}__subtitle{
+      margin-bottom: 20px;
+      position: relative;
+      &-bordered{
+        display: inline-block;
+        border-style: solid;
+        border-image-slice: 30;
+        border-image-width: 30px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+        @include xs-size-max{
+          padding: 0 10px;
+        }
+      }
+    }
+    #{$banner_slider}__title{
+      margin-bottom: 30px;
+      position: relative;
+    }
+    #{$banner_slider}__overlay{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      &-dark{
+        background-color: rgba(var(--ca-alter), 0.3);
+      }
+      &-light{
+        background-color: rgba(var(--ca-light), 0.6);
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+	$p: &;
+	
+	&--snapster_skin-1 {
+		overflow: hidden;
+		#{$p}__content {
+			position: absolute;
+			bottom: 0;
+			left: -1px;
+			padding: 17px 20px 0 0;
+			width: 73.4%;
+			margin-bottom: -5px;
+			background-color: var(--c-light);
+			transition: padding .35s ease;
+		}
+		
+		#{$p}__inner {
+			transition: 0.35s;
+			position: relative;
+			&:hover .aheto-cpt-article__content {
+				padding-left: 20px;
+			}
+		}
+
+		#{$p}__title {
+			word-break: break-word;
+			margin-bottom: 0;
+			margin-top: 0;
+			
+			em,
+			b {
+				color: inherit;
+			}
+			
+			a {
+				color: inherit;
+				line-height: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				font-style: inherit;
+				letter-spacing: inherit;
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+		
+		#{$p}__link {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+		}
+		
+		#{$p}__terms-wrap {
+			display: flex;
+			align-items: center;
+			margin-top: 4px;
+		}
+		#{$p}__terms {
+			width: 100%;
+			a {
+				display: inline-block;
+				color: inherit;
+				line-height: inherit;
+				letter-spacing: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				font-style: inherit;
+				margin-left: 13px;
+				&:hover {
+					color: var(--c-active);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,202 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt {
+  .aheto-cpt-article {
+    $p: &;
+
+    &--soapy_skin-7.aheto-cpt-article {
+      width: calc(100% / 4);
+      --img-height: 100 !important;
+      @include md-size-max {
+        width: calc(100% / 2);
+        --img-height: 100 !important;
+
+      }
+      @include xs-size-max {
+        width: 100%;
+      }
+
+      &:nth-child(12n - 7),
+      &:nth-child(12n - 5) {
+        width: calc(100% / 4);
+        --img-height: 200 !important;
+        @include md-size-max {
+          width: calc(100% / 2);
+          --img-height: 100 !important;
+        }
+        @include xs-size-max {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(12n - 9),
+      &:nth-child(12n - 3) {
+        width: calc(100% / 2);
+        --img-height: 100 !important;
+        @include md-size-max {
+          width: calc(100% / 2);
+          --img-height: 100 !important;
+        }
+        @include xs-size-max {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(12n + 1),
+      &:nth-child(12n),
+      &:nth-child(12n - 1),
+      &:nth-child(12n - 10) {
+        width: calc(100% / 2);
+        --img-height: 50 !important;
+        @include md-size-max {
+          width: calc(100% / 2);
+          --img-height: 100 !important;
+        }
+        @include xs-size-max {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--soapy_skin-7.aheto-cpt-article {
+    #{$p}__img {
+      width: 100%;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      padding-bottom: calc(var(--img-height) * 1% - 21px);
+      z-index: 0;
+
+      a {
+        display: none;
+      }
+    }
+
+    #{$p}__inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      &:hover {
+        #{$p}__content {
+          opacity: 1;
+        }
+      }
+    }
+
+
+    #{$p}__title {
+      margin-bottom: 0;
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+    }
+
+
+    #{$p}__content {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      position: absolute;
+      opacity: 0;
+      transition: 0.5s;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 25px;
+      background: linear-gradient(155deg, var(--c-alter2) 40%, var(--c-active));
+
+      &::before {
+        background-color: rgba(var(--ca-light), 0.9);
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+
+    #{$p}__label {
+      position: absolute;
+      right: -50px;
+      top: -50px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      transform: rotate(45deg);
+      background-color: var(--c-active);
+      z-index: 1;
+    }
+
+    #{$p}__price .price {
+      display: flex;
+      flex-direction: column;
+
+      .amount {
+        width: 100%;
+        display: block;
+      }
+
+      ins {
+        background-color: transparent;
+        color: var(--c-active);
+      }
+    }
+
+    #{$p}__btn {
+      margin-top: 15px;
+
+      a {
+        display: table;
+        margin: 0 auto;
+        color: var(--c-light);
+        padding: 18px 40px;
+        background-color: var(--c-active);
+        border: 1px solid var(--c-active);
+
+        &:hover {
+          color: var(--c-active);
+          background-color: var(--c-light);
+        }
+      }
+
+      #{$p}__btn-disabled {
+        display: none;
+      }
+    }
+
+    #{$p}__btn-disabled {
+      display: none;
+    }
+  }
+
+}
+

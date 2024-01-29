@@ -1,0 +1,105 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing {
+	$pricing: &;
+
+	&--rela-isotope {
+
+		#{$pricing}__box {
+			width: calc(50% - 8px);
+			box-shadow: 0 10px 20px 0 rgba(var(--ca-dark), 0.09);
+			margin-bottom: 15px;
+			padding: 40px 35px 25px 35px;
+			background-color: var(--c-light);
+			@include xs-size-max {
+				width: 100%;
+				padding: 30px 25px;
+			}
+
+			&.remove-shadow{
+				box-shadow: none;
+			}
+			&.item-border{
+				border: 1px solid rgba(var(--ca-grey), .4);
+			}
+
+			&-header {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 8px;
+			}
+
+			&-title {
+				span {
+					margin-left: 5px;
+				}
+			}
+		}
+
+		#{$pricing}__content {
+			padding-bottom: 30px;
+		}
+
+		#{$pricing}__list {
+			background-color: var(--c-active);
+			display: flex;
+			justify-content: center;
+			margin-bottom: 28px;
+			padding: 15px 20px 20px 20px;
+			@include xs-size-max {
+				flex-wrap: wrap;
+				padding: 15px 20px 25px 20px;
+			}
+			&.bg-active-wrap {
+				padding: 20px;
+				@include xs-size-max {
+					padding: 15px 20px;
+				}
+			}
+
+			&-item {
+				margin-right: 55px;
+				position: relative;
+				transition: .3s ease-out;
+				cursor: pointer;
+				&.bg-active {
+					margin-right: 35px;
+					a{
+						padding: 0 13px;
+					}
+				}
+
+				@include xs-size-max {
+					margin: 8px 20px 0 20px;
+				}
+				@include xs-size-min {
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+
+				&.active,
+				&:hover {
+					&:not(.remove-icon)::before {
+						content: '\24';
+						position: absolute;
+						font-family: 'ElegantIcons';
+						top: 2px;
+						left: -20px;
+						color: var(--c-light);
+					}
+					&.bg-active {
+						background-color: var(--c-light);
+						a {
+							color: var(--c-dark);
+						}
+					}
+				}
+
+				a {
+					color: var(--c-light);
+				}
+			}
+		}
+	}
+}

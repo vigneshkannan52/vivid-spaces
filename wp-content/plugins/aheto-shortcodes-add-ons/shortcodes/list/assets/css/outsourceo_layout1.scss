@@ -1,0 +1,46 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-list {
+	&--outsourceo-number {
+
+		ul {
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 25px;
+			display: flex;
+			align-items: center;
+			@include xs-size-max {
+				margin-bottom: 15px;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			p {
+				margin-bottom: 0;
+				overflow: hidden;
+				width: calc(100% - 30px);
+				color: var(--c-dark);
+			}
+		}
+
+		b {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			background: var(--c-dark);
+			color: var(--c-light);
+			margin-right: 20px;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			font-style: inherit;
+			float: left;
+			@include xs-size-max {
+				margin-right: 15px;
+			}
+		}
+
+	}
+}

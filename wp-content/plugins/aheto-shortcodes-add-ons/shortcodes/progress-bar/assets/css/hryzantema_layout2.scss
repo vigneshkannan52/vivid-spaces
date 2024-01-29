@@ -1,0 +1,21 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-counter {
+  $counter: &;
+  &--hr-classic-2 {
+    position: relative;
+    text-align: center;
+
+    &__number {
+      margin: 0;
+    }
+    #{$counter} {
+      &__desc {
+        span {
+          color: var(--c-active);
+        }
+      }
+    }
+  }
+
+}

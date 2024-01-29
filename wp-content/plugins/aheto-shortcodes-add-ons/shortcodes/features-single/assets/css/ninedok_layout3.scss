@@ -1,0 +1,39 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content {
+  $content: &;
+
+  &--ninedok-classic {
+    #{$content}-block {
+      &__image-wrap {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__info {
+        margin-top: 7px;
+      }
+      &__title {
+        margin-top: 17px;
+      }
+      &__link {
+        .aheto-link {
+          &::before {
+            content: "";
+            position: relative;
+            width: 70px;
+            height: 1px;
+            background: #eeeeee;
+            display: block;
+            margin: 5px auto 20px;
+
+          }
+        }
+      }
+    }
+  }
+}

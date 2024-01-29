@@ -1,0 +1,74 @@
+.aheto-list {
+  $p: &;
+
+  &--hr-bullets {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 12px;   
+      position: relative;
+      color: var(--c-grey);
+      list-style: none;
+      vertical-align: middle;
+      transform: translateX(-10px);
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      &::before {
+        vertical-align: middle;
+        content:"\f105";
+        font-family: 'FontAwesome';
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        margin-right: 10px;
+        display: inline-block;
+        -webkit-transform: translateY(-2px);
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -o-transform: translateY(-2px);
+        transform: translateY(-2px);
+        margin-left: 0;
+        color: transparent;
+      }
+      a {
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      &:hover {
+        a {
+          color: var(--c-active);
+          cursor: pointer;
+        }
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        &::before {
+          border-width: 5.5px 0 5.5px 10px;
+
+          margin-left: 15px;
+          font-size: inherit;
+          color: var(--c-active);
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

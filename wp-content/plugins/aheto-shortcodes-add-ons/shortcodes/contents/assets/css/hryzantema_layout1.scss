@@ -1,0 +1,85 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+    $p: &;
+
+    &--hr-faq {
+
+      #{$p}__title {
+        margin: 0;
+        flex: 0 0 95%;
+        transition: all 0.2s ease-in-out;
+
+        cursor: pointer;
+        user-select: none;
+        @media screen and (max-width: 768px) {
+          padding: 20px 0;
+        }
+
+        @include xs-size-max {
+          padding: 0px 0px;
+        }
+      }
+
+      #{$p}__heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          i {
+              margin-left: 10px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+          }
+      }
+
+      #{$p}__item {
+        box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+        background-color: var(--c-light);
+        margin-bottom: 15px;
+        padding: 40px 35px;
+        @include md-size-max {
+            padding: 25px 20px;
+        }
+        &.is-open {
+            padding-bottom: 30px;
+            @include md-size-max {
+                padding-bottom: 25px;
+            }
+            #{$p}__title {
+                color: var(--c-active);
+            }
+            i {
+                color: var(--c-active);
+              display: block;
+              -webkit-transform: rotateZ(90deg);
+              -moz-transform: rotateZ(90deg);
+              -ms-transform: rotateZ(90deg);
+              -o-transform: rotateZ(90deg);
+              transform: rotateZ(90deg);
+              -webkit-transition: all 0.5s;
+              -moz-transition: all 0.5s;
+              -ms-transition: all 0.5s;
+              -o-transition: all 0.5s;
+              transition: all 0.5s;
+            }
+        }
+      }
+
+      #{$p}__panel {
+        display: none;
+      }
+
+      #{$p}__desc {
+        margin-top: 10px;
+        margin-bottom: 9px;
+      }
+    }
+  }

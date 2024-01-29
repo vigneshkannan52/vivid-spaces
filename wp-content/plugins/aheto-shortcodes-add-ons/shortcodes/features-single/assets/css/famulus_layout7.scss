@@ -1,0 +1,68 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content {
+  $features: &;
+
+  &--famulus-logo {
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+    max-width: 385px;
+    height: 385px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 25px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, transparent, var(--c-active));
+
+    }
+
+    #{$features}-block__image-logo {
+      width: 95px;
+      height: 95px;
+      box-shadow: 0 2px 5px 0 rgba(var(--ca-alter), 0.4);
+      background-color: var(--c-light);
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      img{
+        max-width: 60px;
+      }
+      @include xs-size-max{
+        width: 70px;
+        height: 70px;
+        img{
+          max-width: 40px;
+        }
+      }
+    }
+
+    #{$features}-block__title  {
+      z-index: 1;
+      color: var(--c-light);
+      margin-bottom: 7px;
+    }
+    #{$features}-block__info-text {
+      z-index: 1;
+      color: rgba(var(--ca-light), 0.7) ;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../../../assets/css/mixin';
+
+
+
+.aheto-progress {
+  $counter: &;
+  #{$counter}__title {
+    margin: 10px 0;
+  }
+}
+
+
+

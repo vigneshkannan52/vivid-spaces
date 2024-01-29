@@ -1,0 +1,65 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-team-member {
+  $member: &;
+
+  &--snapster-simple {
+    cursor: pointer;
+    &:hover {
+	 #{$member}__contact {
+	   animation: edgtf-animate-overlay-track-in .6s cubic-bezier(.5,.15,.33,.88) forwards;
+	 }
+    }
+    #{$member}__contact {
+	 position: absolute;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 box-sizing: border-box;
+	 margin-left: 36px;
+	 background: #fff;
+	 animation: edgtf-animate-overlay-track-out .3s cubic-bezier(.53,.43,.47,.87) forwards;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+    }
+    #{$member}__link {
+	 padding: 0 15px;
+	 width: 100%;
+    }
+    #{$member}__text {
+	 padding: 29px 26px 17px;
+    }
+    #{$member}__name {
+	 margin-bottom: 0;
+    }
+    #{$member}__networks {
+	 display: flex;
+	 flex-wrap: wrap;
+	 text-align: center;
+    }
+    #{$member}__img-holder {
+	 position: relative;
+	 img {
+	   width: 100%!important;
+	 }
+    }
+  }
+}
+
+@keyframes edgtf-animate-overlay-track-in {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes edgtf-animate-overlay-track-out {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-cpt-article {
+    $p: &;
+
+    &--bizy_skin-1 {
+        #{$p}__inner {
+            position: relative;
+            padding-top: var(--img-height);
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 0;
+                background-image: linear-gradient(to top, var(--c-active), transparent);
+            }
+        }
+
+        #{$p}__img {
+            position: relative;
+            width: 100%;
+        }
+
+        #{$p}__content {
+            z-index: 1;
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            width: calc(100% - 40px);
+        }
+
+        #{$p}__terms {
+            color: var(--c-light);
+            margin-bottom: 3px;
+            a {
+                color: inherit;
+                line-height: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                font-style: inherit;
+                letter-spacing: inherit;
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+
+        #{$p}__title {
+            padding-top: 0;
+            margin-bottom: 10px;
+            color: var(--c-light);
+
+            a {
+                color: inherit;
+                line-height: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                font-style: inherit;
+                letter-spacing: inherit;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}

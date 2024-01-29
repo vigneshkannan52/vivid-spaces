@@ -1,0 +1,97 @@
+@import '../../../../assets/css/mixin';
+
+
+.widget_aheto {
+  $contact: &;
+
+  &__contact_info--soapy-card {
+    max-width: 400px;
+    margin: 0 auto;
+
+    #{$contact}__image-wrap {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #{$contact}__title {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    #{$contact}__infos {
+      a {
+        display: block;
+
+        &:hover {
+          color: var(--c-active);
+        }
+      }
+
+      a, p {
+        padding-left: 35px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: 'Ionicons';
+          font-size: 1.2em;
+          color: var(--c-active);
+        }
+
+        &#{$contact}__link-mail {
+          &:before {
+            content: '\f2eb';
+          }
+        }
+
+        &#{$contact}__link-phone {
+          &:before {
+            content: '\f4b9';
+          }
+        }
+      }
+
+      p {
+        &:before {
+          content: '\f393';
+        }
+      }
+    }
+
+    #{$contact}__infos-wrap {
+      a#{$contact}__link-arrow {
+        margin-top: 45px;
+        display: table;
+        font-family: var(--t-secondary-font-family);
+        color: var(--c-alter);
+        position: relative;
+        padding-right: 50px;
+        transition: 0.5s;
+        @include xs-size-max{
+          margin-top: 25px;
+        }
+        &::after {
+          position: absolute;
+          right: 8px;
+          top: 50%;
+          font-family: 'Ionicons';
+          transform: translate(-50% , -50%);
+          content: '\f3d6';
+          transition: 0.5s;
+          margin-left: 5px;
+          font-size: 1.4em;
+        }
+        &:hover{
+          color: var(--c-active);
+          &:after{
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+}

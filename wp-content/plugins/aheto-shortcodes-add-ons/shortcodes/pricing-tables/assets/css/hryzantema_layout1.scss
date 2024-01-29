@@ -1,0 +1,82 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing{
+	$pricing: &;
+
+	&--hr-classic{
+		background-color: var(--c-light);
+		padding: 36px 70px;
+		text-align: center;
+		border-top: 7px solid var(--c-dark);
+		box-shadow: 0 10px 50px rgba(var(--ca-dark), 0.09);
+		position: relative;
+		z-index: 1;
+		transition: all 0.5s;
+
+		&.active {
+			position: relative;
+			padding: 70px 70px;
+			z-index: 2;
+			transition: all 0.5s;
+			@include xs-size-max{
+				padding: 30px 15px 25px;
+			}
+
+		}
+
+		@include xs-size-max{
+			padding: 30px 15px 25px;
+		}
+
+		#{$pricing}__title{
+			margin-bottom: 20px;
+			span{
+				color: var(--c-active);
+				font-weight: inherit;
+				font-size: 85%;
+			}
+		}
+
+		#{$pricing}__cost-value{
+			color: var(--c-dark);
+			word-break: break-word;
+		}
+		#{$pricing}__cost-time{
+			color: var(--c-dark);
+		}
+
+		#{$pricing}__description{
+			@include xs-size-max{
+				margin-top: 30px;
+			}
+		}
+		#{$pricing}__description-item{
+			margin-bottom: 20px;
+			&.crossed {
+				text-decoration: line-through;
+			}
+
+			@include xs-size-max{
+				margin-bottom: 15px;
+			}
+
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+
+		#{$pricing}__link{
+			margin-top: 50px;
+			margin-bottom: 20px;
+			a{
+				width: 240px;
+				justify-content: center;
+				max-width: 100%;
+			}
+		}
+		#{$pricing}__content {
+			margin-top: 5px;
+		}
+
+	}
+}

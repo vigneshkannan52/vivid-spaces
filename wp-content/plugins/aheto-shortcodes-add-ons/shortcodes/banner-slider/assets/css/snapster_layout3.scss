@@ -1,0 +1,362 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider {
+	$banner_slider: &;
+
+	&--snapster-modern {
+		position: relative;
+
+		.slice-overlay {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			height: calc(100%/3 + 2px);
+			width: 100%;
+			z-index: 10;
+			border-top: 1px solid rgba(var(--ca-light), .3);
+			border-bottom: 1px solid rgba(var(--ca-light), .3);
+			@media screen and (max-width: 1024px) {
+				display: none;
+			}
+		}
+
+		#{$banner_slider}__container {
+			width: 100%;
+			max-height: 100vh;
+			position: relative;
+			margin: 0 auto;
+			overflow: hidden;
+			z-index: 10;
+		}
+
+		#{$banner_slider}__pagination {
+			position: absolute;
+			bottom: 40px;
+			left: 25px;
+			width: auto;
+			z-index: 1000;
+			@include xs-size-max{
+				bottom: 15px;
+				left: 15px;
+				max-width: calc(100% - 30px);
+			}
+
+			&.hidden{
+				display: none;
+			}
+
+			&--counters {
+				position: relative;
+				counter-reset: section;
+
+				label {
+					position: relative;
+					padding: 4px 10px;
+					margin: 0 15px;
+					display: inline;
+					border-radius: 0;
+					color: var(--c-light);
+					background: transparent;
+					cursor:pointer;
+
+					&::before {
+						counter-increment: section;
+						content: "0" counter(section);
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						width: 17px;
+						height: 1px;
+						left: -22px;
+						bottom: 10px;
+						background-color: var(--c-light);
+					}
+				}
+
+				input {
+					display: none;
+
+					&:checked + label {
+						background-color: var(--c-light);
+						color: var(--c-dark);
+					}
+				}
+
+				label:first-of-type {
+					&::after {
+						content: "";
+						display: none;
+					}
+				}
+			}
+		}
+
+		#{$banner_slider}__bgimg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+
+			div {
+				width: 100%;
+				height: calc(100% / 3);
+				position: relative;
+				float: left;
+				&::before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 100;
+					background: rgba(var(--ca-dark), .25);
+				}
+
+				span {
+					position: absolute;
+					width: 100%;
+					height: 100.5%;
+					left: 100%;
+					top: 0;
+					z-index: 2;
+					overflow: hidden;
+					animation: slideOutUp .6s ease-in-out;
+
+					img {
+						display: block;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						min-height: 100vh;
+						min-width: 100vw;
+						max-width: initial;
+						width: auto;
+					}
+				}
+
+				&:nth-child(even) span {
+					left: -100%;
+					animation: slideOutDown .6s ease-in-out;
+				}
+
+				&:nth-child(1) span img {
+					top: 150%;
+				}
+
+				&:nth-child(3) span img {
+					top: -50%;
+				}
+			}
+
+			div span.active {
+				transition: left 0.5s ease-in-out;
+				animation: none;
+				left: 0;
+				z-index: 10;
+			}
+		}
+
+		@keyframes slideOutUp {
+			0% {
+				left: 0;
+			}
+			100% {
+				left: -100%;
+			}
+		}
+
+		@keyframes slideOutDown {
+			0% {
+				left: 0;
+			}
+			100% {
+				left: 100%;
+			}
+		}
+
+		#{$banner_slider}__text {
+			z-index: 10000;
+			position: absolute;
+			width: calc(100% - 160px);
+			left: 50%;
+			text-align: center;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			padding: 0 15px;
+			@media screen and (max-width: 1024px) {
+				width: 100%;
+			}
+
+			.links{
+				position: relative;
+				opacity: 0;
+				margin-top: 12px;
+
+				a {
+					margin: 5px 12px;
+
+					&:first-child {
+						@include xs-size-max {
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+			.title,
+			.subtitle {
+				position: relative;
+				opacity: 0;
+				color: var(--c-light);
+			}
+
+			.title {
+				margin-top: 0;
+				top: -100px;
+				padding: 10px 0 0;
+				transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
+				&.disable{
+					top: 0;
+				}
+			}
+
+			.subtitle{
+				margin-bottom: 4px;
+			}
+
+			.links,
+			.subtitle {
+				transition: opacity 0.8s ease-in-out;
+			}
+
+			&.active {
+				z-index: 10001;
+				.title {
+					opacity: 1;
+					top: 0;
+				}
+				.links,
+				.subtitle {
+					opacity: 1;
+				}
+			}
+		}
+
+		#{$banner_slider}__buttons {
+			&-prev,
+			&-next {
+				width: 45px;
+				height: calc(100%/3);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				left: auto;
+				bottom: auto;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
+				transition: all .3s ease;
+				z-index: 10000;
+				background: var(--c-light);
+				color: var(--c-dark);
+				overflow: hidden;
+				text-align: center;
+				cursor: pointer;
+				@media screen and (max-width: 1024px) {
+					display: none;
+				}
+				&.disabled{
+					opacity: .5;
+				}
+				&.hidden{
+					display: none;
+				}
+
+				span{
+					writing-mode: vertical-lr;
+					width: 100%;
+					display: flex;
+				}
+
+				span::after{
+					content: '';
+					position: absolute;
+					height: 0;
+					width: 1px;
+					background: rgba(var(--ca-dark), .4);
+					transition: height .45s ease;
+
+				}
+				&:hover span::after {
+					height: 100%;
+				}
+			}
+
+			&-prev {
+				left: 0;
+
+				span{
+					transform: rotate(180deg);
+					align-items: flex-end;
+					&::before {
+						content: attr(data-text);
+					}
+					&::after{
+						right: 10px;
+					}
+				}
+			}
+
+			&-next {
+				right: 0;
+				span{
+					align-items: flex-start;
+					transform: rotate(-180deg);
+					&::before {
+						content: attr(data-text);
+					}
+					&::after{
+						left: 10px;
+					}
+				}
+			}
+		}
+
+		&.dark_arrows {
+			#{$banner_slider}__buttons-prev,
+			#{$banner_slider}__buttons-next {
+
+				background: var(--c-dark);
+				color: var(--c-light);
+				span::after{
+					background: rgba(var(--ca-light), .4);
+				}
+			}
+		}
+
+		&.wider_buttons {
+			#{$banner_slider}__buttons-prev,
+			#{$banner_slider}__buttons-next {
+				width: 80px;
+			}
+
+			#{$banner_slider}__buttons-prev,
+			#{$banner_slider}__buttons-next {
+				span{
+					align-items: center;
+					&::after{
+						left: 50%;
+						transform: translate(-50%, 0);
+					}
+				}
+			}
+		}
+	}
+}

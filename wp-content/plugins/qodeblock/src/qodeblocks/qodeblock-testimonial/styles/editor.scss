@@ -1,0 +1,36 @@
+/**
+ * Editor styles for the admin
+ */
+
+.qb-block-testimonial {
+    margin-bottom: 0;
+    color: #999;
+
+    .qb-testimonial-text{
+        color: inherit!important;
+    }
+
+    .components-button:not(:disabled):not([aria-disabled=true]):focus {
+        background: none;
+        box-shadow: none;
+    }
+}
+
+.editor-block-list__layout [data-type="qodeblock/qb-testimonial"] {
+    margin-bottom: 1.2em;
+}
+
+.qb-testimonial-info {
+    h2.editor-rich-text__tinymce {
+        line-height: 1.2;
+    }
+
+    p.editor-rich-text__tinymce {
+        line-height: 1.6;
+    }
+
+    .qb-testimonial-title + .qb-testimonial-title {
+        line-height: 1.8;
+        font-size: 95%;
+    }
+}

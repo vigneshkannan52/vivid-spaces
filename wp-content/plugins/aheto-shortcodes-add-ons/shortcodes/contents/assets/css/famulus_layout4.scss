@@ -1,0 +1,123 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-contents {
+  $contents: &;
+
+  &--faq-famulus-modern {
+    #{$contents}__faq-heading {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--c-alter3);
+      padding: 0 65px 20px;
+      margin-bottom: 10px;
+      @include md-size-max {
+        padding: 0 20px 20px;
+      }
+      @include xs-size-max{
+        display: none;
+      }
+    }
+
+    #{$contents}__faq-heading-title-position {
+      width: 55%;
+      color: rgba(var(--ca-dark2), 0.7);
+      margin-bottom: 0;
+    }
+
+    #{$contents}__faq-heading-title-type {
+      width: 40%;
+      color: rgba(var(--ca-dark2), 0.7);
+      margin-bottom: 0;
+      @include sm-size-max{
+        padding-left: 10px;
+      }
+      @include xs-size-max{
+        padding-left: 0;
+      }
+    }
+
+    #{$contents}__item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 65px;
+      margin-bottom: 40px;
+      @include md-size-max {
+        padding: 0 20px;
+      }
+      @include xs-size-max {
+        padding: 0;
+      }
+      @include xs-size-max {
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+
+      &.is-open {
+        #{$contents}__border {
+          border-bottom: 2px solid var(--c-active);
+        }
+      }
+    }
+
+    #{$contents}__title {
+      width: 55%;
+      color: var(--c-alter);
+      cursor: pointer;
+      margin-bottom: 0;
+      @include xs-size-max {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    #{$contents}__type {
+      width: 25%;
+      color: rgba(var(--ca-alter), 0.7);
+      margin-bottom: 0;
+
+      @include sm-size-max {
+        width: 20%;
+        padding-left: 10px;
+      }
+      @include xs-size-max {
+        width: 50%;
+        margin-bottom: 10px;
+        padding-left: 0;
+      }
+    }
+
+    #{$contents}__border {
+      border-bottom: 1px solid var(--c-alter3);
+      width: calc(100% + 130px);
+      height: 1px;
+      transition: 0.5s;
+      margin: 10px -65px 0;
+      @include md-size-max {
+        width: calc(100% + 40px);
+        margin: 10px -20px 0;
+      }
+      @include md-size-max {
+        width: 100% ;
+        margin: 10px 0 0;
+      }
+    }
+
+    #{$contents}__panel {
+      width: 100%;
+      padding: 40px 0 0;
+      @include md-size-max {
+        padding: 20px 0 0;
+      }
+    }
+
+    #{$contents}__desc {
+      color: var(--c-dark2);
+      @include xs-size-max{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

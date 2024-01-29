@@ -1,0 +1,24 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-content-block {
+	$features: &;
+
+	&--moovit-text-with-icon {
+
+		#{$features}__info-wrap {
+			display: flex;
+			align-items: center;
+		}
+		#{$features}__ico {
+			& + #{$features}__title{
+				margin-left: 10px;
+			}
+
+		}
+		#{$features}__title{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+	}
+}

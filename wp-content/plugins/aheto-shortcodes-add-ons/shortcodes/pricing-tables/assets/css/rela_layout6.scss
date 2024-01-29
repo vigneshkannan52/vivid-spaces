@@ -1,0 +1,102 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing {
+  $pricing: &;
+
+  &--rela-side {
+    background-color: var(--c-light);
+    transition: .3s all;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(var(--ca-dark), .07), var(--c-light));
+
+    &:hover {
+      transform: scale(1.06);
+      z-index: 2;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.12);
+
+      #{$pricing}__header {
+        background-color: var(--c-alter);
+        box-shadow: 0 12px 44px 0 rgba(var(--ca-alter), 0.4);
+        transition: 0s all;
+      }
+
+      #{$pricing}__title,
+      #{$pricing}__cost-value,
+      #{$pricing}__cost-time {
+        color: var(--c-light);
+      }
+    }
+
+    #{$pricing}__header {
+      padding: 30px 15px 25px 15px;
+      border-bottom: 1px solid rgba(var(--ca-dark), 0.1);
+      transition: .3s all;
+    }
+
+    #{$pricing}__content {
+      padding: 40px 30px 35px 30px;
+      @include md-size-max {
+        padding: 40px 15px 35px 15px;
+      }
+
+    }
+
+    #{$pricing}__title {
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    #{$pricing}__cost {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 14px;
+    }
+
+    #{$pricing}__cost-value {
+      color: var(--c-dark);
+    }
+
+    #{$pricing}__cost-time {
+      margin-bottom: -4px;
+    }
+
+    #{$pricing}__list-item-wrap {
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 0;
+      }
+    }
+
+    #{$pricing}__resp-descr {
+      text-align: center;
+      @media screen and (min-width: 1025px) {
+        display: none;
+      }
+    }
+
+    #{$pricing}__link {
+      margin-top: 45px;
+
+      a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    &.aheto-pricing__active {
+      padding: 80px 70px;
+      position: relative;
+      z-index: 10;
+    }
+
+    #{$pricing}__list-item.line-through {
+      text-decoration: line-through;
+    }
+
+    #{$pricing}__list-item.opacity {
+      opacity: 0.32;
+    }
+  }
+}

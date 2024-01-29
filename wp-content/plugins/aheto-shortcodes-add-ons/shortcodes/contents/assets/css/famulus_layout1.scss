@@ -1,0 +1,60 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-contents {
+  $contents: &;
+
+  &--faq-famulus-simple  {
+    #{$contents}__item {
+      padding: 40px 40px 20px;
+      box-shadow: 0 10px 50px 0 rgba(var(--ca-alter), 0.09);
+      background-color: var(--c-light);
+      margin-bottom: 20px;
+      @include sm-size-max{
+        padding: 20px 20px 5px;
+      }
+
+      &.is-open {
+        #{$contents}__title {
+          color: var(--c-active);
+        }
+      }
+    }
+
+    #{$contents}__title {
+      color: var(--c-alter);
+      transition: 0.5s;
+      cursor: pointer;
+      padding-right: 50px;
+      position: relative;
+      margin-bottom: 20px;
+      @include sm-size-max{
+        padding-right: 25px;
+      }
+      &::after{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        content: "\f3d6";
+        font-family: Ionicons;
+        font-size: 1.7em;
+        font-weight: inherit;
+        @include sm-size-max{
+          font-size: 1.3em;
+          top: 10px;
+        }
+      }
+
+      &:hover {
+        color: var(--c-active);
+      }
+    }
+    #{$contents}__desc {
+      margin-bottom: 30px;
+      @include sm-size-max{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-heading {
+  $heading: &;
+  &--soapy-description {
+    p, a {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      font-style: inherit;
+      letter-spacing: inherit;
+      line-height: inherit;
+      margin: 0;
+    }
+  }
+}
+

@@ -1,0 +1,138 @@
+@import "../../../../assets/css/mixin";
+
+.widget_aheto {
+  $p: &;
+  &__cf--mooseoom__modern {
+    background-color: var(--c-light);
+    label {
+      width: 100%;
+      margin: 0;
+    }
+    #{$p}__form {
+      .wpcf7 {
+        form {
+          border: 1px solid var(--c-dark);
+          padding: 50px;
+          @include xs-size-max {
+            padding: 25px;
+          }
+          .button-wrapper {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include xs-size-max {
+              flex-direction: column;
+            }
+          }
+        }
+        .form-title {
+          text-align: center;
+          color: var(--c-dark);
+        }
+        .input-wrapper {
+          display: flex;
+          margin-top: 35px;
+          @include xs-size-max {
+            flex-direction: column;
+          }
+        }
+        span {
+          font: inherit;
+          color: inherit;
+          display: flex;
+          flex-direction: column;
+          .wpcf7-not-valid-tip {
+            margin-top: 10px;
+            color: #f00;
+          }
+          &.your-name {
+            color: var(--c-dark);
+            flex-direction: column;
+          }
+          &.your-tel {
+            color: var(--c-dark);
+            margin: 0 15px;
+            @include xs-size-max {
+              margin: 0;
+            }
+          }
+          &.your-message {
+            margin-top: 15px;
+          }
+          @include xs-size-max {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 7px;
+          }
+        }
+        input:not([type="submit"]) {
+          padding: 11.5px 16px;
+          width: 100%;
+          font: inherit;
+          color: var(--c-dark);
+          max-width: 100%;
+          box-shadow: none;
+          border: 1px solid rgba(var(--ca-dark), 0.7);
+          border-radius: 0;
+          background: transparent;
+          &::-webkit-contacts-auto-fill-button {
+            display: none !important;
+          }
+          &.wpcf7-file {
+            width: 0;
+            height: 0;
+            padding: 0 0 0 20px;
+            border: none;
+          }
+        }
+        input[type="submit"] {
+          padding: 17px 52px;
+          width: 100%;
+          display: block;
+          text-align: center;
+          background-color: rgba(var(--ca-dark), 1);
+          color: var(--c-light);
+          border-radius: 0;
+          @include xs-size-max {
+            margin-top: 15px;
+          }
+          &:hover {
+            background-color: rgba(var(--ca-dark), 0.7);
+          }
+        }
+
+        &-textarea {
+          width: 100%;
+        }
+        .ajax-loader {
+          display: none;
+        }
+        textarea {
+          padding: 18px;
+          width: 100%;
+          height: 167px;
+          background: transparent;
+          font: inherit;
+          color: var(--c-dark);
+          box-shadow: none;
+          border: 1px solid rgba(var(--ca-dark), 0.7);
+          border-radius: 0;
+          resize: none;
+        }
+        &-validation-errors {
+          border: 1px solid #f00;
+        }
+      }
+    }
+    p {
+      margin: 0;
+
+      @include xs-size-max {
+        width: 100%;
+        margin: 0;
+        margin-top: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-features {
+  $features: &;
+
+  &--rela-classic {
+    #{$features}-block {
+      &__image-wrap {
+        width: 140px;
+        height: 140px;
+        background-color: rgba(var(--ca-alter2), .8);
+        border-radius: 70px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__info {
+        margin-top: 13px;
+      }
+
+      &__title {
+        margin-top: 42px;
+
+        span {
+          color: var(--c-active);
+        }
+
+        @include xs-size-max {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

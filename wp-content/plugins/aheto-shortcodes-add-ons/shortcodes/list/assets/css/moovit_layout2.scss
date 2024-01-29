@@ -1,0 +1,45 @@
+.aheto-list{
+	&--moovit-links{
+
+		ul{
+			margin: 0;
+		}
+
+		li{
+			margin-bottom: 18px;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			transition: all .3s ease;
+			position: relative;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+			i{
+				opacity: 0;
+				transition: all 0s ease;
+				color: var(--c-active);
+				position: absolute;
+				top: 0.05em;
+				left: 0;
+				transition-delay: 0s;
+			}
+			&:hover{
+				padding-left: 15px;
+				i{
+					opacity: 1;
+					transition: all .3s ease;
+					transition-delay: .1s;
+				}
+			}
+			a{
+				color: var(--c-dark);
+				text-decoration: none;
+				&:hover{
+					color: var(--c-active)!important;
+				}
+			}
+		}
+
+	}
+}

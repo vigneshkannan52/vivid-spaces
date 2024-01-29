@@ -1,0 +1,81 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-coming-soon {
+	$p: &;
+	
+	&--soapy {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&#{$p}__no-space {
+			#{$p}__number {
+				padding-top: 0;
+			}
+		}
+		#{$p}__unit {
+			display: inline-block ;
+			min-width: 113px;
+			margin: 0 40px 10px;
+			text-align: center;
+			@include lg-size-max {
+				margin: 0 20px 10px;
+			}
+			@include md-size-max {
+				min-width: 108px;
+				margin: 0 15px 10px;
+			}
+
+			@include sm-size-max {
+				min-width: 60px;
+			}
+
+			@media screen and (max-width: 576px) {
+				min-width: 48px;
+				margin: 0 5px ;
+			}
+		}
+
+		#{$p}__number {
+			color: var(--c-dark);
+			width: 190px;
+			height: 190px;
+			padding-top: 15px;
+			box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), 0.09);
+			border-radius: 50%;
+			display: table-cell;
+			vertical-align: middle;
+
+			@include lg-size-max {
+				width: 130px;
+				height: 130px;
+			}
+			@include sm-size-max {
+				padding-top: 7px;
+			}
+			@include xs-size-max {
+				width: 60px;
+				height: 60px;
+				padding-top: 3px;
+			}
+
+		}
+
+		#{$p}__dots {
+			font-family: var(--t-secondary-font-family);
+			font-size: 2.9em;
+			display: flex;
+			align-items: center;
+			color: var(--c-dark);
+
+			@include sm-size-max {
+				font-size: 2.1em;
+			}
+
+			@media screen and (max-width: 576px) {
+				font-size: 1.4em;
+			}
+		}
+
+	}
+}

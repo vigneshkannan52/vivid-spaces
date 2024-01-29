@@ -1,0 +1,102 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-video-funero{
+  .aheto-btn-video {
+    width: 114px;
+    height: 114px;
+    border: none;
+    border-radius: 0;
+    border-left: 2px solid rgba(var(--ca-active), 0.8);
+    position: relative;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+    background-color: transparent;
+    @include md-size-max{
+      width: 75px;
+      height: 75px;
+    }
+    &:hover{
+      transform: scale(0.8);
+      border-left: 2px solid var(--c-active);
+      &::after, &::before{
+        border-right: 2px solid var(--c-active);
+      }
+    }
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      left: -1px;
+      border-radius: 0;
+      height: 120px;
+      width: 2px;
+      border: none;
+      border-right: 2px solid rgba(var(--ca-active), 0.8);
+      @include md-size-max{
+        height: 83px;
+      }
+    }
+    &::after{
+      bottom: -8px;
+      transform: rotate(-62deg);
+      transform-origin: top left;
+    }
+    &::before{
+      top: -8px;
+      transform: rotate(62deg);
+      transform-origin: bottom left;
+    }
+    i{
+      display: none;
+    }
+    &.aheto-btn--light{
+      border-left: 2px solid rgba(var(--ca-alter2), 0.8);
+      &::after, &::before{
+        border-right: 2px solid rgba(var(--ca-alter2), 0.8);
+      }
+      &:hover{
+        border-left: 2px solid var(--c-light);
+        &::after, &::before{
+          border-right: 2px solid var(--c-light);
+        }
+      }
+    }
+    &.aheto-btn--dark{
+      border-left: 2px solid rgba(var(--ca-alter), 0.8);
+      &::after, &::before{
+        border-right: 2px solid rgba(var(--ca-alter), 0.8);
+      }
+      &:hover{
+        border-left: 2px solid var(--c-alter);
+        &::after, &::before{
+          border-right: 2px solid var(--c-alter);
+        }
+      }
+    }
+    &.aheto-btn-video--small{
+      width: 75px;
+      height: 75px;
+      &::after, &::before{
+        height: 83px;
+        @include md-size-max{
+          height: 83px;
+        }
+      }
+    }
+    &.aheto-btn-video--large{
+      width: 144px;
+      height: 144px;
+      @include md-size-max{
+        width: 75px;
+        height: 75px;
+      }
+
+      &::after, &::before{
+        height: 150px;
+        @include md-size-max{
+          height: 83px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-features {
+	$features: &;
+
+	&--snapster-minimal {
+		#{$features}-block {
+			&__wrap {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				@include xs-size-max {
+					justify-content: flex-start;
+				}
+			}
+
+			&__info {
+				margin-left: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				@include xs-size-max {
+					margin-left: 16px;
+				}
+			}
+
+			&__image-wrap {
+				width: 90px;
+				height: 90px;
+				border-radius: 45px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-shrink: 0;
+			}
+
+			&__description {
+				margin-bottom: 2px;
+			}
+
+			&__image {
+				max-width: 50px;
+			}
+		}
+	}
+}

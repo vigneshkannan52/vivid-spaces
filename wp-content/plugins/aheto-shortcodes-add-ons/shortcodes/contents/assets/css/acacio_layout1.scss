@@ -1,0 +1,55 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-contents {
+    $p: &;
+
+    &--acacio-faq {
+
+      #{$p}__title {
+        margin: 0;
+
+        transition: all 0.2s ease-in-out;
+        flex: 0 0 95%;
+        cursor: pointer;
+        user-select: none;
+        @media screen and (max-width: 768px) {
+          padding: 20px 0;
+        }
+      }
+
+
+      #{$p}__heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      #{$p}__item {
+        box-shadow: 0 10px 50px 0 rgba(var(--ca-dark), .07);
+        background-color: var(--c-light);
+        margin-bottom: 15px;
+        padding: 40px 35px;
+        @include md-size-max {
+            padding: 25px 20px;
+        }
+        &.is-open {
+            @include md-size-max {
+                padding-bottom: 25px;
+            }
+            #{$p}__title {
+                color: var(--c-active);
+            }
+            i {
+                color: var(--c-active);
+            }
+        }
+      }
+
+      #{$p}__panel {
+        display: none;
+      }
+
+      #{$p}__desc {
+        margin: 13px 0;
+      }
+    }
+  }

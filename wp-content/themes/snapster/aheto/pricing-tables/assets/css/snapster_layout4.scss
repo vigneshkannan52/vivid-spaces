@@ -1,0 +1,169 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-pricing-tables {
+	$pricing: &;
+
+	&--snapster-simple {
+		#{$pricing}__inner-wrap {
+			max-width: 500px;
+		}
+		#{$pricing}__wrap {
+			padding: 100px 40px;
+			position: relative;
+			color: var(--c-light);
+			cursor: pointer;
+			background-size: cover;
+			background-position: center;
+			clip-path: inset(0 0 0 0);
+			transition: all 350ms ease;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 5;
+				background-color: rgba(0, 0, 0, .6);
+			}
+			&:hover {
+				clip-path: inset(15px 15px 15px 15px);
+				@include md-size-max {
+					clip-path: inset(25px 25px 25px 25px);
+				}
+				@include xs-size-max {
+					clip-path: inset(15px 5px 15px 5px);
+				}
+			}
+			* {
+				position: relative;
+				z-index: 10;
+			}
+			&.active #{$pricing}__input-check-wrap span::before {
+				opacity: 1;
+			}
+			.row {
+				align-items: center;
+			}
+			@include md-size-max {
+				padding: 80px 40px;
+			}
+			@include sm-size-max {
+				padding: 60px 40px;
+			}
+			@include xs-size-max {
+				padding: 35px 5px 40px;
+			}
+		}
+		#{$pricing}__title {
+			color: var(--c-light);
+			z-index: 10;
+			max-width: 400px;
+		}
+		#{$pricing}__text {
+			color: var(--c-light);
+			@include sm-size-max {
+				margin-top: 30px;
+			}
+			@include xs-size-max {
+				margin-top: 10px;
+			}
+		}
+		#{$pricing}__subtitle {
+			color: var(--c-light);
+			margin-top: 50px;
+			@include sm-size-max {
+				margin-top: 40px;
+			}
+			@include xs-size-max {
+				margin-top: 30px;
+			}
+		}
+		#{$pricing}__list-wrap {
+			list-style: none;
+			color: var(--c-light);
+			margin-top: 15px;
+			margin-bottom: 0;
+			i {
+				display: inline-block;
+				margin-right: 10px;
+			}
+		}
+		#{$pricing}__price-wrap {
+			margin-bottom: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			@include sm-size-max {
+				margin-bottom: 40px;
+			}
+			@include xs-size-max {
+				margin-bottom: 25px;
+			}
+		}
+		#{$pricing}__price {
+			order: 2;
+		}
+		#{$pricing}__input-check-wrap {
+			position: relative;
+			width: 30px;
+			height: 30px;
+			order: 1;
+			padding-top: 3px;
+			margin-right: 15px;
+			span {
+				width: 30px;
+				height: 30px;
+				border: 2px solid var(--c-active);
+				border-radius: 50%;
+				position: absolute;
+				top: 3px;
+				cursor: pointer;
+				left: 0;
+				z-index: 1;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 20px;
+					height: 20px;
+					background-color: var(--c-active);
+					border-radius: 50%;
+					opacity: 0;
+					transform: translate(-50%, -50%);
+					transition: opacity 350ms ease;
+					z-index: 1;
+					@include xs-size-max {
+						width: 15px;
+						height: 15px;
+					}
+				}
+				@include xs-size-max {
+					width: 25px;
+					height: 25px;
+				}
+			}
+			input[type="radio"] {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+	&__pricelist-total {
+		background: var(--c-dark);
+		display: inline-block!important;
+		border: 2px solid var(--c-light);
+		padding: 11px 20px 12px 20px;
+		border-radius: 18px;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		z-index: 9000;
+		line-height: 1;
+		color: var(--c-light);
+		&:not(.active) {
+			display: none!important;
+		}
+	}
+}

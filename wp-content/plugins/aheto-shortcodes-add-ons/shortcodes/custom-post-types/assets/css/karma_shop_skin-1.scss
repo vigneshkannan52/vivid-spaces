@@ -1,0 +1,80 @@
+@import '../../../../assets/css/mixin';
+
+
+.aheto-cpt-article {
+  $p: &;
+
+  &--karma_shop_skin-1 {
+    transition: 0.5s;
+
+
+    #{$p}__top {
+      height: 500px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{$p}__img {
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    #{$p}__inner {
+      position: relative;
+      background-color: var(--c-light);
+    }
+
+
+    #{$p}__title {
+      margin-bottom: 5px;
+
+      a {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+
+        &:hover {
+          color: var(--c-alter);
+        }
+      }
+    }
+
+    #{$p}__content {
+      padding: 25px 0 0;
+      @include sm-size-max {
+        padding: 20px 15px 0;
+      }
+    }
+
+    #{$p}__label {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 30px;
+      width: 60px;
+      height: 30px;
+      color: var(--c-light);
+      padding-top: 2px;
+    }
+
+    #{$p}__price {
+      del{
+        text-decoration: line-through;
+      }
+      ins{
+        background-color: transparent;
+      }
+    }
+  }
+}

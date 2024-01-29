@@ -1,0 +1,6 @@
+{
+    "require": {
+        "dompdf/dompdf": "^0.7.0",
+        "ajaxray/php-watermark": "^0.1.1"
+    }
+}

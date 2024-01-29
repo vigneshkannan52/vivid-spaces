@@ -1,0 +1,272 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-banner-slider--noize {
+    $banner_slider: &;
+
+    position: relative;
+
+    #{$banner_slider}-wrap {
+        min-height: 100vh;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px 0;
+    }
+
+    #{$banner_slider}__content {
+        display: flex;
+        position: relative;
+        padding: 180px 15px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        @include md-size-max {
+            display: block;
+            padding: 70px 15px;
+        }
+
+        @include xs-size-max {
+            margin-top: 0px;
+        }
+    }
+
+    #{$banner_slider}__content-line-top {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 102px;
+            background: var(--c-active);
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%);
+        }
+
+        @include md-size-max{
+            display: none;
+        }
+    }
+
+    #{$banner_slider}__content-line-bottom {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 102px;
+            background: var(--c-active);
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+        }
+
+        @include md-size-max{
+            display: none;
+        }
+    }
+
+    .aheto-banner__title {
+        margin-bottom: 27px;
+        color: var(--c-dark);
+
+        .noize-dot {
+            white-space: nowrap;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: calc(1em/100*18);
+                height: calc(1em/100*18);
+                background: var(--c-active);
+            }
+            &.dot-dark::after {
+                background: var(--c-dark);
+            }
+            &.dot-white::after {
+                background: var(--c-light);
+            }
+        }
+    }
+
+    .aheto-banner__subtitle {
+        color: var(--c-active);
+
+        @include md-size-max{
+            text-align: center!important;
+        }
+    }
+
+    #{$banner_slider}__content-left {
+        position: relative;
+        margin-right: 100px;
+
+        @include md-size-max {
+            text-align: center;
+            margin-right: 0;
+        }
+
+        @include xs-size-max {
+            display: none;
+        }
+
+        img {
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @media (max-width: 1300px) {
+                width: 520px;
+                height: 420px;
+            }
+        }
+    }
+
+    #{$banner_slider}__content-right {
+        position: relative;
+        max-width: 370px;
+        margin-right: 135px;
+
+        @include md-size-max {
+            text-align: center;
+            height: auto;
+            margin-top: 70px;
+            margin-right: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @include xs-size-max {
+            margin-top: 0;
+        }
+
+        img {
+            margin-bottom: 22px;
+
+            @include xs-size-max {
+                max-height: 50px;
+                width: auto;
+            }
+        }
+
+    }
+
+    #{$banner_slider}__links {
+        margin-top: 46px;
+
+        a {
+            margin: 5px 12px;
+        }
+
+    }
+
+    div.swiper-pagination {
+        position: absolute;
+        bottom: 47px;
+        left: 0;
+        width: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(var(--ca-light), .1);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .swiper-pagination-bullet {
+            width: 60px;
+            height: 2px;
+            margin: 2px 12px;
+            background-color: var(--c-light);
+            border-radius: 0;
+            border: none;
+
+            &-active {
+                background-color: var(--c-active);
+            }
+        }
+
+        @include xs-size-max{
+            display: none;
+        }
+
+    }
+
+    div.swiper-container {
+        min-height: 100vh;
+    }
+
+    div.swiper-button-prev,
+    div.swiper-button-next {
+        width: 60px;
+        height: 60px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+
+        @include xs-size-max {
+            top: 80%;
+        }
+
+        &:hover {
+            color: var(--c-dark);
+        }
+    }
+
+    div.swiper-button-prev {
+        left: 20px;
+        color: var(--c-dark);
+
+        &::before {
+            content: '\f3d2';
+            font-family: "Ionicons";
+        }
+
+        @include xs-size-max {
+            left: calc(50% - 30px);
+            transform: translateX(calc(-50% - 30px));
+        }
+    }
+
+    div.swiper-button-next {
+        right: 20px;
+        color: var(--c-dark);
+
+        &::before {
+            content: '\f3d3';
+            font-family: "Ionicons";
+        }
+
+        @include xs-size-max {
+            left: calc(50% + 30px);
+            transform: translateX(calc(-50% + 30px));
+        }
+    }
+    
+}

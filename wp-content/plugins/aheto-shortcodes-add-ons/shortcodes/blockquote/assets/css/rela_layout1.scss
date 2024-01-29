@@ -1,0 +1,48 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-quote {
+	$quote: &;
+	&--rela-simple {
+		border: none;
+		padding: 80px 30px 40px 30px;
+		max-width: unset;
+		position: relative;
+		margin: 0;
+		@include sm-size-max {
+			padding: 80px 25px 40px 25px;
+		}
+		@include xs-size-max {
+			padding: 70px 25px 30px 25px;
+		}
+		&:before {
+			content: '“';
+			opacity: 1;
+			top: 15px;
+			text-align: center;
+			position: absolute;
+			width: 100px;
+			left: 50%;
+			transform: translate(-50%,0);
+			color: var(--c-active);
+		}
+		p {
+			opacity: 0.7;
+			margin: 0;
+			color: var(--c-dark);
+		}
+		#{$quote}__author {
+			margin-bottom: 10px;
+			&:before {
+				content: none;
+			}
+		}
+		#{$quote}__date {
+			display: inline-block;
+			opacity: 1;
+			margin: 20px 0 0 0;
+			@include xs-size-max {
+				margin: 15px 0 0 0;
+			}
+		}
+	}
+}

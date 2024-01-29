@@ -1,0 +1,109 @@
+@import '../../../../assets/css/mixin';
+
+.aheto-clients {
+  $clients: &;
+
+  &--classic-mooseoom {
+	display: flex;
+	flex-wrap: wrap;
+
+	#{$clients}__holder {
+	  display: flex;
+	  flex: 1;
+	  flex-basis: 100%;
+	  align-items: center;
+	  justify-content: center;
+		&:first-child {
+		  justify-content: flex-start;
+		}
+		&:last-child {
+		  justify-content: flex-end;
+		}
+	}
+	&.grayscale {
+	  img {
+		opacity: 1;
+		filter: grayscale(100%) brightness(1.3);
+		&:hover {
+		  filter: grayscale(0) brightness(1);
+		}
+	  }
+	}
+
+	&.darkness {
+	  img {
+		opacity: 1;
+		filter: brightness(0);
+		&:hover {
+		  filter: brightness(100%);
+		}
+	  }
+	}
+
+	a {
+	  display: inline-block;
+	}
+
+	img {
+	  transition: all 0.3s ease-out;
+	  opacity: 0.3;
+	  max-height: 100%;
+	  max-width: 100%;
+	  object-fit: contain;
+
+	  &:hover {
+		opacity: 1;
+	  }
+	}
+
+	&.aheto-clients--2-in-row {
+	  #{$clients}__holder {
+		flex-basis: 50%;
+	  }
+	}
+
+	&.aheto-clients--3-in-row {
+	  #{$clients}__holder {
+		flex-basis: 33.33%;
+	  }
+	}
+
+	&.aheto-clients--4-in-row {
+	  #{$clients}__holder {
+		flex-basis: 25%;
+	  }
+	}
+
+	&.aheto-clients--5-in-row {
+	  #{$clients}__holder {
+		flex-basis: 20%;
+		@include sm-size-max {
+		  flex-basis: 50%;
+		  justify-content: center;
+		  margin-top: 70px;
+		  &:first-child{
+			margin-top: 0;
+		  }
+		  &:nth-child(2) {
+			margin-top: 0;
+		  }
+		}
+		@include xs-size-max {
+		  flex-basis: 100%;
+		  justify-content: center;
+		  margin-top: 30px;
+		  &:nth-child(2) {
+			margin-top: 40px;
+		  }
+		}
+	  }
+	}
+
+	&.aheto-clients--6-in-row {
+	  #{$clients}__holder {
+		flex-basis: calc(100% / 6);
+	  }
+	}
+  }
+}
+

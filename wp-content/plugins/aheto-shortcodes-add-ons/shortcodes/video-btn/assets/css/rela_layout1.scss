@@ -1,0 +1,32 @@
+@import '../../../../assets/css/mixin';
+
+.aheto_video-btn---rela {
+
+	.aheto-video-container {
+	}
+
+	.aheto-btn {
+		&-video {
+			color: var(--c-active);
+			padding-top: 1px;
+			padding-left: 4px;
+			margin: 10px 15px;
+			@media screen and (min-width: 1025px) {
+				transform: translateY(-5px);
+			}
+
+			&:before {
+				border-width: 6px;
+			}
+
+			&__text {
+				margin: 0 15px;
+				display: inline-block;
+			}
+		}
+
+		&--primary {
+			color: var(--c-light);
+		}
+	}
+}

@@ -1,0 +1,82 @@
+@import '../../../../assets/css/mixin';
+
+.widget_aheto {
+	$p: &;
+
+	&__cf--outsourceo__subscribe-single {
+		#{$p}__form {
+			.wpcf7 {
+				form p {
+					position: relative;
+				}
+				span {
+					font: inherit;
+					color: inherit;
+					display: block;
+				}
+				input:not([type="submit"]) {
+					padding: 12px 70px 12px 20px;
+					width: 100%;
+					font: inherit;
+					max-width: 100%;
+					border-radius: 5px;
+					border: none;
+					color: rgba(var(--ca-light), 0.6);
+					box-shadow: 0 5px 13px 0 rgba(var(--ca-dark), 0.15);
+					background-color: rgba(var(--ca-light), 0.05);
+					&::placeholder {
+						color: rgba(var(--ca-light), 0.6);
+					}
+				}
+				input[type="submit"] {
+					height: inherit;
+					width: inherit;
+					margin-top: 0;
+					background: transparent;
+					position: relative;
+					padding: 0 20px;
+					box-shadow: none;
+					border: 0;
+					border-radius: 0;
+					outline: none;
+					color: transparent;
+				}
+				.submit-wrap {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 50px;
+					height: 50px;
+					&::before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: flex;
+						height: inherit;
+						width: inherit;
+						font-size: 160%;
+						align-items: center;
+						justify-content: center;
+						background: transparent;
+						border-top-right-radius: 5px;
+						border-bottom-right-radius: 5px;
+						color: var(--c-light);
+						transition: all .3s ease;
+					}
+					&:hover::before {
+						background: var(--c-active);
+						color: var(--c-light);
+					}
+				}
+				.ajax-loader {
+					display: none;
+				}
+			}
+			div.wpcf7-validation-errors,
+			div.wpcf7-acceptance-missing {
+				border: 2px solid var(--c-active) !important;
+			}
+		}
+	}
+}
+
